@@ -5,16 +5,21 @@ body{
 
 .navwrapper {
     /*Defining properties of layout grid for text and images*/
-
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
     background-color: #fed400;
 }
 
-.pic-box {
+.logo-box {
     grid-column: 1;
     grid-row: 1;
+    align-self: stretch; 
+    padding: 50px;
+}
+.search-box{
+    grid-column: 1;
+    grid-row: 6;
     align-self: stretch; 
     padding: 50px;
 }
