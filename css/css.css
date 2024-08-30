@@ -13,7 +13,7 @@ a
  
  a:hover
  {
-   color: #fed400;
+   color: #fe0000;
  }
 #padding{
     /*https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
@@ -94,11 +94,6 @@ a
                opacity 0.55s ease;
  }
  /*Makes the cross in the hamburger look nicer*/
- #menuToggle span:first-child
- {
-   transform-origin: 0% 0%;
- }
- 
  #menuToggle span:nth-last-child(2)
  {
    transform-origin: 0% 100%;
@@ -145,7 +140,7 @@ a
     padding-top: 225px;
     right: -100px;
    
-   background: #ededed;
+   background: #fed400;
    list-style-type: none;
 
    transform-origin: 0% 0%;
@@ -160,7 +155,7 @@ a
    font-size: 22px;
  }
  
- /* Fades it in from the left, making it visible */
+ /* Fades it in from the right, making it visible */
  #menuToggle input:checked ~ ul
  {
    transform: none;
