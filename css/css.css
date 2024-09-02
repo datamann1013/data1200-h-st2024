@@ -1,4 +1,35 @@
 
-body {
-    
+body { 
+    display: grid; /*ads a default grid to body*/
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    /*grid-template-rows: auto 1fr auto; /* fr means that it can take as much space is remaining */
+    min-height: 100vh; /*gives extra space for the main part to take up.Remove after added content */
 }
+
+header {
+    background-color: rgb(255, 220, 0);
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: flex-end; /* Aligns nav to the right*/
+}
+
+
+nav ul {
+    list-style-type: none; /* Removes bullet points form the list*/
+    display: flex; /* Makes the list horizontal*/
+    gap: 20px; /* Adds space between the items in the list*/
+}
+
+main {
+    grid-column: 1 / span 3;
+
+}
+
+footer {
+    background-color: rgb(255, 220, 0);
+    grid-column: 1 / span 3;
+}
+
+
