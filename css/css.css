@@ -4,8 +4,9 @@ body {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto 1fr auto;
     gap: 20px;
-    /*grid-template-rows: auto 1fr auto; /* fr means that it can take as much space is remaining */
-    min-height: 100vh; /*gives extra space for the main part to take up.Remove after added content */
+    max-width: 1100px;
+    margin: auto;
+    min-height: 200vh; /*gives extra space for the main part to take up.Remove after added content */
 }
 
 header {
@@ -17,7 +18,7 @@ header {
 
 
 nav ul {
-    list-style-type: none; /* Removes bullet points form the list*/
+    list-style-type: none; /* Removes bullet points from the list*/
     display: flex; /* Makes the list horizontal*/
     gap: 20px; /* Adds space between the items in the list*/
 }
@@ -25,6 +26,13 @@ nav ul {
 main {
     grid-column: 1 / span 3;
 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px;
+    gap: 20px;
 }
 
 footer {
