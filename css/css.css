@@ -1,0 +1,54 @@
+.header {
+    background-color: yellow;
+    margin-top: 70px;
+    width: 100%;
+    padding: 50px;
+    color: whitesmoke;
+    font-family: Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    box-sizing: border-box;
+}
+.headline {
+    color: blue;
+}
+.social-links a {
+    grid: column 1fr;
+}
+.footer {
+    background-color: yellow;
+    margin-top: 70px;
+    width: 100%;
+    padding: 50px;
+    color: whitesmoke;
+    font-family: Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    box-sizing: border-box;
+ }
+.flex-container {
+    display: flex;
+    background-color: yellow;
+}
+.flex-container > section {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+  /*IKKE INTEGRERT*/
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+}
+  /* Responsive layout - makes the three columns stack on top of each other 
+  instead of next to each other on smaller screens (600px wide or less) */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
