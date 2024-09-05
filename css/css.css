@@ -1,3 +1,4 @@
+/*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body{
     margin: 0px;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
@@ -14,15 +15,6 @@ a
  {
    color: #fe0000;
  }
-#padding{
-    /*https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
-    padding-right: 10px;
-    padding-left: 20px;
-}
-#flex{
-    display: flex;
-}
-
 .navwrapper {
     /*Defining properties of layout grid for text and images*/
     display: grid;
@@ -36,6 +28,9 @@ a
     grid-row: 1;
     align-self: stretch; 
     padding: 50px;
+}
+#flex{
+  display: flex;
 }
 #nav-item{
     /*Sourcecode of OsloMET https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap*/
@@ -70,9 +65,7 @@ a
    z-index: 2; /* and place it over the hamburger */
  }
  
- /*
-  * Just a quick hamburger
-  */
+ /*Just a quick hamburger*/
  #menuToggle span
  {
    display: block;
