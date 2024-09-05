@@ -1,7 +1,6 @@
 body{
     margin: 0px;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
-
 }
 a
  {
