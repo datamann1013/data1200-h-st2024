@@ -15,10 +15,11 @@ a
  {
    color: #fe0000;
  }
+ /*|Logo placement*/
 .navwrapper {
-    /*Defining properties of layout grid for text and images*/
+    /*Defining properties of layout grid for logo*/
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(100px, auto);
     background-color: #fed400;
 }
@@ -29,9 +30,62 @@ a
     align-self: stretch; 
     padding: 50px;
 }
+/*|body grid*/
+.bodywrapper {
+  /*Defining properties of layout grid for logo*/
+  display: grid;
+  grid-template-columns: 100px, repeat(7, 1fr), 100px;
+  grid-auto-rows: minmax(auto, auto);
+ }
+
+.title-box {
+  grid-column: 4;
+  grid-row: 1;
+ 
+  padding: 50px;
+}
+.main-image{
+  grid-column: 2 / 8;
+  grid-row: 2;
+  
+  padding: 50px;
+}
+.text-box-1st{
+  grid-column: 2 / 4;
+  grid-row: 3;
+ 
+  padding: 10px;
+}
+.image-box-1st{
+  grid-column: 4 / 8;
+  grid-row: 3;
+}
+.text-box-standalone{
+  grid-column: 2 / 8;
+  grid-row: 4;
+}
+.text-box-2nd{
+  grid-column: 2 / 4;
+  grid-row: 5;
+}
+.image-box-2nd{
+  grid-column: 4 / 8;
+  grid-row: 5;
+}
+/* Make this absolute positioned at the top right of the screen*/
+#search
+{
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 0;
+   padding: 50px;
+   padding-top: 155px;
+   right: -100px;
+} 
 #flex{
   display: flex;
 }
+/*|hamburgermenu*/
 #nav-item{
     /*Sourcecode of OsloMET https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap*/
     align-items: center;
@@ -113,16 +167,7 @@ a
    transform: rotate(-45deg) translate(0, -1px);
  }
  
- /* Make this absolute positioned at the top right of the screen*/
- #search
- {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 0;
-    padding: 50px;
-    padding-top: 155px;
-    right: -100px;
- } 
+ 
  #menu
  {
     position: absolute;
