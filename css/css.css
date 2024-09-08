@@ -1,54 +1,294 @@
-.header {
-    background-color: yellow;
-    margin-top: 70px;
-    width: 100%;
-    padding: 50px;
-    color: whitesmoke;
-    font-family: Verdana, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 50px;
-    box-sizing: border-box;
+/*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
+body{
+    margin: 0px;
+    overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
+
+    background-color: #fed400;
 }
-.headline {
-    color: blue;
-}
-.social-links a {
-    grid: column 1fr;
-}
-.footer {
-    background-color: yellow;
-    margin-top: 70px;
-    width: 100%;
-    padding: 50px;
-    color: whitesmoke;
-    font-family: Verdana, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 50px;
-    box-sizing: border-box;
+a
+ {
+   text-decoration: none;
+   color: #232323;
+
+   transition: color 0.3s ease;
  }
-.flex-container {
+ 
+ a:hover
+ {
+   color: #fe0000;
+ }
+ /*|Logo placement*/
+.navwrapper {
+    /*Defining properties of layout grid for logo*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #fed400;
+}
+
+.logo-box {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: stretch; 
+    padding: 50px;
+}
+/*|body grid*/
+.bodywrapper {
+  /*Defining properties of layout grid for logo*/
+  display: grid;
+  grid-template-columns: 100px, repeat(7, 1fr), 100px;
+  grid-auto-rows: minmax(auto, auto);
+ }
+
+.title-box {
+  grid-column: 4;
+  grid-row: 1;
+ 
+  padding: 50px;
+}
+.main-image{
+  grid-column: 2 / 8;
+  grid-row: 2;
+  
+  padding: 50px;
+}
+.text-box-1st{
+  grid-column: 2 / 4;
+  grid-row: 3;
+ 
+  padding: 10px;
+}
+.image-box-1st{
+  grid-column: 4 / 8;
+  grid-row: 3;
+}
+.text-box-standalone{
+  grid-column: 2 / 8;
+  grid-row: 4;
+}
+.text-box-2nd{
+  grid-column: 2 / 4;
+  grid-row: 5;
+}
+.image-box-2nd{
+  grid-column: 4 / 8;
+  grid-row: 5;
+}
+/* Make this absolute positioned at the top right of the screen*/
+#search
+{
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 0;
+   padding: 50px;
+   padding-top: 155px;
+   right: -100px;
+} 
+#flex{
+  display: flex;
+}
+/*|hamburgermenu*/
+#nav-item{
+    /*Sourcecode of OsloMET https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap*/
+    align-items: center;
     display: flex;
-    background-color: yellow;
+    height: 33px;
+    padding: 7px;
 }
-.flex-container > section {
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
+/*Where I got the information to make the hamburger menu purely in css https://codepen.io/erikterwan/pen/grOZxx*/
+#menuToggle
+ {
+   display: block;
+   position: absolute;
+   top: 50px;
+   right: 50px;
+   
+   z-index: 1;
+ }
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+ }
+ 
+ /*Just a quick hamburger*/
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #000000;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ /*Makes the cross in the hamburger look nicer*/
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* Transform all the slices of hamburger into a crossmark.*/
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*Hides the middle one.*/
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*turns the other direction*/
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   opacity: 1;
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ 
+ #menu
+ {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 225px;
+    right: -100px;
+   
+   background: #fed400;
+   list-style-type: none;
+
+   transform-origin: 0% 0%;
+   transform: translate(100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /* Fades it in from the right, making it visible */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+   opacity: 1;
+ }
+ /*Action happening when the screen becomes smaller*/
+ @media screen and (max-width: 768px) {
+    /*Makes the menu not slide in, but slowly appear*/
+   #menu {
+     transform: none;
+     opacity: 0;
+ 
+     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   }
+ }
+
+
+ /* |Jen */
+
+/* background: body yellow, main white? */
+
+main {
+    background-color: white;
+    min-height: 50vh; /* just for now, REMEMBER TO REMOVE THIS YOU LIL SHIT */
 }
+
+ .footerwrapper
+{
+    /* display: grid;
+    position:absolute bottom; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 10px;
+    
+    /* grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto); */
+    
+    
+}
+
+.footercontent
+{
+    /* display: grid;
+    position:absolute bottom; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+
+    border-bottom: 1px solid;
+    
+    /* grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto); */
+}
+
+.footercontent > *
+{
+    margin: 5px;
+    width: 30vw;
+}
+
+ .social-links
+ {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    font-size: 22px;
+ }
+
+ #social-links li
+ {
+    padding: 10px 0;
+    font-size: 22px;
+ }
+
+
+
+
 
   /*IKKE INTEGRERT*/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-  @media (max-width: 800px) {
+/*   @media (max-width: 800px) {
     .flex-container {
       flex-direction: column;
     }
 }
   /* Responsive layout - makes the three columns stack on top of each other 
   instead of next to each other on smaller screens (600px wide or less) */
-  @media screen and (max-width: 600px) {
+/*   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
-    }
-  }
+    } */
+  

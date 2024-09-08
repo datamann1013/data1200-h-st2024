@@ -2,71 +2,74 @@
 <html lang="no">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configure the viewport for responsive design -->
+        <link rel="stylesheet" type="text/css" href="css/css.css" />  <!-- Link to the external CSS file -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="icon" type="image/x-icon" href="/images/graduation-cap-solid.ico">
         <title>pls</title>
     </head>
 
     <body>
-        <header class=" flex-container">
-            <h1 class="headline">gon' get gud</h1>
-        <button></button>
-            <nav>
-                <menu onclick="menubar">
-                    <li>aight</li>
-                    <li>this</li>
-                    <li>is</li>
-                    <li>some</li>
-                    <li>diff</li>
-                    <li>options</li>
-                    <li>one more</li>
-                </menu>
+        <header>
+            <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
+                <article class="logo-box">
+                    <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
+                    <img src = "svg/OsloMET.svg" alt="OsloMET logo"/>
+                </article>
+                <article id="search">
+                    <div id="flex">
+                        <img src="svg/search-icon.svg" alt="search-icon"> 
+                </article>
+                <article>
+                        <div id="menuToggle">
+                            <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            
+                            <ul id="menu">
+                              <a href="#"><li>Home</li></a>
+                              <a href="#"><li>Accessibility</li></a>
+                              <a href="#"><li>Activity</li></a>
+                              <a href="#"><li>Github</li></a>
+                            </ul>
+                          </div>
+                      </div>  
+                </article>
             </nav>
-        </menu>
-        <button>Back</button>
         </header>
+
+<!--  MATMOD PAGE-->
+
         <main>
-            <article>
-                <p>asdfghjkl</p>
-                <h2>asdfghjkl</h2>
-    
-            </article>
+            <section>
+                <h1>MatMod</h1>
+                <p>welcome to math hell</p>
+            </section>
+
+            <article><!--Main info for denne siden--></article>
         </main>
 
-        <footer>
-            <section class="footer-grid">
+        <footer class="footerwrapper"> <!-- Footer navigation wrapper -->
+            <section class="footercontent">
                 <h2>newsletter</h2>
-                <ul>
-                    <il><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></il>
-                    <il><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>Twitter</a></il>
-                    <il><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></il>
-                    <il><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></il>
-                </ul>
-            <i class="fa-solid fa-house">Home</i>
-            <a href="INSERT LINK">newsletter link</a>
-                <div class="flex-container">
-                        <ul>
-                            <il><a class="social-links" href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></il>
-                            <il><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>Twitter</a></il>
-                            <il><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></il>
-                            <il><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></il>
-                        </ul>
-                    <div><ul>
+                <button>subs</button>
+            </section>
+
+            <section class="footercontent"> <!--Enda en nav bar for social links og andre ting-->
+        
+                <i class="fa-solid fa-house"> There's no place like home</i> <!--Placeholder-->
+                <a href="INSERT LINK">newsletter link that doesn't work</a> <!--Placeholder-->
+                <nav class="social-links">
+                    <ul class="social-links">
                         <il><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></il>
                         <il><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>Twitter</a></il>
                         <il><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></il>
                         <il><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></il>
-                    </ul></div>
-                    <div>yhujin</div>
-                </div>
-
+                    </ul>
+                </nav>
             </section>
-            
-
-        </footer>
-
+        </footer>    
     </body>
-    
 </html>
