@@ -20,12 +20,12 @@ a
    color: #fe0000;
  }
  /*|Logo placement*/
-.navwrapper {
-    /*Defining properties of layout grid for logo*/
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    background-color: #fed400;
+ .navwrapper {
+  /*Defining properties of layout grid for logo*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  background-color: #fed400;
 }
 
 .logo-box {
