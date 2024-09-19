@@ -2,6 +2,10 @@
 body{
     margin: 0px;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
+/*jen
+  endra bakgrunnsfargen til gul
+*/
+    background-color: #fed400;
 }
 a
  {
@@ -209,3 +213,83 @@ a
    }
  }
 
+
+ /* |Jen */
+
+/* background: body yellow, main white? */
+
+main {
+    background-color: white;
+    min-height: 50vh; /* just for now, REMEMBER TO REMOVE THIS YOU LIL SHIT */
+}
+
+ .footerwrapper
+{
+    /* display: grid;
+    position:absolute bottom; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 10px;
+    
+    /* grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto); */
+    
+    
+}
+
+.footercontent
+{
+    /* display: grid;
+    position:absolute bottom; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+
+    border-bottom: 1px solid;
+    
+    /* grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto); */
+}
+
+.footercontent > *
+{
+    margin: 5px;
+    width: 30vw;
+}
+
+ .social-links
+ {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    font-size: 22px;
+ }
+
+ #social-links li
+ {
+    padding: 10px 0;
+    font-size: 22px;
+ }
+
+
+
+
+
+  /*IKKE INTEGRERT*/
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/*   @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+}
+  /* Responsive layout - makes the three columns stack on top of each other 
+  instead of next to each other on smaller screens (600px wide or less) */
+/*   @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    } */
