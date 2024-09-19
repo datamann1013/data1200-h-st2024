@@ -2,13 +2,13 @@
 body{
     margin: 0px;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
-/*jen
+/* |Jen
   endra bakgrunnsfargen til gul
 */
     background-color: #fed400;
 }
 a
- {
+{
    text-decoration: none;
    color: #232323;
 
