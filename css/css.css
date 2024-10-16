@@ -1,29 +1,64 @@
+/* Darkmode is activated when the users preferences are set to 
+enable darkmode on applicable websites.
+This is from Tengels lecture that covered this last year. */
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+      /* General colors: */
+      --main-background-color: #fed400;
+      --secondary-background-color: #292929;
+      --main-font-color: #eeeeee;
+      /* Lighter links for darkmode */
+      --body-link-color: #58a6ff;
+      --body-link-color-visited: #B661FF;
+      /* For the site with a different theme */
+      --diff-background-color: #77000e;
+      --diff-secondary-background-color: #61cdff;
+  }
+}
+
+/* Scrolls smoothly when clicking links that leads to other sections within the current site */
+/* IKKE I BRUK: spørsmålet er om vi skal ha linker som går fra et sted til et annet innen samme side?*/
+html {
+  scroll-behavior: smooth;
+}
+
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
-body{
+body {
     margin: 0px;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
-/* |Jen
-  endra bakgrunnsfargen til gul
-*/
-    background-color: #fed400;
+    background-color: var(--main-background-color);
+    font-family: Verdana, sans-serif;
+    letter-spacing: 0.04rem;
 }
-a
-{
+
+/* Background color for the main tag on all sites */
+main {
+  background-color: white;
+  min-height: 50vh; /* just for now, REMEMBER TO REMOVE THIS YOU LIL SHIT */
+}
+
+/* Accessible font size and line spacing */
+p {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+a {
    text-decoration: none;
    color: #232323;
 
    transition: color 0.3s ease;
  }
  
- a:hover
- {
+ a:hover {
    color: #fe0000;
  }
+
  /*|Logo placement*/
 .navwrapper {
     /*Defining properties of layout grid for logo*/
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat 1fr, 1fr, 1fr;
     grid-auto-rows: minmax(100px, auto);
     background-color: #fed400;
 }
@@ -34,6 +69,7 @@ a
     align-self: stretch; 
     padding: 50px;
 }
+
 /*|body grid*/
 .bodywrapper {
   /*Defining properties of layout grid for logo*/
@@ -48,37 +84,36 @@ a
  
   padding: 50px;
 }
-.main-image{
+.main-image {
   grid-column: 2 / 8;
   grid-row: 2;
   
   padding: 50px;
 }
-.text-box-1st{
+.text-box-1st {
   grid-column: 2 / 4;
   grid-row: 3;
  
   padding: 10px;
 }
-.image-box-1st{
+.image-box-1st {
   grid-column: 4 / 8;
   grid-row: 3;
 }
-.text-box-standalone{
+.text-box-standalone {
   grid-column: 2 / 8;
   grid-row: 4;
 }
-.text-box-2nd{
+.text-box-2nd {
   grid-column: 2 / 4;
   grid-row: 5;
 }
-.image-box-2nd{
+.image-box-2nd {
   grid-column: 4 / 8;
   grid-row: 5;
 }
 /* Make this absolute positioned at the top right of the screen*/
-#search
-{
+#search {
    position: absolute;
    width: 300px;
    margin: -100px 0 0 0;
@@ -86,11 +121,12 @@ a
    padding-top: 155px;
    right: -100px;
 } 
-#flex{
+
+#flex {
   display: flex;
 }
 /*|hamburgermenu*/
-#nav-item{
+#nav-item {
     /*Sourcecode of OsloMET https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap*/
     align-items: center;
     display: flex;
@@ -98,8 +134,7 @@ a
     padding: 7px;
 }
 /*Where I got the information to make the hamburger menu purely in css https://codepen.io/erikterwan/pen/grOZxx*/
-#menuToggle
- {
+#menuToggle {
    display: block;
    position: absolute;
    top: 50px;
@@ -108,8 +143,7 @@ a
    z-index: 1;
  }
  
- #menuToggle input
- {
+ #menuToggle input {
    display: block;
    width: 40px;
    height: 32px;
@@ -124,8 +158,7 @@ a
  }
  
  /*Just a quick hamburger*/
- #menuToggle span
- {
+ #menuToggle span {
    display: block;
    width: 33px;
    height: 4px;
@@ -144,36 +177,31 @@ a
                opacity 0.55s ease;
  }
  /*Makes the cross in the hamburger look nicer*/
- #menuToggle span:nth-last-child(2)
- {
+ #menuToggle span:nth-last-child(2) {
    transform-origin: 0% 100%;
  }
  
  /* Transform all the slices of hamburger into a crossmark.*/
- #menuToggle input:checked ~ span
- {
+ #menuToggle input:checked ~ span {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
    background: #232323;
  }
  
  /*Hides the middle one.*/
- #menuToggle input:checked ~ span:nth-last-child(3)
- {
+ #menuToggle input:checked ~ span:nth-last-child(3) {
    opacity: 0;
    transform: rotate(0deg) scale(0.2, 0.2);
  }
  
  /*turns the other direction*/
- #menuToggle input:checked ~ span:nth-last-child(2)
- {
+ #menuToggle input:checked ~ span:nth-last-child(2) {
    opacity: 1;
    transform: rotate(-45deg) translate(0, -1px);
  }
  
  
- #menu
- {
+ #menu {
     position: absolute;
     width: 300px;
     margin: -100px 0 0 0;
@@ -181,7 +209,7 @@ a
     padding-top: 225px;
     right: -100px;
    
-   background: #fed400;
+   background: var(--main-background-color);
    list-style-type: none;
 
    transform-origin: 0% 0%;
@@ -190,18 +218,17 @@ a
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
  }
  
- #menu li
- {
+ #menu li {
    padding: 10px 0;
    font-size: 22px;
  }
  
  /* Fades it in from the right, making it visible */
- #menuToggle input:checked ~ ul
- {
+ #menuToggle input:checked ~ ul {
    transform: none;
    opacity: 1;
  }
+
  /*Action happening when the screen becomes smaller*/
  @media screen and (max-width: 768px) {
     /*Makes the menu not slide in, but slowly appear*/
@@ -216,15 +243,7 @@ a
 
  /* |Jen */
 
-/* background: body yellow, main white? */
-
-main {
-    background-color: white;
-    min-height: 50vh; /* just for now, REMEMBER TO REMOVE THIS YOU LIL SHIT */
-}
-
- .footerwrapper
-{
+ .footerwrapper {
     /* display: grid;
     position:absolute bottom; */
     display: flex;
@@ -235,12 +254,9 @@ main {
     
     /* grid-template-columns:repeat(3, 1fr);
     grid-auto-rows: minmax(200px, auto); */
-    
-    
 }
 
-.footercontent
-{
+.footercontent {
     /* display: grid;
     position:absolute bottom; */
     display: flex;
@@ -255,14 +271,12 @@ main {
     grid-auto-rows: minmax(200px, auto); */
 }
 
-.footercontent > *
-{
+.footercontent > * {
     margin: 5px;
     width: 30vw;
 }
 
- .social-links
- {
+ .social-links {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -270,14 +284,10 @@ main {
     font-size: 22px;
  }
 
- #social-links li
- {
+ #social-links li {
     padding: 10px 0;
     font-size: 22px;
  }
-
-
-
 
 
   /*IKKE INTEGRERT*/
@@ -293,3 +303,48 @@ main {
     .column {
       width: 100%;
     } */
+
+
+  /* --- GITHUB PAGE START ---- */
+  .github-main{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 15px;
+    height: 100vh;
+    }
+  
+    .github-introduction{
+      background-color: purple;
+      grid-row: 1 / 2;
+      padding: 10px;
+    }
+  
+    .github-img-container{
+      grid-row: 2 / 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns. */
+      gap: 10px;
+      background-color: pink;
+      padding: 10px;
+    }
+  
+    .github-img1-container{
+      grid-column: 1;
+      background-color: lightyellow;
+      padding: 10px;
+    }
+  
+    .github-img2-container{
+      grid-column: 2;
+      background-color: lightcoral;
+      padding: 10px;
+    }
+  
+    .github-text-container{
+      background-color: orange;
+      grid-row: 3 / 4;
+      padding: 10px;
+    }
+  /* --- GITHUB PAGE END ---- */
