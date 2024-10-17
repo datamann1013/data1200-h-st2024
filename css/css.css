@@ -69,7 +69,22 @@ a {
     align-self: stretch; 
     padding: 50px;
 }
-
+/* Overskrift med dimmet cover bakgrunsbilde og sentrert heading */
+.top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    background-image: url('../img/p32-04_SB.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: center;
+    color: white;
+    text-shadow: 8px -4px 20px black;
+}
 /*|body grid*/
 .bodywrapper {
   /*Defining properties of layout grid for logo*/
@@ -111,6 +126,21 @@ a {
 .image-box-2nd {
   grid-column: 4 / 8;
   grid-row: 5;
+}
+
+/*Terms for video on matmodpage, borrowed from https://film.oslomet.no/matematisk-modellering-og*/
+.matmod-video-format{
+    width:100%;
+    height:0;
+    position: relative;
+    padding-bottom:56.25%
+}
+.matmod-video{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 /* Make this absolute positioned at the top right of the screen*/
 #search {
