@@ -295,26 +295,31 @@ main {
   /* --- GITHUB PAGE START ---- */
   .github-main{
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto auto;
     gap: 10px;
     background-color: #2196F3;
     padding: 15px;
-    height: 100vh;
+    /*max-width: 100%;  Makes sure the content doesn´t go beyond the screen width.
+    box-sizing: border-box;  Makes sure padding is included in width calculations*/
+    /*overflow-x: hidden; Prevents horizontal scrolling*/
     }
   
     .github-introduction{
       background-color: purple;
-      grid-row: 1 / 2;
+      /*grid-row: 1 / 2;*/
       padding: 10px;
+      /*max-width: 100%;*/
     }
   
     .github-img-container{
-      grid-row: 2 / 3;
+      /*grid-row: 2 / 3;*/
       display: grid;
       grid-template-columns: 1fr 1fr; /* Two equal columns. */
       gap: 10px;
       background-color: pink;
       padding: 10px;
+      /*max-width: 100%;
+      box-sizing: border-box;*/
     }
   
     .github-img1-container{
@@ -331,7 +336,7 @@ main {
   
     .github-text-container{
       background-color: orange;
-      grid-row: 3 / 4;
+      /*grid-row: 3 / 4;*/
       padding: 10px;
     }
   /* --- GITHUB PAGE END ---- */
