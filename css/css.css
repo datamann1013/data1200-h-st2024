@@ -69,7 +69,22 @@ a {
     align-self: stretch; 
     padding: 50px;
 }
-
+/* Overskrift med dimmet cover bakgrunsbilde og sentrert heading */
+.top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    background-image: url('../img/TKD_BAW_15.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: center;
+    color: white;
+    text-shadow: 8px -4px 20px black;
+}
 /*|body grid*/
 .bodywrapper {
   /*Defining properties of layout grid for logo*/
@@ -111,6 +126,21 @@ a {
 .image-box-2nd {
   grid-column: 4 / 8;
   grid-row: 5;
+}
+
+/*Terms for video on matmodpage, borrowed from https://film.oslomet.no/matematisk-modellering-og*/
+.matmod-video-format{
+    width:100%;
+    height:0;
+    position: relative;
+    padding-bottom:56.25%
+}
+.matmod-video{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 /* Make this absolute positioned at the top right of the screen*/
 #search {
@@ -306,45 +336,55 @@ a {
 
 
   /* --- GITHUB PAGE START ---- */
-  .github-main{
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    gap: 10px;
-    background-color: #2196F3;
-    padding: 15px;
-    height: 100vh;
-    }
   
-    .github-introduction{
-      background-color: purple;
-      grid-row: 1 / 2;
-      padding: 10px;
-    }
+  .github-main {
+    background-color: #f4f4f4;
+    text-align: center; /* Centers text */
+  }
+  .github-extra{
+    margin: 2rem 4rem;
+    padding: 2rem;
+  }
+  .github-introduction img {
+    width: 300px; /* Sets the width of image in the introduction section to 300px */
+    height: auto; /* Maintains the images aspect ratio by allowing the height to adjust automatically */
+  }
+
+  .github-introduction{
+    margin-bottom: 5rem; /* Space between the sections */
+    
+  }
   
-    .github-img-container{
-      grid-row: 2 / 3;
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Two equal columns. */
-      gap: 10px;
-      background-color: pink;
-      padding: 10px;
-    }
+  .github-img-container {
+    margin-bottom: 5rem; /* Space between the sections */
+  }
   
-    .github-img1-container{
-      grid-column: 1;
-      background-color: lightyellow;
-      padding: 10px;
-    }
+  .image-grid {
+    display: grid; /* Grid is used to arrange the images within the container */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 1rem; /* Gap between the images */
+  }
   
-    .github-img2-container{
-      grid-column: 2;
-      background-color: lightcoral;
-      padding: 10px;
-    }
-  
-    .github-text-container{
-      background-color: orange;
-      grid-row: 3 / 4;
-      padding: 10px;
-    }
+  .image-grid img {
+    width: 100%; /* Makes the images take up 100% of their columns width */
+    border-radius: 8px; /* Makes the corners of the images round */
+  }
+
   /* --- GITHUB PAGE END ---- */
+
+  /*--- MATMOD ---- */
+
+  .grid-Container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 20px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+  }
+  .grid-Item{
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    position: relative;
+   
+  }
