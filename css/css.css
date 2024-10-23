@@ -63,7 +63,20 @@ a {
      text-align: center;
  }
 
-
+/* Heading placement, plays well with the background tags for each site */
+.top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 3%;
+    text-align: center;
+    color: white;
+    text-shadow: 8px -4px 20px black;
+}
 
  /*|Logo placement*/
 .navwrapper {
@@ -80,20 +93,7 @@ a {
     align-self: stretch; 
     padding: 50px;
 }
-/* Overskrift med dimmet cover bakgrunsbilde og sentrert heading */
-.top-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 60vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 0 3%;
-    text-align: center;
-    color: white;
-    text-shadow: 8px -4px 20px black;
-}
+
 
 /*Terms for video on matmodpage, borrowed from https://film.oslomet.no/matematisk-modellering-og*/
 .matmod-video-format{
@@ -305,7 +305,7 @@ a {
 
   .github-introduction-image{
     margin-bottom: 5rem; /* Space between the sections */
-      background-image: url('../img/Github-main-background.jpg');
+      background-image: url('../img/Github-main-background.jpg'); /*Chooses image for the main heading */
   }
   
   .github-img-container {
@@ -418,4 +418,8 @@ input[type="checkbox"]:checked + label + .accordion-content-infobox {
 input[type="checkbox"]:checked + label .icon span {
     content: "-"; /* Changes the icon text to a minus sign when checked */
 }
+/* --- Accessibility --- */
 
+.accessibility-introduction-image{ /*Chooses image for the main heading */
+    background-image: url('../img/Accessibility-main-background.jpg') ;
+}
