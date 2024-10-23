@@ -348,9 +348,9 @@ a {
 
 /* Main container for the accordion */
 .container-infobox {
-    width: 80%; /* Sets the width of the container to 80% of its parent element */
+
     margin: 0 auto; /* Centers the container horizontally */
-    padding: 20px; /* Adds 20 pixels of padding inside the container */
+
 }
 
 /* Description text within the accordion */
