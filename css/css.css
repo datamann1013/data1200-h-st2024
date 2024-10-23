@@ -16,12 +16,6 @@ This is from Tengels lecture that covered this last year. */
   }
 }
 
-/* Scrolls smoothly when clicking links that leads to other sections within the current site */
-/* IKKE I BRUK: spørsmålet er om vi skal ha linker som går fra et sted til et annet innen samme side?*/
-html {
-  scroll-behavior: smooth;
-}
-
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
