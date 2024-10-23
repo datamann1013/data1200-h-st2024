@@ -34,7 +34,6 @@ body {
 /* Background color for the main tag on all sites */
 main {
   background-color: white;
-  min-height: 50vh; /* just for now, REMEMBER TO REMOVE THIS YOU LIL SHIT */
 }
 
 /* Accessible font size and line spacing */
@@ -53,6 +52,18 @@ a {
  a:hover {
    color: #fe0000;
  }
+
+ /*Main functionality */
+
+ .main-padding{
+     margin: 2rem 4rem;
+     padding: 2rem;
+ }
+ .center-horizontal{
+     text-align: center;
+ }
+
+
 
  /*|Logo placement*/
 .navwrapper {
@@ -291,21 +302,8 @@ a {
 
 
   /* --- GITHUB PAGE START ---- */
-  
-  .github-main {
-    background-color: #f4f4f4;
-    text-align: center; /* Centers text */
-  }
-  .github-extra{
-    margin: 2rem 4rem;
-    padding: 2rem;
-  }
-  .github-introduction img {
-    width: 300px; /* Sets the width of image in the introduction section to 300px */
-    height: auto; /* Maintains the images aspect ratio by allowing the height to adjust automatically */
-  }
 
-  .github-introduction{
+  .github-introduction-image{
     margin-bottom: 5rem; /* Space between the sections */
       background-image: url('../img/Github-main-background.jpg');
   }
@@ -316,7 +314,7 @@ a {
   
   .image-grid {
     display: grid; /* Grid is used to arrange the images within the container */
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
   }
   
@@ -324,9 +322,11 @@ a {
     width: 100%; /* Makes the images take up 100% of their columns width */
     border-radius: 8px; /* Makes the corners of the images round */
   }
-
-  /* --- GITHUB PAGE END ---- */
-
+.vertical {
+    border-left: 2px solid #aca7a2;
+    height: 5rem;
+    margin: auto;
+}
   /*--- MATMOD ---- */
 
   .grid-Container{
