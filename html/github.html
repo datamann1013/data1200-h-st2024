@@ -3,22 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configure the viewport for responsive design -->
-        <link rel="stylesheet" type="text/css" href="../css/css.css" />  <!-- Link to the external CSS file -->
+        <link rel="stylesheet" type="text/css" href="..../css/css.css" />  <!-- Link to the external CSS file -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
         <title>pls</title>
     </head>
-
     <body>
+
+    <!-- HEADER START -->    
         <header>
             <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
                 <article class="logo-box">
                     <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-                    <img src = "../svg/OsloMET.svg" alt="OsloMET logo"/>
+                    <img src = "../../svg/OsloMET.svg" alt="OsloMET logo"/>
                 </article>
                 <article id="search">
                     <div id="flex">
-                        <img src="../svg/search-icon.svg" alt="search-icon">
+                        <img src="../../svg/search-icon.svg" alt="search-icon">
                     </div>
                 </article>
                 <article>
@@ -39,40 +40,58 @@
                 </article>
             </nav>
         </header>
+    <!-- HEADER END --> 
 
-<!--  GITHUB PAGE-->
 
 <main class="github-main">
+    <section class="github-extra">
+
+<!--  INTRODUCTION SECTION -->
     <section class="github-introduction">
-        <h1 class="github-title">Github</h1>
+       <img src="../img/transparent-github-icon-cat-with-tilted-head-closed-eyes-blue-1710879429064.webp">
+        <h1 class="github-title">Welcome to Github</h1>
         <p>In this page you will find images showing part of commits history and specific changes. There will also be a short text about collaboration in repositories like GitHub.</p>
-    </section>    
-    <article class="github-content">
-        <section class="github-img-container">
-         <section class="github-img1-container">
+    </section>  
+<!--  INTRODUCTION END -->
+
+
+<!-- IMAGES SECTION START -->
+    <section class="github-img-container">
+        <section class="github-img1-container">
             <h2 class="github-title-img1">Images showing part of commits history</h2>
-            <br>
-            <br>
+            <section class="image-grid">
+                <img src="../img/history1.png" alt="commit1">
+                <img src="../img/history2.png" alt="commit2">
+            </section>
         </section>
         <section class="github-img2-container">
             <h2 class="github-title-img2">Images showing a specific change</h2>
-            <br>
-            <br>
+            <section class="image-grid">
+                <img src="../img/change1.png" alt="change1">
+                <img src="../img/change2.png" alt="change2">
+            </section>
         </section>
-        </section>
+    </section>
+<!-- IMAGES SECTION END -->
+
+
+<!-- TEXT SECTION START -->        
         <section class="github-text-container">
-            <h2 class="github-title-text">Text about collaboration in repositories like GitHub</h2>
+            <h2 class="github-title-text">A short list of benefits of Git and Github in VS code</h2>
             <h3 class="github-title-text-point1">Github can make collaborations easier</h3>
-            <p>When working with a team, GitHub is often used to share and collaborate on code. With GitHub tools built into VS Code, you can review code changes, make comments, and open pull requests directly from the editor. This can make it easier to collaborate with others because you don’t need to switch to a web browser. You can work with your team in real-time without leaving the editor, and all the GitHub features are right at your fingertips</p>
-            <h3 class="github-title-text-point2">Branches
-            </h3>
+            <p>When working in a team, GitHub is often used to share and collaborate on code. With GitHub tools built into VS Code, you can review code changes, make comments, and open pull requests directly from the editor. This can make it easier to collaborate with others because you don’t need to switch to a web browser. You can work with your team in real-time without leaving the editor, and all the GitHub features are right at your fingertips</p>
+            <h3 class="github-title-text-point2">Git branches</h3>
             <p>
-                Branches are a key part of using Git, allowing you to work on different features or fixes without affecting the main codebase. In VS Code, you can create new branches, switch between them, and merge changes back into the main branch with just a few clicks. This is really helpful for organizing your work and making sure that different features or bug fixes don’t interfere with each other. Plus, you can easily see which branch you’re working on at any time.
+                Branches are a key part of using Git, allowing you to work on different features or fixes without affecting the main codebase. In VS Code, you can create new branches, switch between them, and merge changes back into the main branch with just a few clicks when needed. This can help to keep your work organized and prevent conflicts from appearing between different pieces of code. Plus, you can easily see which branch you’re working on at any time.
             </p>
         </section>
-    </article>
+    </section>
+<!-- TEXT SECTION END --> 
+
 </main>
 
+
+    <!-- FOOTER START -->    
         <footer class="footerwrapper"> <!-- Footer navigation wrapper -->
             <section class="footercontent">
                 <h2>newsletter</h2>
@@ -92,6 +111,9 @@
                     </ul>
                 </nav>
             </section>
-        </footer>    
+        </footer> 
+    <!-- FOOTER END -->  
+    
+    
     </body>
 </html>
