@@ -75,7 +75,6 @@ a {
     flex-direction: column;
     justify-content: center;
     height: 60vh;
-    background-image: url('../img/TKD_BAW_15.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -308,7 +307,7 @@ a {
 
   .github-introduction{
     margin-bottom: 5rem; /* Space between the sections */
-    
+      background-image: url('../img/Github-main-background.jpg');
   }
   
   .github-img-container {
