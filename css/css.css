@@ -388,3 +388,79 @@ a {
     position: relative;
    
   }
+/* --- Accordion for MATMOD --- */
+/* Inspiration from https://www.w3schools.com/howto/howto_js_accordion.asp */
+
+/* Main container for the accordion */
+.container-infobox {
+    width: 80%; /* Sets the width of the container to 80% of its parent element */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Adds 20 pixels of padding inside the container */
+}
+
+/* Description text within the accordion */
+.description-infobox {
+    font-size: 20px; /* Sets the font size for the description text */
+    line-height: 1.5; /* Sets the line height for better readability */
+    margin-bottom: 20px; /* Adds space below the description */
+}
+
+/* Accordion component styles */
+.accordion-infobox {
+    border-top: 1px solid #e0e0e0; /* Adds a light gray top border to the accordion */
+}
+
+/* Individual accordion item styling */
+.accordion-item-infobox {
+    display: flex; /* Uses flexbox layout for the accordion item */
+    align-items: center; /* Vertically centers items within the flex container */
+    padding: 15px 0; /* Adds vertical padding to the item */
+    border-bottom: 1px solid #e0e0e0; /* Adds a light gray bottom border */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate clickable items */
+}
+
+/* Icon styling within each accordion item */
+.accordion-item-infobox .icon {
+    width: 40px; /* Sets a fixed width for the icon */
+    height: 40px; /* Sets a fixed height for the icon */
+    background-color: #ffd700; /* Sets a gold background color for the icon */
+    display: flex; /* Uses flexbox layout for the icon container */
+    align-items: center; /* Centers the icon content vertically */
+    justify-content: center; /* Centers the icon content horizontally */
+    margin-right: 15px; /* Adds space to the right of the icon */
+}
+
+/* Icon text styling */
+.accordion-item-infobox .icon span {
+    font-size: 24px; /* Sets the font size for the icon text */
+    font-weight: bold; /* Makes the icon text bold */
+}
+
+/* Main text styling for accordion items */
+.accordion-item-infobox .text {
+    font-size: 18px; /* Sets the font size for the accordion item text */
+    font-weight: bold; /* Makes the item text bold */
+}
+
+/* Content area of the accordion */
+.accordion-content-infobox {
+    display: none; /* Hides the content area of the accordion by default */
+    padding: 15px 0; /* Adds vertical padding to the content area */
+    border-bottom: 1px solid #e0e0e0; /* Adds a light gray bottom border */
+}
+
+/* Hiding the checkbox input */
+input[type="checkbox"] {
+    display: none; /* Hides the checkbox input element */
+}
+
+/* Displaying content when checkbox is checked */
+input[type="checkbox"]:checked + label + .accordion-content-infobox {
+    display: block; /* Displays the accordion content when the checkbox is checked */
+}
+
+/* Changing icon text when accordion is expanded */
+input[type="checkbox"]:checked + label .icon span {
+    content: "-"; /* Changes the icon text to a minus sign when checked */
+}
+
