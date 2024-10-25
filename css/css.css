@@ -318,6 +318,12 @@ a {
     gap: 1rem; /* Gap between the images */
   }
 
+  .image-container{
+    height: 70%;
+    background-color: red;
+    float: left;
+  }
+
   .image-grid img {
     width: 100%; /* Makes the images take up 100% of their columns width */
     object-fit: cover;
