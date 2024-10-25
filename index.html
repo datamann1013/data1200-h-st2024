@@ -24,25 +24,18 @@
         </article>
         <article>
             <div id="menuToggle">
-                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
-                <input type="checkbox"/>
+                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
+                 Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
+                <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
                 <span></span>
                 <span></span>
                 <span></span>
 
                 <ul id="menu">
-                    <a href="index.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="html\accessibility.html">
-                        <li>Accessibility</li>
-                    </a>
-                    <a href="html\activity.html">
-                        <li>Activity</li>
-                    </a>
-                    <a href="html\github.html">
-                        <li>Github</li>
-                    </a>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="activity.html">Activity</a></li>
+                    <li><a href="github.html">GitHub</a></li>
                 </ul>
             </div>
         </article>
@@ -531,7 +524,7 @@
         <h4>Spørsmål om utdanningen?</h4>
         <p><strong>Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</strong></p>
         <h5>Faglig leder</h5>
-        <img src="img/BILDEMATMOD1.jpg">
+        <img src="../img/matmod-faglig-leder.jpg">
         <p><strong>Kristoffer Herland Hellton</strong></p>
         <p>Førsteamanuensis</p>
         <p>+47 672 37 240 | kristoffer.hellton@oslomet.no</p>
