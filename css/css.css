@@ -317,9 +317,10 @@ a {
     grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
   }
-  
+
   .image-grid img {
     width: 100%; /* Makes the images take up 100% of their columns width */
+    object-fit: cover;
     border-radius: 8px; /* Makes the corners of the images round */
   }
 .vertical {
