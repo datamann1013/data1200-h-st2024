@@ -440,7 +440,7 @@ input[type="checkbox"]:checked + label .icon span {
 .carousel {
     width: 100%;
     overflow-x: scroll;
-    padding: 80px 30px 30px;
+    padding: 10px 20px 20px;
     position: relative;
     box-sizing: border-box;
 }
