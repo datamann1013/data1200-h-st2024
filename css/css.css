@@ -15,7 +15,6 @@ This is from Tengels lecture that covered this last year. */
       --diff-secondary-background-color: #61cdff;
   }
 }
-
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
@@ -24,12 +23,16 @@ body {
     font-family: Verdana, sans-serif;
     letter-spacing: 0.04rem;
 }
-
 /* Background color for the main tag on all sites */
 main {
   background-color: white;
+  /* Accessible font size, line height, letter-spacing and word-breaks*/
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.04rem;
+  word-break: normal;
 }
-h1{
+h1 {
     font-size: 60px;
 }
 h2 {
@@ -37,13 +40,6 @@ h2 {
 }
 h3 {
    font-size: 20px;
-}
-
-
-/* Accessible font size and line spacing */
-p {
-  line-height: 1.5;
-  font-size: 1rem;
 }
 
 a {
@@ -59,11 +55,11 @@ a {
 
  /*Main functionality */
 
- .main-padding{
+ .main-padding {
      margin: 2rem 4rem;
      padding: 2rem;
  }
- .center-horizontal{
+ .center-horizontal {
      text-align: center;
  }
 
@@ -98,15 +94,14 @@ a {
     padding: 50px;
 }
 
-
 /*Terms for video on matmodpage, borrowed from https://film.oslomet.no/matematisk-modellering-og*/
-.matmod-video-format{
+.matmod-video-format {
     width:100%;
     height:0;
     position: relative;
     padding-bottom:56.25%
 }
-.matmod-video{
+.matmod-video {
     width:100%;
     height:100%;
     position: absolute;
@@ -121,7 +116,6 @@ a {
    padding: 50px 0 0 0;
    right: -100px;
 } 
-
 
 /*|hamburgermenu*/
 #nav-item {
@@ -198,7 +192,6 @@ a {
    transform: rotate(-45deg) translate(0, -1px);
  }
  
- 
  #menu {
     position: absolute;
     width: 300px;
@@ -236,7 +229,6 @@ a {
      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
  }
-
 
  /* |Jen */
 
@@ -286,7 +278,6 @@ a {
     font-size: 22px;
  }
 
-
   /*IKKE INTEGRERT*/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 /*   @media (max-width: 800px) {
@@ -304,9 +295,9 @@ a {
 
   /* --- GITHUB PAGE START ---- */
 
-  .github-introduction-image{
+  .github-introduction-image {
       margin-bottom: 5rem; /* Space between the sections */
-      background-image: url('../img/Github-main-background.jpg'); /*Chooses image for the main heading */
+      background-image: url('../img/github-main-background.jpg'); /*Chooses image for the main heading */
       text-shadow: 2px 2px #000000;
   }
   
@@ -318,6 +309,12 @@ a {
     display: grid; /* Grid is used to arrange the images within the container */
     grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
+  }
+
+  .image-container{
+    height: 70%;
+    background-color: red;
+    float: left;
   }
 
   .image-grid img {
@@ -332,14 +329,14 @@ a {
 }
   /*--- MATMOD ---- */
 
-  .grid-Container{
+  .grid-Container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 20px;
     border-top: 1px solid black;
   }
-  .grid-item{
+  .grid-item {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
     position: relative;
@@ -350,7 +347,6 @@ a {
 
 /* Main container for the accordion */
 .container-infobox {
-
     margin: 0 auto; /* Centers the container horizontally */
 
 }
@@ -423,5 +419,5 @@ input[type="checkbox"]:checked + label .icon span {
 /* --- Accessibility --- */
 
 .accessibility-introduction-image{ /*Chooses image for the main heading */
-    background-image: url('../img/Accessibility-main-background.jpg') ;
+    background-image: url('../img/accessibility-header.png') ;
 }
