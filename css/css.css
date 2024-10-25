@@ -28,6 +28,9 @@ body {
 /* Background color for the main tag on all sites */
 main {
   background-color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.04rem;
 }
 
 /* Accessible font size and line spacing */
@@ -413,5 +416,5 @@ input[type="checkbox"]:checked + label .icon span {
 /* --- Accessibility --- */
 
 .accessibility-introduction-image{ /*Chooses image for the main heading */
-    background-image: url('../img/Accessibility-main-background.jpg') ;
+    background-image: url('../img/accessibility_header.png') ;
 }
