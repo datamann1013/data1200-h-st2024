@@ -1,119 +1,153 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configure the viewport for responsive design -->
-        <link rel="stylesheet" type="text/css" href="..../css/css.css" />  <!-- Link to the external CSS file -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
-        <title>pls</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configure the viewport for responsive design -->
+    <link rel="stylesheet" type="text/css" href="../css/css.css"/>  <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
+    <title>Github</title>
+</head>
+<body>
 
-    <!-- HEADER START -->    
-        <header>
-            <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
-                <article class="logo-box">
-                    <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-                    <img src = "../../svg/OsloMET.svg" alt="OsloMET logo"/>
-                </article>
-                <article id="search">
-                    <div id="flex">
-                        <img src="../../svg/search-icon.svg" alt="search-icon">
-                    </div>
-                </article>
-                <article>
-                        <div id="menuToggle">
-                            <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
-                            <input type="checkbox" />
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            
-                            <ul id="menu">
-                                <a href="../index.html"><li>Home</li></a>
-                                <a href="accessibility.html"><li>Accessibility</li></a>
-                                <a href="activity.html"><li>Activity</li></a>
-                                <a href="github.html"><li>Github</li></a>
-                            </ul>
-                        </div>
-                </article>
-            </nav>
-        </header>
-    <!-- HEADER END --> 
+<!-- HEADER START -->
+<header>
+    <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
+        <article class="logo-box">
+            <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
+            <img src="../svg/OsloMET.svg" alt="OsloMET logo"/>
+        </article>
+        <article id="search">
+            <div id="flex">
+                <img src="../svg/search-icon.svg" alt="search-icon">
+            </div>
+        </article>
+        <article>
+            <div id="menuToggle">
+                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
 
-
-<main class="github-main">
-    <section class="github-extra">
-
-<!--  INTRODUCTION SECTION -->
-    <section class="github-introduction">
-       <img src="../img/transparent-github-icon-cat-with-tilted-head-closed-eyes-blue-1710879429064.webp">
-        <h1 class="github-title">Welcome to Github</h1>
-        <p>In this page you will find images showing part of commits history and specific changes. There will also be a short text about collaboration in repositories like GitHub.</p>
-    </section>  
-<!--  INTRODUCTION END -->
+                <ul id="menu">
+                    <a href="../index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="accessibility.html">
+                        <li>Accessibility</li>
+                    </a>
+                    <a href="activity.html">
+                        <li>Activity</li>
+                    </a>
+                    <a href="github.html">
+                        <li>Github</li>
+                    </a>
+                </ul>
+            </div>
+        </article>
+    </nav>
+</header>
+<!-- HEADER END -->
 
 
-<!-- IMAGES SECTION START -->
-    <section class="github-img-container">
-        <section class="github-img1-container">
-            <h2 class="github-title-img1">Images showing part of commits history</h2>
-            <section class="image-grid">
-                <img src="../img/history1.png" alt="commit1">
-                <img src="../img/history2.png" alt="commit2">
+<main>
+    <section>
+        <!--  INTRODUCTION SECTION -->
+        <section class="top-text github-introduction-image">
+
+            <h1>Welcome to Github</h1>
+            <p>In this page you will find images showing part of commits history and specific changes. There will also
+                be a short text about collaboration in repositories like GitHub.</p>
+        </section>
+        <!--  INTRODUCTION END -->
+
+
+        <!-- IMAGES SECTION START -->
+        <section class="github-img-container main-padding">
+            <section>
+                <h2>Images showing part of commits history</h2>
+                <section class="image-grid">
+                    <img src="../img/history1.png" alt="commit1">
+                    <div class= "vertical"></div>
+                    <img src="../img/history2.png" alt="commit2">
+                </section>
+            </section>
+            <section>
+                <h2>Images showing a specific change</h2>
+                <section class="image-grid">
+                    <img src="../img/change1.png" alt="change1">
+                    <div class= "vertical"></div>
+                    <img src="../img/change2.png" alt="change2">
+                </section>
             </section>
         </section>
-        <section class="github-img2-container">
-            <h2 class="github-title-img2">Images showing a specific change</h2>
+        <!-- IMAGES SECTION END -->
+
+
+        <!-- TEXT SECTION START -->
+        <section class="main-padding">
+            <h2 class="center-horizontal">A short list of benefits of Git and Github in VS code</h2>
             <section class="image-grid">
-                <img src="../img/change1.png" alt="change1">
-                <img src="../img/change2.png" alt="change2">
+                <div>
+                    <h3>Github can make collaborations easier</h3>
+                    <p>
+                        When working in a team, collaboration and code reviews are important for keeping code quality gigh and to make sure that
+                        everyone´s contributions are in sync. Github together with Visual Studio Code can offer an easy way to achieve
+                        this by giving direct access to GitHub´s collaboration tools inside the editor. This can let developers review code,
+                        create and manage pull requests, leave comments, and work together in real-time. It can make it easier to collaborate
+                        with others because there is no need to constantly switch to a web browser. You can stay within the editor and still use
+                        all of GitHub´s features.
+                    </p>
+                </div>
+                <div class= "vertical"></div>
+                <div>
+                    <h3 >Git branches</h3>
+                    <p>
+                        Branches are an importan part of using Git becuase they let developers work on different features without
+                        affecting the main codebase. In Visual Studio Code, you can create new branches, switch between them, and merge
+                        them back into the main branch with just a few clicks when needed. By creating branches, developers can work and
+                        test their changes separately form the main branch. This can help to keep work organized and prevent conflicts from
+                        appearing between different pieces of code. Each branch can focus on a specific task or feature, making it easier to
+                        review and merge changes once the work is complete.
+                    </p>
+                </div>
             </section>
-        </section>
-    </section>
-<!-- IMAGES SECTION END -->
 
 
-<!-- TEXT SECTION START -->        
-        <section class="github-text-container">
-            <h2 class="github-title-text">A short list of benefits of Git and Github in VS code</h2>
-            <h3 class="github-title-text-point1">Github can make collaborations easier</h3>
-            <p>When working in a team, GitHub is often used to share and collaborate on code. With GitHub tools built into VS Code, you can review code changes, make comments, and open pull requests directly from the editor. This can make it easier to collaborate with others because you don’t need to switch to a web browser. You can work with your team in real-time without leaving the editor, and all the GitHub features are right at your fingertips</p>
-            <h3 class="github-title-text-point2">Git branches</h3>
-            <p>
-                Branches are a key part of using Git, allowing you to work on different features or fixes without affecting the main codebase. In VS Code, you can create new branches, switch between them, and merge changes back into the main branch with just a few clicks when needed. This can help to keep your work organized and prevent conflicts from appearing between different pieces of code. Plus, you can easily see which branch you’re working on at any time.
-            </p>
+
         </section>
     </section>
-<!-- TEXT SECTION END --> 
+    <!-- TEXT SECTION END -->
 
 </main>
 
 
-    <!-- FOOTER START -->    
-        <footer class="footerwrapper"> <!-- Footer navigation wrapper -->
-            <section class="footercontent">
-                <h2>newsletter</h2>
-                <button>subs</button>
-            </section>
+<!-- FOOTER START -->
+<footer class="footerwrapper"> <!-- Footer navigation wrapper -->
+    <section class="footercontent">
+        <h2>newsletter</h2>
+        <button>subs</button>
+    </section>
 
-            <section class="footercontent"> <!--Enda en nav bar for social links og andre ting-->
-        
-                <i class="fa-solid fa-house"> There's no place like home</i> <!--Placeholder-->
-                <a href="INSERT LINK">newsletter link that doesn't work</a> <!--Placeholder-->
-                <nav class="social-links">
-                    <ul class="social-links">
-                        <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                        <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
-                        <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
-                    </ul>
-                </nav>
-            </section>
-        </footer> 
-    <!-- FOOTER END -->  
-    
-    
-    </body>
+    <section class="footercontent"> <!--Enda en nav bar for social links og andre ting-->
+
+        <i class="fa-solid fa-house"> There's no place like home</i> <!--Placeholder-->
+        <a href="INSERT LINK">newsletter link that doesn't work</a> <!--Placeholder-->
+        <nav class="social-links">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
+                <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                </li>
+                <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+<!-- FOOTER END -->
+
+
+</body>
 </html>
