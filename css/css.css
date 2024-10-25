@@ -32,6 +32,16 @@ main {
   line-height: 1.5;
   letter-spacing: 0.04rem;
 }
+h1{
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+   font-size: 20px;
+}
+
 
 /* Accessible font size and line spacing */
 p {
@@ -298,8 +308,9 @@ a {
   /* --- GITHUB PAGE START ---- */
 
   .github-introduction-image{
-    margin-bottom: 5rem; /* Space between the sections */
+      margin-bottom: 5rem; /* Space between the sections */
       background-image: url('../img/Github-main-background.jpg'); /*Chooses image for the main heading */
+      text-shadow: 2px 2px #000000;
   }
   
   .github-img-container {
@@ -338,7 +349,7 @@ a {
     position: relative;
    
   }
-/* --- Accordion for MATMOD --- */
+/* --- Accordion for MATMOD and ACCESSIBILITY --- */
 /* Inspiration from https://www.w3schools.com/howto/howto_js_accordion.asp */
 
 /* Main container for the accordion */
