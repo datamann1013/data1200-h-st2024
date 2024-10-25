@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>  <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
-    <title>Github</title>
+    <title>GitHub</title>
 </head>
 <body>
 
@@ -25,25 +25,18 @@
         </article>
         <article>
             <div id="menuToggle">
-                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
-                <input type="checkbox"/>
+                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
+                 Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
+                <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
                 <span></span>
                 <span></span>
                 <span></span>
 
                 <ul id="menu">
-                    <a href="../index.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="accessibility.html">
-                        <li>Accessibility</li>
-                    </a>
-                    <a href="activity.html">
-                        <li>Activity</li>
-                    </a>
-                    <a href="github.html">
-                        <li>Github</li>
-                    </a>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="activity.html">Activity</a></li>
+                    <li><a href="github.html">GitHub</a></li>
                 </ul>
             </div>
         </article>
@@ -51,17 +44,17 @@
 </header>
 <!-- HEADER END -->
 
-
+<!-- MAIN SECTION START -->
 <main>
     <section>
-        <!--  INTRODUCTION SECTION -->
+        <!-- INTRODUCTION SECTION START -->
         <section class="top-text github-introduction-image">
 
             <h1>Welcome to Github</h1>
             <p>In this page you will find images showing part of commits history and specific changes. There will also
                 be a short text about collaboration in repositories like GitHub.</p>
         </section>
-        <!--  INTRODUCTION END -->
+        <!-- INTRODUCTION SECTION END -->
 
 
         <!-- IMAGES SECTION START -->
@@ -122,6 +115,7 @@
     <!-- TEXT SECTION END -->
 
 </main>
+<!-- MAIN SECTION END -->
 
 
 <!-- FOOTER START -->

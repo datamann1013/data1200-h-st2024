@@ -6,10 +6,11 @@
         <link rel="stylesheet" type="text/css" href="../css/css.css" />  <!-- Link to the external CSS file -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
-        <title>pls</title>
+        <title>Activity / OsloMetGaming</title>
     </head>
 
     <body>
+        <!-- HEADER START -->
         <header>
             <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
                 <article class="logo-box">
@@ -22,27 +23,29 @@
                     </div>
                 </article>
                 <article>
-                        <div id="menuToggle">
-                            <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
-                            <input type="checkbox" />
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            
-                            <ul id="menu">
-                                <a href="../index.html"><li>Home</li></a>
-                                <a href="accessibility.html"><li>Accessibility</li></a>
-                                <a href="activity.html"><li>Activity</li></a>
-                                <a href="github.html"><li>Github</li></a>
-                            </ul>
-                          </div>
-                      </div>  
+                    <div id="menuToggle">
+                        <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
+                         Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
+                        <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+        
+                        <ul id="menu">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="accessibility.html">Accessibility</a></li>
+                            <li><a href="activity.html">Activity</a></li>
+                            <li><a href="github.html">GitHub</a></li>
+                        </ul>
+                    </div>
                 </article>
             </nav>
         </header>
+        <!-- HEADER END -->
 
-<!--  ACTIVITY PAGE-->
+        <!--  ACTIVITY PAGE-->
 
+        <!-- MAIN SECTION START -->
         <main>
             <section>
                 <h1>Activity</h1>
@@ -51,7 +54,9 @@
 
             <article><!--Main info for denne siden--></article>
         </main>
+        <!-- MAIN SECTION END -->
 
+        <!-- FOOTER START -->
         <footer class="footerwrapper"> <!-- Footer navigation wrapper -->
             <section class="footercontent">
                 <h2>newsletter</h2>
@@ -71,6 +76,7 @@
                     </ul>
                 </nav>
             </section>
-        </footer>    
+        </footer>
+        <!-- FOOTER END -->
     </body>
 </html>
