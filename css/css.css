@@ -16,12 +16,6 @@ This is from Tengels lecture that covered this last year. */
   }
 }
 
-/* Scrolls smoothly when clicking links that leads to other sections within the current site */
-/* IKKE I BRUK: spørsmålet er om vi skal ha linker som går fra et sted til et annet innen samme side?*/
-html {
-  scroll-behavior: smooth;
-}
-
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
@@ -118,9 +112,7 @@ a {
    right: -100px;
 } 
 
-#flex {
-  display: flex;
-}
+
 /*|hamburgermenu*/
 #nav-item {
     /*Sourcecode of OsloMET https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap*/
@@ -166,7 +158,7 @@ a {
    
    z-index: 1;
    
-   transform-origin: 4px 0px;
+   transform-origin: 4px 0;
    
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -174,7 +166,7 @@ a {
  }
  /*Makes the cross in the hamburger look nicer*/
  #menuToggle span:nth-last-child(2) {
-   transform-origin: 0% 100%;
+   transform-origin: 0 100%;
  }
  
  /* Transform all the slices of hamburger into a crossmark.*/
@@ -201,14 +193,13 @@ a {
     position: absolute;
     width: 300px;
     margin: -100px 0 0 0;
-    padding: 50px;
-    padding-top: 225px;
-    right: -100px;
+     padding: 225px 50px 50px;
+     right: -100px;
    
    background: var(--main-background-color);
    list-style-type: none;
 
-   transform-origin: 0% 0%;
+   transform-origin: 0 0;
    transform: translate(100%, 0);
    
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
