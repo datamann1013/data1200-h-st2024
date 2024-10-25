@@ -297,7 +297,7 @@ a {
 
   .github-introduction-image {
       margin-bottom: 5rem; /* Space between the sections */
-      background-image: url('../img/Github-main-background.jpg'); /*Chooses image for the main heading */
+      background-image: url('../img/github-main-background.jpg'); /*Chooses image for the main heading */
       text-shadow: 2px 2px #000000;
   }
   
@@ -414,5 +414,5 @@ input[type="checkbox"]:checked + label .icon span {
 /* --- Accessibility --- */
 
 .accessibility-introduction-image{ /*Chooses image for the main heading */
-    background-image: url('../img/accessibility_header.png') ;
+    background-image: url('../img/accessibility-header.png') ;
 }
