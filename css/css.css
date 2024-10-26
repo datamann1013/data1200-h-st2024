@@ -434,8 +434,9 @@ input[type="checkbox"]:checked + label .icon span {
 }
 .survey-container {
     display: grid; /* Grid is used to arrange the images within the container */
-    grid-template-columns: 3fr 1fr; /* Two equal columns */
+    grid-template-columns: 3fr 10px 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
+    padding-bottom: 1rem;
 }
 
 /*Carousel borrowed from https://devdevout.com/css/css-cards */
@@ -622,7 +623,7 @@ input[type=button]{
 }
 
 input[type=button]:hover{
-    transform: translateX(45px);
+    transform: translateX(15px);
 }
 
 label{
