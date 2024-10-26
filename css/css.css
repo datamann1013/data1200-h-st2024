@@ -15,6 +15,7 @@ This is from Tengels lecture that covered this last year. */
       --diff-secondary-background-color: #61cdff;
   }
 }
+
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
@@ -23,6 +24,7 @@ body {
     font-family: Verdana, sans-serif;
     letter-spacing: 0.04rem;
 }
+
 /* Background color for the main tag on all sites */
 main {
   background-color: white;
@@ -191,7 +193,7 @@ a {
    opacity: 1;
    transform: rotate(-45deg) translate(0, -1px);
  }
- 
+
  #menu {
     position: absolute;
     width: 300px;
@@ -229,6 +231,7 @@ a {
      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
  }
+
 
  /* |Jen */
 
@@ -277,6 +280,7 @@ a {
     padding: 10px 0;
     font-size: 22px;
  }
+
 
   /*IKKE INTEGRERT*/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
@@ -421,3 +425,229 @@ input[type="checkbox"]:checked + label .icon span {
 .accessibility-introduction-image{ /*Chooses image for the main heading */
     background-image: url('../img/accessibility-header.png') ;
 }
+
+/* --- Activity --- */
+
+.activity-introduction-image{ /*Chooses image for the main heading */
+    background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg') ;
+}
+.survey-container {
+    display: grid; /* Grid is used to arrange the images within the container */
+    grid-template-columns: 3fr 10px 1fr; /* Two equal columns */
+    gap: 1rem; /* Gap between the images */
+    padding-bottom: 1rem;
+}
+
+/*Carousel borrowed from https://devdevout.com/css/css-cards */
+
+/*More spesifically https://codepen.io/hourwinner/pen/gOaWdNy*/
+
+.carousel {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 10px 20px 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    margin: 70px 0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+
+.carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #95bcd6;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-top: 70px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: 1000ms all;
+    transition: 1000ms all;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.carousel-item__details {
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0) 100%
+    );
+    font-size: 10px;
+    opacity: 0;
+    -webkit-transition: 450ms opacity;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-item__details:hover {
+    opacity: 1;
+}
+
+.carousel-item__details span {
+    /* width: 10px;
+    height: 10px; */
+    font-size: 0.9rem;
+    color: #2ecc71;
+    /* background-color: white; */
+}
+
+.carousel-item__details .controls {
+    padding-top: 180px;
+}
+
+.carousel-item__details .carousel-item__details--title,
+.carousel-item__details--subtitle {
+    color: #fff;
+    margin: 5px 0;
+}
+
+/* Survey form borowed from https://wpdean.com/css-forms/ */
+/*Spesifically https://codepen.io/erfan74sh/pen/bGpRago */
+
+.container-Form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #fad714, #ffbe05);
+    height: 550px;
+    width: 350px;
+}
+
+.register-div{
+    width: 300px;
+    height: 100%;
+    position: relative;
+}
+.title{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    margin-left: -25px;
+    border-left: 10px solid black;
+}
+
+.register-form{
+    position: absolute;
+    width: 100%;
+    top: 170px;
+}
+
+.input-div{
+    width: 100%;
+    font-size: 18px;
+}
+
+input{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: none;
+    border: none;
+    border-bottom: solid 1px black;
+    outline: none;
+    box-shadow: none;
+}
+
+input::selection{
+    background-color: black;
+    color: #fad714;
+}
+
+.bar::before{
+    display: block;
+    position: relative;
+    top: -27px;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: 250ms;
+}
+
+input:focus ~ .bar::before{
+    height: 2px;
+    width: 100%;
+}
+
+input[type=button]{
+    cursor: pointer;
+    height: 35px;
+    margin-left: auto;
+    margin-top: 15px;
+    font-size: 20px;
+    width: 50%;
+    background-color: black;
+    color: #fad714;
+    transition: 200ms;
+}
+
+input[type=button]:hover{
+    transform: translateX(15px);
+}
+
+label{
+    display: inline-block;
+    position: relative;
+    bottom: 27px;
+    transition: 200ms;
+    transform-origin: left;
+    cursor: text;
+}
+
+input:focus + label{
+    bottom: 50px;
+    transform: scale(.8);
+    font-weight: 400;
+}
+
+input:valid + label{
+    bottom: 50px;
+    transform: scale(.8);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: 100ms;
+}
+
