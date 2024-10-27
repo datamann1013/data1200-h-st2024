@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configure the viewport for responsive design -->
-    <link rel="stylesheet" type="text/css" href="css/css.css"/>  <!-- Link to the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/css.css"/> <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/images/graduation-cap-solid.ico">
+    <link rel="icon" type="image/x-icon" href="img/graduation-cap-solid.ico">
     <title>Matematisk modellering</title>
 </head>
 
@@ -18,26 +19,33 @@
             <img src="svg/OsloMET.svg" alt="OsloMET logo"/>
         </article>
         <article id="search">
-            <div id="flex">
+            <section id="flex">
                 <img src="svg/search-icon.svg" alt="search-icon">
-            </div>
+            </section>
         </article>
         <article>
-            <div id="menuToggle">
-                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
-                 Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
-                <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
+            <section id="menuToggle">
+                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.-->
+                <input type="checkbox"/>
                 <span></span>
                 <span></span>
                 <span></span>
 
                 <ul id="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="activity.html">Activity</a></li>
-                    <li><a href="github.html">GitHub</a></li>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="html/accessibility.html">
+                        <li>Accessibility</li>
+                    </a>
+                    <a href="html/activity.html">
+                        <li>Activity</li>
+                    </a>
+                    <a href="html/github.html">
+                        <li>Github</li>
+                    </a>
                 </ul>
-            </div>
+            </section>
         </article>
     </nav>
 </header>
@@ -47,8 +55,8 @@
 <main>
     <section class="matmod-video-format">
         <iframe class="matmod-video" title="Matematisk Modellering"
-                src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo%5fid=95216483"
-                allowfullscreen allow="autoplay; fullscreen"></iframe>
+                src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo%5fid=95216483" allowfullscreen
+                allow="autoplay; fullscreen"></iframe>
     </section>
 
     <article class="main-padding"><!--Main info for denne siden-->
@@ -57,460 +65,564 @@
             <h1><strong>Matematisk modelering og datavitenskap - Ingeniør</strong></h1>
             <p>Bachelorprogram</p>
         </section>
-        <div class="grid-Container">
-            <div class="grid-item">
+        <section class="grid-Container">
+            <section class="grid-item">
                 <p><strong>Studiested:</strong></p>
                 <p>Pilestredet i Oslo</p>
-            </div>
-            <div class="grid-item">
+            </section>
+            <section class="grid-item">
                 <p><strong>Varighet:</strong></p>
                 <p>3 år</p>
-            </div>
-            <div class="grid-item">
+            </section>
+            <section class="grid-item">
                 <p><strong>Omfang:</strong></p>
                 <p>Heltid</p>
-            </div>
-            <div class="grid-item">
+            </section>
+            <section class="grid-item">
                 <p><strong>Studiepoeng</strong></p>
                 <p>180</p>
-            </div>
-            <div class="grid-item">
+            </section>
+            <section class="grid-item">
                 <p><strong>Studiestart</strong></p>
                 <p>August</p>
-            </div>
-            <div class="grid-item">
+            </section>
+            <section class="grid-item">
                 <p><strong>Undervisningsspråk</strong></p>
                 <p>Norsk, engelsk</p>
-            </div>
-            <div class="grid-item">
+            </section>
+            <section class="grid-item">
                 <p><strong>Studieplasser</strong></p>
                 <p>40</p>
-            </div>
-        </div>
+            </section>
+        </section>
         <hr>
 
 
-        <div class="container-infobox">
+        <section class="container-infobox">
             <!-- Description section providing insight into the content -->
-            <div class="description-infobox">
-                <p>Få innsikt i matematiske og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
-                <p>Informasjon om program, timeplaner, pensum, fadderuker og mye mer finner du på studiestartsiden for
+            <section class="description-infobox">
+                <p>Få innsikt i matematiske og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige
+                    oppgaver.</p>
+                <p>Informasjon om program, timeplaner, pensum, fadderuker og mye mer finner du på studiestartsiden
+                    for
                     matematisk modellering og datavitenskap - ingeniør (student.oslomet.no).
 
-                    NB! Vær obs på at timeplanen som ligger på studiestartsiden er en timeplan for alle studentene på kullet.
+                    NB! Vær obs på at timeplanen som ligger på studiestartsiden er en timeplan for alle studentene
+                    på kullet.
 
-                    For å se din personlige timeplan må du logge deg inn på "Min side" (student.oslomet.no) etter at du har
+                    For å se din personlige timeplan må du logge deg inn på "Min side" (student.oslomet.no) etter at
+                    du har
                     aktivert IT-kontoen din og du er blitt plassert i klasse/gruppe. Dette skjer vanligvis uken før
                     studiestart.</p>
-            </div>
+            </section>
+        </section>
+    </article>
+    <article class="main-padding">
+        <!-- Accordion component that contains multiple items -->
+        <section class="accordion-infobox">
+            <!-- First accordion item -->
+            <input type="checkbox" id="item1"> <!-- Hidden checkbox for toggling content visibility -->
+            <label for="item1" class="accordion-item-infobox">
+                <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <section class="text">Opptakskrav og poeng</section> <!-- Title of the accordion item -->
+            </label>
+            <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <p>For å søke på dette programmet må du ha
 
-            <!-- Accordion component that contains multiple items -->
-            <div class="accordion-infobox">
-                <!-- First accordion item -->
-                <input type="checkbox" id="item1"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item1" class="accordion-item-infobox">
-                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                    <div class="text">Opptakskrav og poeng</div> <!-- Title of the accordion item -->
-                </label>
-                <div class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
-                    <p >For å søke på dette programmet må du ha
+                    generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse
+                    matematikk R1 og R2
+                    fysikk 1
+                    Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.
 
-                        generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse
-                        matematikk R1 og R2
-                        fysikk 1
-                        Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.
+                    Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du
+                    søke på dette
+                    studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
+            </section>
 
-                        Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette
-                        studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
-                </div>
+            <!-- Second accordion item -->
+            <input type="checkbox" id="item2"> <!-- Hidden checkbox for toggling content visibility -->
+            <label for="item2" class="accordion-item-infobox">
+                <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <section class="text">Slik søker du</section> <!-- Title of the accordion item -->
+            </label>
+            <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <p>Du søker på Samordna opptak med studiekode 215 503.
 
-                <!-- Second accordion item -->
-                <input type="checkbox" id="item2"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item2" class="accordion-item-infobox">
-                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                    <div class="text">Slik søker du</div> <!-- Title of the accordion item -->
-                </label>
-                <div class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
-                    <p>Du søker på Samordna opptak med studiekode 215 503.
+                    15. april: ordinær søknadsfrist
+                    1. mars: frist for enkelte søkere</p>
+                <p>Mer om å søke på bachelor.</p>
+            </section>
 
-                        15. april: ordinær søknadsfrist
-                        1. mars: frist for enkelte søkere</p>
-                    <p>Mer om å søke på bachelor.</p>
-                </div>
+            <!-- Third accordion item -->
+            <input type="checkbox" id="item3"> <!-- Hidden checkbox for toggling content visibility -->
+            <label for="item3" class="accordion-item-infobox">
+                <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <section class="text">Hva lærer du?</section> <!-- Title of the accordion item -->
+            </label>
+            <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk,
+                    fysikk og
+                    statistikk.
 
-                <!-- Third accordion item -->
-                <input type="checkbox" id="item3"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item3" class="accordion-item-infobox">
-                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                    <div class="text">Hva lærer du?</div> <!-- Title of the accordion item -->
-                </label>
-                <div class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
-                    <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og
-                        statistikk.
+                    Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i
+                    medisinsk kjemi,
+                    biologiske prosesser og ulike samfunnssystemer.
 
-                        Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i medisinsk kjemi,
-                        biologiske prosesser og ulike samfunnssystemer.
+                    Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi
+                    for å få en
+                    felles forståelse av tematikken.
 
-                        Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en
-                        felles forståelse av tematikken.
+                    Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i
+                    arbeidslivet.
 
-                        Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.
+                    Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
+                <p>Statistiske metoder og datadrevne metoder</p>
+                <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til
+                    å gjøre
+                    beregninger, for eksempel av fremtidige strømpriser.
+                    Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale
+                    datatyper.
+                    Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+                <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og
+                    fysiske
+                    problemer med numeriske metoder.
+                    Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske
+                    prosesser og annet.</p>
+                <p>Matematikk og fysikk</p>
+                <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig
+                    intelligens.
 
-                        Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
-                    <p>Statistiske metoder og datadrevne metoder</p>
-                    <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til å gjøre
-                        beregninger, for eksempel av fremtidige strømpriser.
-                        Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale datatyper.
-                        Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
-                    <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og fysiske
-                        problemer med numeriske metoder.
-                        Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.</p>
-                    <p>Matematikk og fysikk</p>
-                    <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.
+                    Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer,
+                    representasjonsteori og kategoriteori.
 
-                        Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer,
-                        representasjonsteori og kategoriteori.
+                    I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
+            </section>
 
-                        I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
-                </div>
+            <!-- Fourth accordion item -->
+            <input type="checkbox" id="item4"><!-- Hidden checkbox for toggling content visibility -->
+            <label for="item4" class="accordion-item-infobox">
+                <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <section class="text">Studiets oppbygging</section> <!-- Title of the accordion item -->
+            </label>
+            <section class="accordion-content-infobox">
+                <p>Her finner du informasjon om studiets oppbygging.</p>
+                <!-- Content displayed when the item is expanded -->
 
-                <!-- Fourth accordion item -->
-                <input type="checkbox" id="item4"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item4" class="accordion-item-infobox">
-                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                    <div class="text">Studiets oppbygging</div> <!-- Title of the accordion item -->
-                </label>
-                <div class="accordion-content-infobox">
-                    <p>Her finner du informasjon om studiets oppbygging.</p> <!-- Content displayed when the item is expanded -->
-                </div>
-            </div>
-        </div>
-        <p><strong>Studiets oppbygging</strong></p>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Valgfritt emne
+                            Løper over flere semestre
+                        <p>1. studieår</p>
+                        <p>1. semester</p>
+                    </section>
+                </section>
 
-        <p>Valgfritt emne
-            Løper over flere semestre
-        <p>1. studieår</p>
-        <p>1. semester</p>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Diskret matematikk</p>
+                        <p>DAPE1300</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Programmering</p>
+                        <p>DAPE1400</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Teknologi og samfunn for programmerere</p>
+                        <p>DATA1100</p>
+                        <p>5 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Innføring i modeller og beregninger</p>
+                        <p>MAMO1100</p>
+                        <p>5 stp.</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>2. semester</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Matematikk 1000</p>
+                        <p>DAFE1000</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Fysikk og kjemi</p>
+                        <p>DAPE2101</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Databaser</p>
+                        <p>DATA1500</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>2. studieår</p>
+                        <p>3. semester</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Matematikk 2000 med statistikk</p>
+                        <p>DAPE2000</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Moderne fysikk</p>
+                        <p>MAMO2100</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
 
-        <div class="grid-Container">
-            <div class="grid-item">
-                <p>Diskret matematikk</p>
-                <p>DAPE1300</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Programmering</p>
-                <p>DAPE1400</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Teknologi og samfunn for programmerere</p>
-                <p>DATA1100</p>
-                <p>5 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Innføring i modeller og beregninger</p>
-                <p>MAMO1100</p>
-                <p>5 stp.</p>
-            </div>
-        </div>
-        <p>2. semester</p>
-        <div class="grid-Container">
-            <div class="grid-item">
-                <p>Matematikk 1000</p>
-                <p>DAFE1000</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Fysikk og kjemi</p>
-                <p>DAPE2101</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Databaser</p>
-                <p>DATA1500</p>
-                <p>10 stp.</p>
-            </div>
-        </div>
-        <div class="grid-Container">
-            <div class="grid-item">
-            <p>2. studieår</p>
-            <p>3. semester</p>
-        </div>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>4. semester</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Matematikk 4000</p>
+                        <p>DAVE3705</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Emnegruppe: Matematikk og fysikk</p>
+                            <p>3. semester</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Lineær algebra og introduksjon til gruppeteori</p>
+                            <p>MAMO2300</p>
+                            <p>10 stp.</p>
+                        </section>
+                    </section>
 
-            <div class="grid-item">
-                <p>Matematikk 2000 med statistikk</p>
-                <p>DAPE2000</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Moderne fysikk</p>
-                <p>MAMO2100</p>
-                <p>10 stp.</p>
-            </div>
-        </div>
-            <p>4. semester</p>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>4. semester</p>
+                        </section>
+                    </section>
 
-            <div class="grid-item">
-                <p>Matematikk 4000</p>
-                <p>DAVE3705</p>
-                <p>10 stp.</p>
-            </div>
-            <p>Emnegruppe: Matematikk og fysikk</p>
-            <p>3. semester</p>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Termodynamikk og statistisk fysikk</p> MAMO2400
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Symmetrier og algebraiske strukturer</p>
+                            <p>MAMO2500</p>
+                            <p>10 stp.</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Emnegruppe: Statistiske og datadrevne metoder</p>
+                            <p>3. semester</p>
+                        </section>
+                    </section>
+                    <section class="grid-item">
+                        <p>Algoritmer og datastrukturer</p>
+                        <p>DATS2300</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
 
-            <div class="grid-item">
-                <p>Lineær algebra og introduksjon til gruppeteori</p>
-                <p>MAMO2300</p>
-                <p>10 stp.</p>
-            </div>
-            <p>4. semester</p>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>4. semester</p>
+                    </section>
+                </section>
 
-            <div class="grid-item">
-                <p>Termodynamikk og statistisk fysikk</p> MAMO2400
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Symmetrier og algebraiske strukturer</p>
-                <p>MAMO2500</p>
-                <p>10 stp.</p>
-            </div>
-            <p>Emnegruppe: Statistiske og datadrevne metoder</p>
-            <p>3. semester</p>
-            <div class="grid-item">
-                <p>Algoritmer og datastrukturer</p>
-                <p>DATS2300</p>
-                <p>10 stp.</p>
-            </div>
-            <p>4. semester</p>
 
-            <div class="grid-item">
-                <p>Statistisk analyse</p>
-                <p>MAMO3100</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Visualisering</p>
-                <p>ADSE3200</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Avansert modellering og beregninger</p>
-                <p>MAMO2200</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-Container">
-                <div class="grid-item">
-            <p>Emnegruppe: Vitenskapelige beregninger</p>
-            <p>4. semester</p>
-        </div>
-        </div>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Statistisk analyse</p>
+                        <p>MAMO3100</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Visualisering</p>
+                        <p>ADSE3200</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Avansert modellering og beregninger</p>
+                        <p>MAMO2200</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Emnegruppe: Vitenskapelige beregninger</p>
+                        <p>4. semester</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Ressurseffektive programmer</p>
+                        <p>DAVE3606</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Avansert modellering og beregninger</p>
+                        <p>MAMO2200</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>3. studieår</p>
+                        <p>5. semester</p>
+                    </section>
+                </section>
 
-            <div class="grid-item">
-                <p>Ressurseffektive programmer</p>
-                <p>DAVE3606</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-item">
-                <p>Avansert modellering og beregninger</p>
-                <p>MAMO2200</p>
-                <p>10 stp.</p>
-            </div>
-            <div class="grid-Container">
-                <div class="grid-item">
-            <p>3. studieår</p>
-            <p>5. semester</p>
-                </div>
-        </div>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Matematikk 3000</p>
+                        <p>DAVE3700</p>
+                        <p>10 stp.</p>
+                    </section>
 
-            <div class="grid-item"></div>
-            <p>Matematikk 3000</p>
-            <p>DAVE3700</p>
-            <p>10 stp.</p>
-        </div>
-        <p>6. semester</p>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>6. semester</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Bacheloroppgave</p>
+                            <p>DATA3900</p>
+                            <p>20 stp.</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Emnegruppe: Matematikk og fysikk</p>
+                            <p>5. semester</p>
+                        </section>
+                    </section>
 
-        <div class="grid-item"></div>
-        <p>Bacheloroppgave</p>
-        <p>DATA3900</p>
-        <p>20 stp.</p>
-        </div>
-        <div class="grid-Container">
-            <div class="grid-item">
-        <p>Emnegruppe: Matematikk og fysikk</p>
-        <p>5. semester</p>
-        </div>
-        </div>
-        <div class="grid-item">
-            <p>Reell analyse</p>
-            <p>MAMO3300</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Introduksjon til IT-forskning</p>
-            <p>DATA3730</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Introduction to Data Science with Scripting</p>
-            <p>DATA3800</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Datasikkerhet</p>
-            <p>ITPE3100</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Simulering og visualisering</p>
-            <p>MAMO3200</p>
-            <p>10 stp.</p>
-        </div>
-        <p>6. semester</p>
-        <div class="grid-item">
-            <p>Testing av programvare</p>
-            <p>ADTS2310</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Datanettverk og skytjenester</p>
-            <p>DATA2410</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Ressurseffektive programmer</p>
-            <p>DAVE3606</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Avansert modellering og beregninger</p>
-            <p>MAMO2200</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-Container">
-            <div class="grid-item">
-        <p>Emnegruppe: Statistiske og datadrevne metoder</p>
-        <p>5. semester</p>
-    </div>
-    </div>
-        <div class="grid-item">
-            <p>Introduksjon til Kunstig Intelligens</p>
-            <p>DAVE3625</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Introduksjon til IT-forskning</p>
-            <p>DATA3730</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Anvendt kunstig intelligens og data science prosjekt</p>
-            <p>DATA3750</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Datasikkerhet</p>
-            <p>ITPE3100</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Simulering og visualisering</p>
-            <p>MAMO3200</p>
-            <p>10 stp.</p>
-        </div>
-        <p>6. semester</p>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Reell analyse</p>
+                            <p>MAMO3300</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Introduksjon til IT-forskning</p>
+                            <p>DATA3730</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Introduction to Data Science with Scripting</p>
+                            <p>DATA3800</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Datasikkerhet</p>
+                            <p>ITPE3100</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Simulering og visualisering</p>
+                            <p>MAMO3200</p>
+                            <p>10 stp.</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>6. semester</p>
+                        </section>
+                    </section>
 
-        <div class="grid-item">
-            <p>Testing av programvare
-            <p>ADTS2310</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Datanettverk og skytjenester</p>
-            <p>DATA2410</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Ressurseffektive programmer</p>
-            <p>DAVE3606</p>
-            <p>10 stp.</p>
-        </div>
-        <p>Emnegruppe: Vitenskapelige beregninger</p>
-        <p>5. semester</p>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Testing av programvare</p>
+                            <p>ADTS2310</p>
+                            <p>10 stp.</p>
+                        </section>
 
-        <div class="grid-item">
-            <p>Simulering og visualisering</p>
-            <p>MAMO3200</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Introduksjon til IT-forskning</p>
-            <p>DATA3730</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Datasikkerhet</p>
-            <p>ITPE3100</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Lineær algebra og introduksjon til gruppeteori</p>
-            <p>MAMO2300</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Reell analyse</p>
-            <p>>MAMO3300</p>
-            <p>10 stp.</p>
-        </div>
-        <p>6. semester</p>
-        <div class="grid-item">
-            <p>Visualisering</p>
-            <p>ADSE3200</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Testing av programvare</p>
-            <p>ADTS2310</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Datanettverk og skytjenester</p>
-            <p>DATA2410</p>
-            <p>10 stp.</p>
-        </div>
-        <div class="grid-item">
-            <p>Symmetrier og algebraiske strukturer</p>
-            <p>MAMO2500</p>
-            <p>10 stp.</p>
-        </div>
-        </div>
+                        <section class="grid-item">
+                            <p>Datanettverk og skytjenester</p>
+                            <p>DATA2410</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Ressurseffektive programmer</p>
+                            <p>DAVE3606</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Avansert modellering og beregninger</p>
+                            <p>MAMO2200</p>
+                            <p>10 stp.</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Emnegruppe: Statistiske og datadrevne metoder</p>
+                            <p>5. semester</p>
+                        </section>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Introduksjon til Kunstig Intelligens</p>
+                            <p>DAVE3625</p>
+                            <p>10 stp.</p>
+                        </section>
+
+                        <section class="grid-item">
+                            <p>Introduksjon til IT-forskning</p>
+                            <p>DATA3730</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Anvendt kunstig intelligens og data science prosjekt</p>
+                            <p>DATA3750</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Datasikkerhet</p>
+                            <p>ITPE3100</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <section class="grid-item">
+                            <p>Simulering og visualisering</p>
+                            <p>MAMO3200</p>
+                            <p>10 stp.</p>
+                        </section>
+                    </section>
+
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>6. semester</p>
+                        </section>
+                    </section>
+
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>Testing av programvare
+                            <p>ADTS2310</p>
+                            <p>10 stp.</p>
+                        </section>
+                        <s class="grid-item">
+                            <p>Datanettverk og skytjenester</p>
+                            <p>DATA2410</p>
+                            <p>10 stp.</p>
+                        </s>
+                    </section>
+                    <section class="grid-item">
+                        <p>Ressurseffektive programmer</p>
+                        <p>DAVE3606</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
+
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Emnegruppe: Vitenskapelige beregninger</p>
+                        <p>5. semester</p>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Simulering og visualisering</p>
+                        <p>MAMO3200</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Introduksjon til IT-forskning</p>
+                        <p>DATA3730</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Datasikkerhet</p>
+                        <p>ITPE3100</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Lineær algebra og introduksjon til gruppeteori</p>
+                        <p>MAMO2300</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Reell analyse</p>
+                        <p>MAMO3300</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-Container">
+                        <section class="grid-item">
+                            <p>6. semester</p>
+                        </section>
+                    </section>
+                </section>
+                <section class="grid-Container">
+                    <section class="grid-item">
+                        <p>Visualisering</p>
+                        <p>ADSE3200</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Testing av programvare</p>
+                        <p>ADTS2310</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Datanettverk og skytjenester</p>
+                        <p>DATA2410</p>
+                        <p>10 stp.</p>
+                    </section>
+                    <section class="grid-item">
+                        <p>Symmetrier og algebraiske strukturer</p>
+                        <p>MAMO2500</p>
+                        <p>10 stp.</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+    </article>
+    <article class="main-padding">
+
         <p><strong>Hvordan foregår undervisningen?</strong></p>
         <p>Undervisningen er en kombinasjon av
 
-            prosjektarbeid
-            workshop
-            presentasjoner
-            veiledninger
-            diskusjoner og refleksjoner
-            forelesninger
-            selvstudier
-            gruppearbeid
-            arbeidslivsrelevant bacheloroppgave
-            For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert
-            arbeid gjennom hele semesteret.  </p>
+        <ul>
+            <li>prosjektarbeid</li>
+            <li>workshop</li>
+            <li>presentasjoner</li>
+            <li>veiledninger</li>
+            <li>diskusjoner og refleksjoner</li>
+            <li>forelesninger</li>
+            <li>selvstudier</li>
+            <li>gruppearbeid</li>
+            <li>arbeidslivsrelevant bacheloroppgave</li>
+        </ul>
+        <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på</p>
+        <p>studierelatert</p>
+        <p>arbeid gjennom hele semesteret.</p>
         <p><strong>Hva koster det?</strong></p>
-        <p>Det er ikke studieavgift på dette studiet. Du betaler en semesteravgift hvert semester
-            (student.oslomet.no).</p>
+        <p>Det er ikke studieavgift på dette studiet. Du betaler en semesteravgift hvert semester</p>
+        <p>(student.oslomet.no).</p>
         <p><strong>Hva kan du jobbe som?</strong></p>
         <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger
-            spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.
+        <p>spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
 
-            Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt
-            kompetanse i arbeidslivet etter bachelorstudiet.
+        <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du
+            etterspurt</p>
+        <p>kompetanse i arbeidslivet etter bachelorstudiet.</p>
 
-            Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger
-            knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.
+        <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel
+            beregninger</p>
+        <p>knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.
 
             Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet. </p>
         <p><strong>Utveksling</strong></p>
@@ -524,7 +636,7 @@
         <h4>Spørsmål om utdanningen?</h4>
         <p><strong>Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</strong></p>
         <h5>Faglig leder</h5>
-        <img src="../img/matmod-faglig-leder.jpg">
+        <img src="img/matmod-faglig-leder.jpg">
         <p><strong>Kristoffer Herland Hellton</strong></p>
         <p>Førsteamanuensis</p>
         <p>+47 672 37 240 | kristoffer.hellton@oslomet.no</p>
@@ -545,14 +657,18 @@
         <a href="INSERT LINK">newsletter link that doesn't work</a> <!--Placeholder-->
         <nav class="social-links">
             <ul class="social-links">
-                <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
+                <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                </li>
+                <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a>
+                </li>
                 <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a>
                 </li>
-                <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
+                <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                </li>
             </ul>
         </nav>
     </section>
 </footer>
 </body>
+
 </html>
