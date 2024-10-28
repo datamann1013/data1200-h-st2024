@@ -17,19 +17,22 @@ This is from Tengels lecture that covered this last year. */
 
   }
 }
+html{
+    background-color: #fed400;
+}
 
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
-    background-color: var(--main-background-color);
+
     font-family: Verdana, sans-serif;
     letter-spacing: 0.04rem;
 }
 
 /* Background color for the main tag on all sites */
 main {
-  background-color: var(--secondary-background-color);
+    background-color: white;
   /* Accessible font size, line height, letter-spacing and word-breaks*/
   font-size: 1rem;
   line-height: 1.5;
@@ -162,7 +165,7 @@ a {
    height: 4px;
    margin-bottom: 5px;
    position: relative;
-   
+
    background: #000000;
    border-radius: 3px;
    
@@ -205,7 +208,7 @@ a {
      padding: 225px 50px 50px;
      right: -100px;
    
-   background: var(--main-background-color);
+   background: #fed400;
    list-style-type: none;
 
    transform-origin: 0 0;
@@ -341,10 +344,10 @@ a {
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 20px;
-    border-top: 1px solid var(--main-font-color);
+    border-top: 1px solid black;
   }
   .grid-item {
-    border-bottom: 1px solid var(--main-font-color);
+    border-bottom: 1px solid black;
     padding-bottom: 20px;
     position: relative;
    
@@ -368,7 +371,7 @@ a {
 
 /* Accordion component styles */
 .accordion-infobox {
-    border-top: 1px solid var(--main-font-color); /* Adds a light gray top border to the accordion */
+    border-top: 1px solid black; /* Adds a black top border to the accordion */
 }
 
 /* Individual accordion item styling */
@@ -376,7 +379,7 @@ a {
     display: flex; /* Uses flexbox layout for the accordion item */
     align-items: center; /* Vertically centers items within the flex container */
     padding: 15px 0; /* Adds vertical padding to the item */
-    border-bottom: 1px solid var(--main-font-color); /* Adds a light gray bottom border */
+    border-bottom: 1px solid black; /* Adds a black bottom border */
     cursor: pointer; /* Changes the cursor to a pointer to indicate clickable items */
 }
 
@@ -401,7 +404,7 @@ a {
 .accordion-item-infobox .text {
     font-size: 18px; /* Sets the font size for the accordion item text */
     font-weight: bold; /* Makes the item text bold */
-    color: var(--main-font-color);
+    color: black;
 }
 
 /* Content area of the accordion */
