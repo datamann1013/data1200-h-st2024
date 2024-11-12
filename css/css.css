@@ -1,12 +1,12 @@
 /* Darkmode is activated when the users preferences are set to 
 enable darkmode on applicable websites.
 This is from Tengels lecture that covered this last year. */
-@media only screen and (prefers-color-scheme: dark) {
+@media only screen {
   :root {
       /* General colors: */
       --main-background-color: #fed400;
       --secondary-background-color: #292929;
-      --main-font-color: #eeeeee;
+      
       /* Lighter links for darkmode */
       --body-link-color: #58a6ff;
       --body-link-color-visited: #B661FF;
@@ -19,6 +19,7 @@ This is from Tengels lecture that covered this last year. */
 }
 html{
     background-color: #fed400;
+    
 }
 
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
