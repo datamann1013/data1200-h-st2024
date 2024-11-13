@@ -58,11 +58,7 @@ a {
    color: #232323;
    transition: color 0.3s ease;
  }
- /*Fant denne a'en på bunnen, hvorfor har vi to?*/
-a{
-    color: black;
-    transition: 100ms;
-}
+
  
  a:hover {
    color: #4D4DFF;
