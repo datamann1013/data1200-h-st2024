@@ -290,7 +290,7 @@ a{
       text-shadow: 2px 2px #000000;
   }
   
-  .github-img-container {
+  .img-container {
     margin-bottom: 5rem; /* Space between the sections */
   }
   
@@ -307,11 +307,6 @@ a{
     .vertical{
         display: none;
     }
-  }
-
-  .image-container{
-    height: 70%;
-    float: left;
   }
 
   .image-grid img {
