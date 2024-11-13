@@ -300,6 +300,15 @@ a{
     gap: 1rem; /* Gap between the images */
   }
 
+  @media (max-width: 768px) {
+    .image-grid{
+        grid-template-columns: 1fr;
+    }
+    .vertical{
+        display: none;
+    }
+  }
+
   .image-container{
     height: 70%;
     float: left;
