@@ -32,7 +32,6 @@ main {
 }
 
 h1,h2,h3,h4,p,hr{
-    color: var(--main-font-color);
     /* Accessible line height, letter-spacing and word-breaks for better readability*/
     line-height: 1.3em;
     letter-spacing: 0.04rem;
@@ -58,15 +57,11 @@ a {
    color: #232323;
    transition: color 0.3s ease;
  }
- /*Fant denne a'en på bunnen, hvorfor har vi to?*/
-a{
-    color: black;
-    transition: 100ms;
-}
- 
+
+
  a:hover {
    color: #4D4DFF;
-   
+
  }
 
  /*Main functionality */
@@ -290,7 +285,7 @@ a{
       text-shadow: 2px 2px #000000;
   }
   
-  .github-img-container {
+  .img-container {
     margin-bottom: 5rem; /* Space between the sections */
   }
   
@@ -300,9 +295,13 @@ a{
     gap: 1rem; /* Gap between the images */
   }
 
-  .image-container{
-    height: 70%;
-    float: left;
+  @media (max-width: 768px) {
+    .image-grid{
+        grid-template-columns: 1fr;
+    }
+    .vertical{
+        display: none;
+    }
   }
 
   .image-grid img {
@@ -623,7 +622,7 @@ input:valid + label{
    #menu {
      transform: none;
      opacity: 0;
- 
+
      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
     h1 {
@@ -646,7 +645,7 @@ input:valid + label{
       flex-direction: column;
     }
 }
-  /* Responsive layout - makes the three columns stack on top of each other 
+  /* Responsive layout - makes the three columns stack on top of each other
   instead of next to each other on smaller screens (600px wide or less) */
 /*   @media screen and (max-width: 600px) {
     .column {
