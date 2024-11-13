@@ -32,7 +32,7 @@ main {
 }
 
 h1,h2,h3,h4,p,hr{
-    color: var(--main-font-color);
+    color: var(--body-font-color);
     /* Accessible line height, letter-spacing and word-breaks for better readability*/
     line-height: 1.3em;
     letter-spacing: 0.04rem;
@@ -59,10 +59,10 @@ a {
    transition: color 0.3s ease;
  }
 
- 
+
  a:hover {
    color: #4D4DFF;
-   
+
  }
 
  /*Main functionality */
@@ -623,7 +623,7 @@ input:valid + label{
    #menu {
      transform: none;
      opacity: 0;
- 
+
      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
     h1 {
@@ -646,7 +646,7 @@ input:valid + label{
       flex-direction: column;
     }
 }
-  /* Responsive layout - makes the three columns stack on top of each other 
+  /* Responsive layout - makes the three columns stack on top of each other
   instead of next to each other on smaller screens (600px wide or less) */
 /*   @media screen and (max-width: 600px) {
     .column {
