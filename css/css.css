@@ -1,67 +1,75 @@
-/* Darkmode is activated when the users preferences are set to 
-enable darkmode on applicable websites.
-This is from Tengels lecture that covered this last year. */
-@media only screen and (prefers-color-scheme: dark) {
-  :root {
-      /* General colors: */
-      --main-background-color: #fed400;
-      --secondary-background-color: #292929;
-      --main-font-color: #eeeeee;
-      /* Lighter links for darkmode */
-      --body-link-color: #58a6ff;
-      --body-link-color-visited: #B661FF;
-      /* For the site with a different theme */
-      --diff-background-color: #77000e;
-      --diff-secondary-background-color: #61cdff;
-      --navbar-background-color: #fed400;
-
+:root {
+    /* General colors: */
+    --main-background-color: #f0f0f0;
+    --secondary-background-color: #fed400;
+    --body-font-color: #000000;
+    /* Lighter links for darkmode */
+    --a-color: #4D4DFF;
+    --a-color-visited: #551A8B;
+    /* For the site with a different theme */
+    --diff-background-color: #77000e;
+    --diff-secondary-background-color: #61cdff;
+    --navwrapper-background-color: #fed400;
   }
+
+html{
+    /*Accessible font size in a relative unit*/
+    font-size: 100%;
 }
 
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
-    background-color: var(--main-background-color);
+
     font-family: Verdana, sans-serif;
-    letter-spacing: 0.04rem;
+    background-color: var(--secondary-background-color);
 }
 
 /* Background color for the main tag on all sites */
 main {
-  background-color: var(--secondary-background-color);
-  /* Accessible font size, line height, letter-spacing and word-breaks*/
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0.04rem;
-  word-break: normal;
+    background-color: var(--main-background-color);
 }
+
 h1,h2,h3,h4,p,hr{
     color: var(--main-font-color);
+    /* Accessible line height, letter-spacing and word-breaks for better readability*/
+    line-height: 1.3em;
+    letter-spacing: 0.04rem;
+    word-break: normal;
 }
 h1 {
-    font-size: 60px;
+    font-size: 4rem;
 }
 h2 {
-    font-size: 40px;
+    font-size: 2rem;
 }
 h3 {
-   font-size: 20px;
+   font-size: 1.5rem;
 }
 
-a {
-   text-decoration: none;
-   color: #232323;
+img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 
+
+a {
+   color: #232323;
    transition: color 0.3s ease;
  }
+ /*Fant denne a'en på bunnen, hvorfor har vi to?*/
+a{
+    color: black;
+    transition: 100ms;
+}
  
  a:hover {
-   color: #fe0000;
+   color: #4D4DFF;
+   
  }
 
  /*Main functionality */
-
  .main-padding {
      margin: 2rem 4rem;
      padding: 2rem;
@@ -162,7 +170,7 @@ a {
    height: 4px;
    margin-bottom: 5px;
    position: relative;
-   
+
    background: #000000;
    border-radius: 3px;
    
@@ -205,7 +213,7 @@ a {
      padding: 225px 50px 50px;
      right: -100px;
    
-   background: var(--main-background-color);
+   background: var(--secondary-background-color);
    list-style-type: none;
 
    transform-origin: 0 0;
@@ -225,17 +233,6 @@ a {
    opacity: 1;
  }
 
- /*Action happening when the screen becomes smaller*/
- @media screen and (max-width: 768px) {
-    /*Makes the menu not slide in, but slowly appear*/
-   #menu {
-     transform: none;
-     opacity: 0;
- 
-     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-   }
- }
-
 
  /* |Jen */
 
@@ -246,7 +243,7 @@ a {
     flex-direction: column;
     align-items: center;
 
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
     
     /* grid-template-columns:repeat(3, 1fr);
     grid-auto-rows: minmax(200px, auto); */
@@ -277,29 +274,13 @@ a {
     display: flex;
     flex-direction: column;
     width: 30vw;
-    font-size: 22px;
+    font-size: 1rem;
  }
 
  #social-links li {
     padding: 10px 0;
-    font-size: 22px;
+    font-size: 1rem;
  }
-
-
-  /*IKKE INTEGRERT*/
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-/*   @media (max-width: 800px) {
-    .flex-container {
-      flex-direction: column;
-    }
-}
-  /* Responsive layout - makes the three columns stack on top of each other 
-  instead of next to each other on smaller screens (600px wide or less) */
-/*   @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    } */
-
 
   /* --- GITHUB PAGE START ---- */
 
@@ -341,10 +322,10 @@ a {
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 20px;
-    border-top: 1px solid var(--main-font-color);
+    border-top: 1px solid black;
   }
   .grid-item {
-    border-bottom: 1px solid var(--main-font-color);
+    border-bottom: 1px solid black;
     padding-bottom: 20px;
     position: relative;
    
@@ -360,15 +341,15 @@ a {
 
 /* Description text within the accordion */
 .description-infobox {
-    font-size: 20px; /* Sets the font size for the description text */
-    line-height: 1.5; /* Sets the line height for better readability */
+    font-size: 1.2rem; /* Sets the font size for the description text */
     margin-bottom: 20px; /* Adds space below the description */
 
 }
 
 /* Accordion component styles */
 .accordion-infobox {
-    border-top: 1px solid var(--main-font-color); /* Adds a light gray top border to the accordion */
+    /* border-top: 1px solid black; */ /* Adds a black top border to the accordion FUNKER IKKE :(*/
+    margin-top: 2rem;
 }
 
 /* Individual accordion item styling */
@@ -376,7 +357,7 @@ a {
     display: flex; /* Uses flexbox layout for the accordion item */
     align-items: center; /* Vertically centers items within the flex container */
     padding: 15px 0; /* Adds vertical padding to the item */
-    border-bottom: 1px solid var(--main-font-color); /* Adds a light gray bottom border */
+    border-bottom: 1px solid black; /* Adds a black bottom border */
     cursor: pointer; /* Changes the cursor to a pointer to indicate clickable items */
 }
 
@@ -384,11 +365,11 @@ a {
 .accordion-item-infobox .icon {
     width: 40px; /* Sets a fixed width for the icon */
     height: 40px; /* Sets a fixed height for the icon */
-    background-color: var(--main-background-color); /* Sets a gold background color for the icon */
+    background-color: var(--secondary-background-color); /* Sets a gold background color for the icon */
     display: flex; /* Uses flexbox layout for the icon container */
     align-items: center; /* Centers the icon content vertically */
     justify-content: center; /* Centers the icon content horizontally */
-    margin-right: 15px; /* Adds space to the right of the icon */
+    margin-right: 1rem; /* Adds space to the right of the icon */
 }
 
 /* Icon text styling */
@@ -401,7 +382,7 @@ a {
 .accordion-item-infobox .text {
     font-size: 18px; /* Sets the font size for the accordion item text */
     font-weight: bold; /* Makes the item text bold */
-    color: var(--main-font-color);
+    color: black;
 }
 
 /* Content area of the accordion */
@@ -428,7 +409,8 @@ input[type="checkbox"]:checked + label .icon span {
 /* --- Accessibility --- */
 
 .accessibility-introduction-image{ /*Chooses image for the main heading */
-    background-image: url('../img/accessibility-header.png') ;
+    background-image: url('../img/accessibility-header.png');
+    text-shadow: 2px 2px #000000;
 }
 
 /* --- Activity --- */
@@ -634,9 +616,40 @@ input:valid + label{
     transform: scale(.8);
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    transition: 100ms;
-}
 
+ /*Action happening when the screen becomes smaller*/
+ @media screen and (max-width: 768px) {
+    /*Makes the menu not slide in, but slowly appear*/
+   #menu {
+     transform: none;
+     opacity: 0;
+ 
+     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   }
+    h1 {
+    font-size: 2rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+    font-size: 0.7rem;
+    }
+    .main-padding {
+        margin: 0.5rem 0.7rem;
+        padding: 0.7rem;
+    }
+      /*IKKE INTEGRERT*/
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/*   @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+}
+  /* Responsive layout - makes the three columns stack on top of each other 
+  instead of next to each other on smaller screens (600px wide or less) */
+/*   @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    } */
+ }
