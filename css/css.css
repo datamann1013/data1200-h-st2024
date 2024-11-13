@@ -32,7 +32,6 @@ main {
 }
 
 h1,h2,h3,h4,p,hr{
-    color: var(--body-font-color);
     /* Accessible line height, letter-spacing and word-breaks for better readability*/
     line-height: 1.3em;
     letter-spacing: 0.04rem;
