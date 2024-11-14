@@ -401,7 +401,9 @@ footer ul {
 /* Content area of the accordion */
 .accordion-content-infobox {
     display: none; /* Hides the content area of the accordion by default */
-    padding: 15px 0; /* Adds vertical padding to the content area */
+    margin-top: -50px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px;
     border-bottom: 1px solid var(--main-background-color); /* Adds a light gray bottom border */
 }
 
