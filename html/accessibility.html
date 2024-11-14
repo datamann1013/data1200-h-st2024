@@ -2,8 +2,8 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configure the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>  <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
@@ -11,238 +11,257 @@
 </head>
 
 <body>
-<!-- HEADER START -->
-<header>
-    <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
-        <section class="logo-box">
-            <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-            <img src="../svg/OsloMET.svg" alt="OsloMET logo"/>
-        </section>
-        <section id="search">
-            <div id="flex">
-                <img src="../svg/search-icon.svg" alt="search-icon">
-            </div>
-        </section>
-        <section>
-            <div id="menuToggle">
-                <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
-                 Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
-                <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- HEADER START -->
+    <header>
+        <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
+            <section class="logo-box">
+                <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
+                <img src="../svg/OsloMET.svg" alt="OsloMET logo"/>
+            </section>
+            <section id="search">
+                <div id="flex">
+                    <img src="../svg/search-icon.svg" alt="search-icon">
+                </div>
+            </section>
+            <section id="menuToggle">
+                    <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
+                    Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
+                    <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-                <ul id="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="activity.html">Activity</a></li>
-                    <li><a href="github.html">GitHub</a></li>
-                </ul>
-            </div>
-        </section>
-    </nav>
-</header>
-<!-- HEADER END -->
-
-<!--  ACCESSIBILITY PAGE
-
-Har ikke fiksa formatering med css enda, kun notert for accessibility teksten.
-
-Assignment text:
-Short presentation of accessibility for your site. Test your site with an automated test. Write a very short text
-(between 400 and 500 words) about the coding choices you made for universal design beyond what an
-automated test could tell you. You are recommended to use screenshots from the testing site and of your code.
-When using automated tests, you still have a responsibility to check The coding choices made to enhance xyz was implementet by xyz manually as well. Errors/ non-
-compliance may appear even if the automated test gives an All clear-verdict. -->
-
-<!-- MAIN SECTION START -->
-<main>
-    <!-- INTRODUCTION SECTION START -->
-    <section class="top-text accessibility-introduction-image">
-        <h1>Accessibility</h1>
-        <p>welcome to accessibility hell</p>
-    </section>
-    <!-- INTRODUCTION SECTION END -->
-
-    <!-- Main container for the accordion component -->
-    <!--Main info for denne siden
-            Write a very short text (between 400 and 500 words) about the coding choices
-            you made for universal design beyond what an automated test could tell you.-->
-
-    <article class="container-infobox main-padding">
-        <!-- Description section providing insight into the content -->
-        <section class="description-infobox">
-            Add some descriptive text
-        </section>
-
-        <!-- Accordion component that contains multiple items -->
-        <section class="accordion-infobox">
-            <!-- First accordion item -->
-            <input type="checkbox" id="item1"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item1" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Font and Readability</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p>We chose the font Verdana, with sans-serif as a backup. The justification for this choice
-                    was based on it's legibility and accessible design. The font differatiates the letters
-                    well even in small textsizes. We've avoided fonts featuring “imposter letter shapes”.
-                    These include characters that are visually similar, but not the same,
-                    for example uppercase Is, the number 1 and lowercase Ls.
-                    <!--https://www.siteimprove.com/glossary/accessible-fonts/-->
-                <p>All paragraphs use the reccommended 1.5 line-height to make the text easier to read.
-                    We've ensured that the textsize is rem to scale it properly based on individual user needs.
-                    letter-spacing is 0.04rem
-                </p>
-                </p>
-                <!-- Content displayed when the item is expanded -->
-            </div>
-
-            <!-- Second accordion item -->
-            <input type="checkbox" id="item2"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item2" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Structure</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p>General layout, clear headers and high-resolution images.
-                    Understandable: Implicitly imply the content without needing to read everything.
-                    Keeping headers in correct order
-                    The content scales nicely when transitioning between smaller and larger screen sizes.
-                    Specifically, the text's width and height remains the same by using media queries.
-                    Max width for larger screens???
-                </p>
-                <!-- Content displayed when the item is expanded -->
-            </div>
-
-            <!-- Third accordion item -->
-            <input type="checkbox" id="item3"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item3" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Colors</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p>Choices and justification
-                    Lightmode and darkmode = contrast on both!
-                    darkmode links are lighter than lightmode links while still being assosiated to hyperlinks
-                </p>
-                <!-- Content displayed when the item is expanded -->
-            </div>
-
-            <!-- Fourth accordion item -->
-            <input type="checkbox" id="item4"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item4" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Images</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p> PNG, WebP, JPEG
-                    Backup image formatting nescessary?
-                    Multiple versions of one image to support different screen sizes
-                </p>
-                <!-- Content displayed when the item is expanded -->
-            </div>
-            <!-- Fourth accordion item -->
-            <input type="checkbox" id="item5"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item5" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Alt text</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p>We've made sure to include a descriptive alt text for visually impaired users.
-                    Images and icons should have this
-                </p>
-                <!-- Content displayed when the item is expanded -->
-            </div>
-            <input type="checkbox" id="item6"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item6" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Interactibility</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p>Screen readers (aria-label).
-                    Tabindex for non-mouse users
-                </p>
-                <!--(convinceandconvert.com)-->
-                <!-- Content displayed when the item is expanded -->
-            </div>
-            <input type="checkbox" id="item7"> <!-- Hidden checkbox for toggling content visibility -->
-            <label for="item7" class="accordion-item-infobox">
-                <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
-                <div class="text">Lighthouse test</div> <!-- Title of the accordion item -->
-            </label>
-            <div class="accordion-content-infobox">
-                <p>intro for tests....
-                </p>
-                <section>
-                    <p>Images are not in place and are just placeholders for future tests</p>
-
-                    <img class="lighthouse-test-github-1" src="/img/ac-lighthouse-test-github-1.png"
-                         alt="Screenshot of accessibility test results">
-                    <p>The first test gave an overall score of 22/25....  and this prompted us to make the following changes: ...</p>
-                    <img class="code-problem-screenshot-1" src="/img/ac-code-problem-1.png"
-                         alt="Screenshot of code to enhance accessibility">
-                    <p>The coding choices made to enhance xyz was implementet by xyz</p>
-
-                    <img class="lighthouse-test-github-2" src="/img/ac-lighthouse-test-github-2.png"
-                         alt="Screenshot of accessibility test results">
-                        <p>The second test gave an overall score of 25/25....  and this prompted us to make the following changes: ...</p>
-                    <img class="code-improvement-screenshot-2" src="/img/ac-code-improvement-1.png"
-                         alt="Screenshot of code to enhance accessibility">
-                    <p>The coding choices made to enhance xyz was implementet by xyz</p>
-
-                    <img class="lighthouse-test-image" src="../img/"
-                         alt="Screenshot of accessibility test results">
-                    <p>The second test gave an overall score of ... and this prompted us to make the following changes: ...</p>
-                    <img class="code-improvement-screenshot-3" src="../img/"
-                         alt="Screenshot of code to enhance accessibility">
-                    <p>The coding choices made to enhance xyz was implementet by xyz</p>
-
-                    <img class="lighthouse-test-image" src="../img/"
-                         alt="Screenshot of accessibility test results">
-                    <p>The third test gave an overall score of ... and this prompted us to make the following changes: ...</p>
-                    <img class="code-improvement-screenshot-4" src="../img/"
-                         alt="Screenshot of code to enhance accessibility">
-                    <p>The coding choices made to enhance xyz was implementet by xyz</p>
-
-                    <img class="lighthouse-test-image" src="../img/"
-                         alt="Screenshot of accessibility test results">
-                    <p>The final test gave an overall score of ... and this prompted us to make the following changes: ...</p>
-                    <img class="code-improvement-screenshot-5" src="../img/"
-                         alt="Screenshot of code to enhance accessibility">
-                    <p>The coding choices made to enhance xyz was implementet by xyz</p>
-
-                </section>
-                <!-- Content displayed when the item is expanded -->
-            </div>
-        </section>
-    </article>
-
-</main>
-<!-- MAIN SECTION END -->
-
-<!-- FOOTER START -->
-<footer class="footerwrapper"> <!-- Footer navigation wrapper -->
-    <section class="footercontent">
-        <h2>newsletter</h2>
-        <button>subs</button>
-    </section>
-
-    <section class="footercontent"> <!--Enda en nav bar for social links og andre ting-->
-
-        <i class="fa-solid fa-house"> There's no place like home</i> <!--Placeholder-->
-        <a href="INSERT LINK">newsletter link that doesn't work</a> <!--Placeholder-->
-        <nav class="social-links">
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
-                <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                </li>
-                <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
-            </ul>
+                    <ul id="menu">
+                        <!-- <li><button><a href="../index.html">Home</a></button></li> -->
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="activity.html">Activity</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                    </ul>
+            </section>
         </nav>
-    </section>
-</footer>
-<!-- FOOTER END -->
-</body>
+    </header>
+    <!-- HEADER END -->
+
+    <!--  ACCESSIBILITY PAGE
+
+    Har ikke fiksa formatering med css enda, kun notert for accessibility teksten.
+
+    Assignment text:
+    Short presentation of accessibility for your site. Test your site with an automated test. Write a very short text
+    (between 400 and 500 words) about the coding choices you made for universal design beyond what an
+    automated test could tell you. You are recommended to use screenshots from the testing site and of your code.
+    When using automated tests, you still have a responsibility to check The coding choices made to enhance xyz was implementet by xyz manually as well. Errors/ non-
+    compliance may appear even if the automated test gives an All clear-verdict. -->
+
+    <!-- MAIN SECTION START -->
+    <main>
+        <!-- INTRODUCTION SECTION START -->
+        <section class="top-text accessibility-introduction-image">
+            <h1>Accessibility</h1>
+            <p>Presentation of accessibility for our site.</p>
+        </section>
+        <!-- INTRODUCTION SECTION END -->
+
+        <!-- Main container for the accordion component -->
+        <!--Main info for denne siden
+                Write a very short text (between 400 and 500 words) about the coding choices
+                you made for universal design beyond what an automated test could tell you.-->
+
+        <article class="container-infobox main-padding">
+            <!-- Description section providing insight into the content -->
+            <section class="description-infobox">
+                <p>This page covers how we made our site accessible for all users by making coding choices for universal design.</p>
+            </section>
+
+            <!-- Accordion component that contains multiple items -->
+            <section class="accordion-infobox">
+                <!-- First accordion item -->
+                <input type="checkbox" id="item1"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item1" class="accordion-item-infobox">
+                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
+                    <div class="text">Readability</div> <!-- Title of the accordion item -->
+                </label>
+                <div class="accordion-content-infobox">
+                    <p>We chose the font Verdana, with sans-serif as a backup. The justification for this choice was based on it's 
+                        legibility and accessible design by being simple and unembellished. The font should clearly differentiate 
+                        the letters well even in small text sizes. We've avoided fonts featuring “imposter letter shapes”. These include characters 
+                        that are visually similar, but not the same, for example uppercase and lowercase Is, lowercase Ls, and the number 1 (Iil1).
+                        We've ensured that the font size is in a relative unit, like rem and percentages, to scale it properly based on individual user needs.
+                        This is because using absolute units, like pixels, limits the option to increase or decrease text size without 
+                        zooming in on everything else on the page.
+
+                        All paragraphs use 1.3em line-height and letter-spacing is set to 0.04rem to make the text easier to read.
+                        
+                        <!-- https://betterwebtype.com/5-keys-to-accessible-web-typography/ and https://www.siteimprove.com/glossary/accessible-fonts/ -->
+                    </p>
+                    <!-- Content displayed when the item is expanded -->
+                </div>
+
+                <!-- Second accordion item -->
+                <input type="checkbox" id="item2"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item2" class="accordion-item-infobox">
+                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
+                    <div class="text">Structure</div> <!-- Title of the accordion item -->
+                </label>
+                <div class="accordion-content-infobox">
+                    <p>General layout, clear headers and high-resolution images.
+                        Understandable: Implicitly imply the content without needing to read everything.
+                        Keeping headers in correct order and using semantic tags.
+                        
+                    </p>
+                    <!-- Content displayed when the item is expanded -->
+                </div>
+
+                <!-- Third accordion item -->
+                <input type="checkbox" id="item3"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item3" class="accordion-item-infobox">
+                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
+                    <div class="text">Colors</div> <!-- Title of the accordion item -->
+                </label>
+                <div class="accordion-content-infobox">
+                    <p>Choices and justification
+                        Lightmode and darkmode = contrast on both!
+                        darkmode links are lighter than lightmode links while still being assosiated to hyperlinks
+                    </p>
+                    <!-- Content displayed when the item is expanded -->
+                </div>
+
+                <!-- Fourth accordion item -->
+                <input type="checkbox" id="item4"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item4" class="accordion-item-infobox">
+                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
+                    <div class="text">Images</div> <!-- Title of the accordion item -->
+                </label>
+                <div class="accordion-content-infobox">
+                    <p> We've made sure to include a descriptive alternative text on every image for visually impaired users,
+                        but also in case any images should fail to load.
+                        !Images AND icons should have this!
+                        PNG, WebP, JPEG
+                        Backup image formatting nescessary?
+                        Multiple versions of one image to support different screen sizes
+                    </p>
+                    <!-- Content displayed when the item is expanded -->
+                </div>
+                <input type="checkbox" id="item6"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item6" class="accordion-item-infobox">
+                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
+                    <div class="text">Intractability</div> <!-- Title of the accordion item -->
+                </label>
+                <div class="accordion-content-infobox">
+                    <p>Screen readers (aria-label).
+                        Tabindex for non-mouse users
+                    </p>
+                    <!--(convinceandconvert.com)-->
+                    <!-- Content displayed when the item is expanded -->
+                </div>
+                <input type="checkbox" id="item7"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item7" class="accordion-item-infobox">
+                    <div class="icon"><span>+</span></div> <!-- Icon indicating expandable content -->
+                    <div class="text">Lighthouse test</div> <!-- Title of the accordion item -->
+                </label>
+                <div class="accordion-content-infobox">
+                    <p>We started testing the accessibility of our site by using the automated Lighthouse tests in Google Chrome.
+                        The first test gave a score of 22/25 and highlighted missing labels in forms and problematic lists.
+                        The main source of this was the hamburger menu items starting with anchor-tags instead of list-tags and missing
+                        labels for the input type checkbox that is used as a click receiver.</p>
+                    <section class="image-grid">
+                        <img src="../img/ac-lighthouse-test-github-1.png"
+                            alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
+                        <div class= "vertical"></div>
+                        <img src="../img/ac-code-problem-1.png"
+                            alt="Improved code to enhance site accessibility.">
+                    </section>
+                    <p>The second test gave an overall score of 25/25 after we rearranged the menu item tags and added labels to our code. 
+                        This prompted us to dig deeper and manually check for code improvement opportunities.</p>
+                    <section class="image-grid">
+                        <img src="../img/ac-lighthouse-test-github-2.png"
+                            alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
+                        <div class= "vertical"></div>
+                        <img src="../img/ac-code-improvement-1.png"
+                            alt="Improved code to enhance site accessibility.">
+                    </section>
+                    <p>Later in the semester, another Lighthouse test was done while the hamburger menu was opened. This third test gave a score of 
+                        24/25 based on ARIA attributes not being used as specified for the elements role.</p>
+                    <section class="image-grid">
+                        <img src="../img/ac-lighthouse-test-github-3.png"
+                            alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
+                        <div class= "vertical"></div>
+                        <img class="image-grid" src="../img/"
+                            alt="Improved code to enhance site accessibility.">
+                    </section>
+                        <p>The coding choices made to enhance xyz was implementet by xyz</p>
+
+                    <p>The fourth test gave an overall score of ....  and this prompted us to make the following changes: ...</p>
+                    <section class="image-grid">    
+                        <img src="../img/"
+                            alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
+                        <div class= "vertical"></div>
+                        <img src="../img/"
+                            alt="Improved code to enhance site accessibility.">
+                    </section>
+                        <p>The coding choices made to enhance xyz was implementet by xyz</p>
+
+                    <p>The final test gave an overall score of ... and this prompted us to make the following changes: ...</p>
+                    <section class="image-grid"> 
+                        <img src="../img/"
+                            alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
+                        <div class= "vertical"></div>
+                        <img src="../img/"
+                            alt="Improved code to enhance site accessibility.">
+                    </section>
+                        <p>The coding choices made to enhance xyz was implementet by xyz</p>
+
+                    </section>
+                    <!-- Content displayed when the item is expanded -->
+                </div>
+            </section>
+        </article>
+
+    </main>
+    <!-- MAIN SECTION END -->
+
+        <!-- FOOTER START -->
+        <footer>
+            <section class="footer-header">
+                <h2>Stay updated on OsloMet news and events.</h2>
+                <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Subscribe to the newsletter!</button></a>
+            </section>
+                <section class="footer-wrapper">
+                <!-- Contact information -->
+                <section class="footer-content">
+                    <h3>Contact information</h3>
+                    <ul>
+                        <li>Oslo Metropolitan University</li>
+                        <li>Storbyuniversitetet</li>
+                        <li>Postboks 4, St. Olavs plass</li>
+                        <li>0130 Oslo</li>
+                        <li>Phone nr.: <a href="tel:67235000">67 23 50 00</a></li>
+                        <li>Email: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
+                    </ul>
+                </section>
+                <!-- Navigational links -->
+                <section class="footer-content">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="activity.html">Activity</a></li>
+                        <li><a href="github.html">GitHub</a></li>
+                    </ul>    
+                </section>
+                <!-- Social media links -->
+                <section class="footer-content">
+                    <h3>Follow us</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                            <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
+                            <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                            <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
+                        </ul>
+                </section>
+            </section>
+        </footer>
+        <!-- FOOTER END -->
+    </body>
 </html>

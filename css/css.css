@@ -1,24 +1,24 @@
-/* Darkmode is activated when the users preferences are set to 
-enable darkmode on applicable websites.
-This is from Tengels lecture that covered this last year. */
-@media only screen and (prefers-color-scheme: dark) {
-  :root {
-      /* General colors: */
-      --main-background-color: #fed400;
-      --secondary-background-color: #292929;
-      --main-font-color: #eeeeee;
-      /* Lighter links for darkmode */
-      --body-link-color: #58a6ff;
-      --body-link-color-visited: #B661FF;
-      /* For the site with a different theme */
-      --diff-background-color: #77000e;
-      --diff-secondary-background-color: #61cdff;
-      --navbar-background-color: #fed400;
-
+:root {
+    /* General colors: */
+    --main-background-color: #f0f0f0;
+    --secondary-background-color: #fed400;
+    --body-font-color: #000000;
+    /* Lighter links for darkmode */
+    --a-color: #4D4DFF;
+    --a-color-visited: #551A8B;
+    /* For the site with a different theme */
+    --diff-background-color: #77000e;
+    --diff-secondary-background-color: #61cdff;
+    --navwrapper-background-color: #fed400;
   }
-}
+
 html{
-    background-color: #fed400;
+    /*Accessible font size in a relative unit*/
+    font-size: 100%;
+}
+
+header {
+    background-color: var(--secondary-background-color);
 }
 
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
@@ -27,44 +27,48 @@ body {
     overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
 
     font-family: Verdana, sans-serif;
-    letter-spacing: 0.04rem;
+    background-color: var(--main-background-color);
 }
 
 /* Background color for the main tag on all sites */
 main {
-    background-color: white;
-  /* Accessible font size, line height, letter-spacing and word-breaks*/
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0.04rem;
-  word-break: normal;
+    background-color: var(--main-background-color);
 }
+
 h1,h2,h3,h4,p,hr{
-    color: var(--main-font-color);
+    /* Accessible line height, letter-spacing and word-breaks for better readability*/
+    line-height: 1.3em;
+    letter-spacing: 0.04rem;
+    word-break: normal;
 }
 h1 {
-    font-size: 60px;
+    font-size: 4rem;
 }
 h2 {
-    font-size: 40px;
+    font-size: 2rem;
 }
 h3 {
-   font-size: 20px;
+   font-size: 1.5rem;
 }
 
-a {
-   text-decoration: none;
-   color: #232323;
+img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 
+
+a {
+   color: #232323;
    transition: color 0.3s ease;
  }
- 
+
+
  a:hover {
-   color: #fe0000;
+   color: #4D4DFF;
+
  }
 
  /*Main functionality */
-
  .main-padding {
      margin: 2rem 4rem;
      padding: 2rem;
@@ -208,7 +212,7 @@ a {
      padding: 225px 50px 50px;
      right: -100px;
    
-   background: #fed400;
+   background: var(--secondary-background-color);
    list-style-type: none;
 
    transform-origin: 0 0;
@@ -228,81 +232,56 @@ a {
    opacity: 1;
  }
 
- /*Action happening when the screen becomes smaller*/
- @media screen and (max-width: 768px) {
-    /*Makes the menu not slide in, but slowly appear*/
-   #menu {
-     transform: none;
-     opacity: 0;
- 
-     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-   }
- }
 
-
- /* |Jen */
-
- .footerwrapper {
-    /* display: grid;
-    position:absolute bottom; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-bottom: 10px;
-    
-    /* grid-template-columns:repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, auto); */
+ /* FOOTER */
+footer {
+    background-color: var(--secondary-background-color);
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid;
 }
 
-.footercontent {
-    /* display: grid;
-    position:absolute bottom; */
+footer ul {
+    list-style-type: none;
+    font-family: Verdana, sans-serif;
+    margin: 0.3rem;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: baseline;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid;
+}
+
+.footer-header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 90vw;
-
     border-bottom: 1px solid;
-    
-    /* grid-template-columns:repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, auto); */
 }
 
-.footercontent > * {
-    margin: 5px;
-    width: 30vw;
-}
-
- .social-links {
-    list-style: none;
+.footer-content {
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    font-size: 22px;
- }
-
- #social-links li {
-    padding: 10px 0;
-    font-size: 22px;
- }
-
-
-  /*IKKE INTEGRERT*/
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-/*   @media (max-width: 800px) {
-    .flex-container {
-      flex-direction: column;
-    }
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
 }
-  /* Responsive layout - makes the three columns stack on top of each other 
-  instead of next to each other on smaller screens (600px wide or less) */
-/*   @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    } */
 
+.btn-newsletter {
+    background-color: #000000;
+    color: #f0f0f0;
+    font-family: Verdana, sans-serif;
+    font-size: 1.50rem;
+    padding: 0.2rem;
+}
 
   /* --- GITHUB PAGE START ---- */
 
@@ -312,7 +291,7 @@ a {
       text-shadow: 2px 2px #000000;
   }
   
-  .github-img-container {
+  .img-container {
     margin-bottom: 5rem; /* Space between the sections */
   }
   
@@ -322,9 +301,21 @@ a {
     gap: 1rem; /* Gap between the images */
   }
 
-  .image-container{
-    height: 70%;
-    float: left;
+  @media (max-width: 768px) {
+    .image-grid{
+        grid-template-columns: 1fr;
+    }
+    .vertical{
+        display: none;
+    }
+    .footer-wrapper {
+        display: flex wrap;
+        flex-direction: column;
+    }
+    .footer-header{
+        display: flex wrap;
+        flex-direction: column;
+    }
   }
 
   .image-grid img {
@@ -363,15 +354,15 @@ a {
 
 /* Description text within the accordion */
 .description-infobox {
-    font-size: 20px; /* Sets the font size for the description text */
-    line-height: 1.5; /* Sets the line height for better readability */
+    font-size: 1.2rem; /* Sets the font size for the description text */
     margin-bottom: 20px; /* Adds space below the description */
 
 }
 
 /* Accordion component styles */
 .accordion-infobox {
-    border-top: 1px solid black; /* Adds a black top border to the accordion */
+    /* border-top: 1px solid black; */ /* Adds a black top border to the accordion FUNKER IKKE :(*/
+    margin-top: 2rem;
 }
 
 /* Individual accordion item styling */
@@ -387,11 +378,11 @@ a {
 .accordion-item-infobox .icon {
     width: 40px; /* Sets a fixed width for the icon */
     height: 40px; /* Sets a fixed height for the icon */
-    background-color: var(--main-background-color); /* Sets a gold background color for the icon */
+    background-color: var(--secondary-background-color); /* Sets a gold background color for the icon */
     display: flex; /* Uses flexbox layout for the icon container */
     align-items: center; /* Centers the icon content vertically */
     justify-content: center; /* Centers the icon content horizontally */
-    margin-right: 15px; /* Adds space to the right of the icon */
+    margin-right: 1rem; /* Adds space to the right of the icon */
 }
 
 /* Icon text styling */
@@ -431,7 +422,8 @@ input[type="checkbox"]:checked + label .icon span {
 /* --- Accessibility --- */
 
 .accessibility-introduction-image{ /*Chooses image for the main heading */
-    background-image: url('../img/accessibility-header.png') ;
+    background-image: url('../img/accessibility-header.png');
+    text-shadow: 2px 2px #000000;
 }
 
 /* --- Activity --- */
@@ -637,9 +629,42 @@ input:valid + label{
     transform: scale(.8);
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    transition: 100ms;
-}
+ /*Action happening when the screen becomes smaller*/
+ @media screen and (max-width: 768px) {
+    /*Makes the menu not slide in, but slowly appear*/
+   #menu {
+     transform: none;
+     opacity: 0;
 
+     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   }
+    h1 {
+    font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+    font-size: 1.2rem;
+    }
+    p {
+        font-size: smaller;
+    }
+    .main-padding {
+        margin: 0.5rem 0.7rem;
+        padding: 0.7rem;
+    }
+      /*IKKE INTEGRERT*/
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/*   @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+}
+  /* Responsive layout - makes the three columns stack on top of each other
+  instead of next to each other on smaller screens (600px wide or less) */
+/*   @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    } */
+ }
