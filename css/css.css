@@ -343,8 +343,19 @@ footer ul {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
     position: relative;
-   
   }
+  .fagligLeder {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #cccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  .fagligLeder img {
+    height: auto;
+    max-width: 150px;
+  }
+
 /* --- Accordion for MATMOD and ACCESSIBILITY --- */
 /* Inspiration from https://www.w3schools.com/howto/howto_js_accordion.asp */
 
