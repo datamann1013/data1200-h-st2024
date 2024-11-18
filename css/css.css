@@ -665,7 +665,7 @@ input:valid + label{
         padding: 0.7rem;
     }
 
-  /* Burde være plassert med resten av media på bunnen av CSS */
+  /* Responsive layout - makes a one column layout */
   @media (max-width: 768px) {
     .image-grid, .text-grid{
         grid-template-columns: 1fr;
