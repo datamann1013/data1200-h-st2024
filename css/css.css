@@ -292,68 +292,44 @@ footer ul {
       text-shadow: 2px 2px #000000;
   }
   
-  .img-container {
-    margin-bottom: 5rem; /* Space between the sections */
-    
-  }
-  
+  /* Content divided into two equal columns woth a gap in between */
   .image-grid, .text-grid {
     display: grid; /* Grid is used to arrange the images within the container */
     grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
   }
 
+  /* Adds space between the image sections*/
   .image-section {
     margin-bottom: 6rem;
   }
 
+  /* Styles the text container */
   .text-grid {
     border-radius: 8px;
     background-color: white;
     box-shadow: 10px 10px 5px gray;
     padding: 20px;
   }
-
-  .image-section {
-    margin-bottom: 6rem;
-  }
-
-  .text-grid {
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 10px 10px 5px gray;
-    padding: 20px;
-  }
-
-  /* Burde være plassert med resten av media på bunnen av CSS */
-  @media (max-width: 768px) {
-    .image-grid, .text-grid{
-        grid-template-columns: 1fr;
-    }
-    .vertical{
-        display: none;
-    }
-    .footer-wrapper {
-        display: flex wrap;
-        flex-direction: column;
-    }
-    .footer-header{
-        display: flex wrap;
-        flex-direction: column;
-    }
-  }
-
+  
+  /* Image styling */
   .image-grid img {
     width: 100%; /* Makes the images take up 100% of their columns width */
     object-fit: cover;
     border-radius: 8px; /* Makes the corners of the images round */
     box-shadow: 10px 10px 5px gray;
   }
+
+ /* Vertical line for separation */ 
 .vertical {
     border-left: 2px solid #aca7a2;
     height: 5rem;
     margin: auto;
 }
+
+  /* --- GITHUB PAGE END --- */  
+
+
   /*--- MATMOD ---- */
 
   .grid-Container {
@@ -688,6 +664,25 @@ input:valid + label{
         margin: 0.5rem 0.7rem;
         padding: 0.7rem;
     }
+
+  /* Burde være plassert med resten av media på bunnen av CSS */
+  @media (max-width: 768px) {
+    .image-grid, .text-grid{
+        grid-template-columns: 1fr;
+    }
+    .vertical{
+        display: none;
+    }
+    .footer-wrapper {
+        display: flex wrap;
+        flex-direction: column;
+    }
+    .footer-header{
+        display: flex wrap;
+        flex-direction: column;
+    }
+  }
+
       /*IKKE INTEGRERT*/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 /*   @media (max-width: 800px) {
