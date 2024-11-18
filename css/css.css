@@ -294,17 +294,40 @@ footer ul {
   
   .img-container {
     margin-bottom: 5rem; /* Space between the sections */
+    
   }
   
-  .image-grid {
+  .image-grid, .text-grid {
     display: grid; /* Grid is used to arrange the images within the container */
     grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
   }
 
+  .image-section {
+    margin-bottom: 6rem;
+  }
+
+  .text-grid {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
+    padding: 20px;
+  }
+
+  .image-section {
+    margin-bottom: 6rem;
+  }
+
+  .text-grid {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
+    padding: 20px;
+  }
+
   /* Burde være plassert med resten av media på bunnen av CSS */
   @media (max-width: 768px) {
-    .image-grid{
+    .image-grid, .text-grid{
         grid-template-columns: 1fr;
     }
     .vertical{
@@ -324,6 +347,7 @@ footer ul {
     width: 100%; /* Makes the images take up 100% of their columns width */
     object-fit: cover;
     border-radius: 8px; /* Makes the corners of the images round */
+    box-shadow: 10px 10px 5px gray;
   }
 .vertical {
     border-left: 2px solid #aca7a2;
