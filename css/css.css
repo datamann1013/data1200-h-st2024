@@ -446,6 +446,7 @@ input[type="checkbox"]:checked + label .icon span {
     border-radius: 8px;
     background-color: white;
     box-shadow: 10px 10px 5px gray;
+
 }
 
 /*Carousel borrowed from https://devdevout.com/css/css-cards */
@@ -667,8 +668,12 @@ input:valid + label{
 
   /* Burde være plassert med resten av media på bunnen av CSS */
   @media (max-width: 768px) {
-    .image-grid, .text-grid{
+    .image-grid, .text-grid, .survey-container{
         grid-template-columns: 1fr;
+    }
+    .container-Form{
+        padding-left: 20%;
+        padding-right: 22%;
     }
     .vertical{
         display: none;
