@@ -30,9 +30,12 @@ body {
     background-color: var(--main-background-color);
 }
 
-/* Background color for the main tag on all sites */
-main {
-    background-color: var(--main-background-color);
+/* ===================== Main Content Styles ===================== */
+.content {
+    margin: 0 15vw;
+    padding: 3vh 5vw;
+    background-color: white;
+    box-shadow: 0 0px 7px rgb(200, 200, 200); /* Shadow for 3D effect */
 }
 
 h1,h2,h3,h4,p,hr{
@@ -69,10 +72,7 @@ a {
  }
 
  /*Main functionality */
- .main-padding {
-     margin: 2rem 4rem;
-     padding: 2rem;
- }
+ 
  .center-horizontal {
      text-align: center;
  }
