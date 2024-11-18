@@ -343,6 +343,33 @@ footer ul {
     position: relative;
     
   }
+  .grid-Container .fagligLeder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 5px;
+    border-top: 1px solid #cccc;
+    background-color: #f9f9f9;
+  }
+  .fagligLeder {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 15px; 
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #cccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    justify-content: start;
+    align-items: center; 
+    box-shadow: 10px 10px 5px gray;
+  }
+  .fagligLeder img {
+    height: auto;
+    max-width: 150px;
+    margin-right: 50px;
+  }
+
 
 /* --- Accordion for MATMOD */
 /* Inspiration from https://www.w3schools.com/howto/howto_js_accordion.asp */
