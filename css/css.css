@@ -24,34 +24,33 @@ header {
 /*Foreløpig ikke brukt: https://stackoverflow.com/questions/29313837/space-between-image-and-text*/
 body {
     margin: 0;
-    overflow-x: hidden; /* Added here because hiding the menu on the right side is not perfect,  */
+    overflow-x: hidden;
 
     font-family: Verdana, sans-serif;
     background-color: var(--main-background-color);
 }
-
-/* ===================== Main Content Styles ===================== */
-.content {
-    margin: 0 15vw;
-    padding: 3vh 5vw;
-    background-color: white;
-    box-shadow: 0 0px 7px rgb(200, 200, 200); /* Shadow for 3D effect */
-}
-
 h1,h2,h3,h4,p,hr{
     /* Accessible line height, letter-spacing and word-breaks for better readability*/
     line-height: 1.3em;
     letter-spacing: 0.04rem;
     word-break: normal;
 }
-h1 {
-    font-size: 4rem;
+h1 {font-size: 3rem;}
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+p {font-size: ;}
+
+/* ===================== Main Content Styles ===================== */
+.content {
+    margin: 0 15vw;
+    padding: 3vh 4vw;
+    background-color: white;
+    box-shadow: 0 0px 7px rgb(200, 200, 200); /* Shadow for 3D effect */
 }
-h2 {
-    font-size: 2rem;
-}
-h3 {
-   font-size: 1.5rem;
+
+/* Provides some air between the articles */
+.article-padding {
+    padding-bottom: 0.5rem;
 }
 
 img {
@@ -59,12 +58,10 @@ img {
     max-height: 100%;
   }
 
-
 a {
    color: #232323;
    transition: color 0.3s ease;
  }
-
 
  a:hover {
    color: #4D4DFF;
@@ -438,16 +435,6 @@ input[type="checkbox"]:checked + label .icon span {
 .activity-introduction-image{ /*Chooses image for the main heading */
     background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg') ;
 }
-.survey-container {
-    display: grid; /* Grid is used to arrange the images within the container */
-    grid-template-columns: 3fr 10px 1fr; /* Two equal columns */
-    gap: 1rem; /* Gap between the images */
-    padding-bottom: 1rem;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 10px 10px 5px gray;
-
-}
 
 /*Carousel borrowed from https://devdevout.com/css/css-cards */
 
@@ -533,6 +520,16 @@ input[type="checkbox"]:checked + label .icon span {
 
 /* Survey form borowed from https://wpdean.com/css-forms/ */
 /*Spesifically https://codepen.io/erfan74sh/pen/bGpRago */
+.survey-container {
+    display: grid; /* Grid is used to arrange the images within the container */
+    grid-template-columns: 3fr 10px 1fr; /* Two equal columns */
+    gap: 1rem; /* Gap between the images */
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
+
+}
 
 .container-Form{
     display: flex;
@@ -639,35 +636,49 @@ input:valid + label{
     bottom: 50px;
     transform: scale(.8);
 }
-
+/* ===================== Responsive Design ===================== */
  /*Action happening when the screen becomes smaller*/
- @media screen and (max-width: 768px) {
-    /*Makes the menu not slide in, but slowly appear*/
-   #menu {
-     transform: none;
-     opacity: 0;
 
-     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ /* ===================== Medium Devices ===================== */
+ @media screen and (max-width: 992px) {
+    /* General font size adjustments */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+    /* Main content padding and margins for smaller screens */
+    .content {
+       margin: 0 0;
+       padding: 0 10vw;
    }
-    h1 {
-    font-size: 3rem;
+}
+
+/* ===================== Small Devices ===================== */
+ @media screen and (max-width: 768px) {
+    /* General font size adjustments */
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1rem; }
+    p { font-size: 0.8rem; }
+
+    /* Main content padding and margins for smaller screens */
+    .content {
+        margin: 0 0;
+        padding: 1rem;
     }
-    h2 {
-        font-size: 1.5rem;
-    }
-    h3 {
-    font-size: 1.2rem;
-    }
-    p {
-        font-size: smaller;
-    }
-    .main-padding {
+    .article-padding {
         margin: 0.5rem 0.7rem;
         padding: 0.7rem;
     }
 
-  /* Responsive layout - makes a one column layout */
-  @media (max-width: 768px) {
+    /*Makes the menu not slide in, but slowly appear*/
+    #menu {
+        transform: none;
+        opacity: 0;
+        transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    /* Makes a one column layout */
     .image-grid, .text-grid, .survey-container{
         grid-template-columns: 1fr;
     }
@@ -678,6 +689,7 @@ input:valid + label{
     .vertical{
         display: none;
     }
+    /* Footer */
     .footer-wrapper {
         display: flex wrap;
         flex-direction: column;
@@ -686,19 +698,10 @@ input:valid + label{
         display: flex wrap;
         flex-direction: column;
     }
-  }
-
-      /*IKKE INTEGRERT*/
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-/*   @media (max-width: 800px) {
-    .flex-container {
-      flex-direction: column;
+    .footer-content {
+        text-align: center;
     }
-}
-  /* Responsive layout - makes the three columns stack on top of each other
-  instead of next to each other on smaller screens (600px wide or less) */
-/*   @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    } */
- }
+    .footer-content ul li {
+        font-size: 1.1rem;
+    }
+  }
