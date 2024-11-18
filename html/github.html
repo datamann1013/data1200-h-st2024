@@ -2,8 +2,8 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configure the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>  <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
@@ -16,15 +16,15 @@
     <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
         <article class="logo-box">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-            <img src="../svg/OsloMET.svg" alt="OsloMET logo"/>
+            <img src="../svg/OsloMET.svg" alt="OsloMET logo."/>
         </article>
         <article id="search">
             <div id="flex">
-                <img src="../svg/search-icon.svg" alt="search-icon">
+                <img src="../svg/search-icon.svg" alt="search-icon.">
             </div>
         </article>
         <article>
-            <div id="menuToggle">
+            <section id="menuToggle">
                 <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
                  Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
                 <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
@@ -33,12 +33,13 @@
                 <span></span>
 
                 <ul id="menu">
+                    <!-- <li><button><a href="../index.html">Home</a></button></li> -->
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="accessibility.html">Accessibility</a></li>
                     <li><a href="activity.html">Activity</a></li>
                     <li><a href="github.html">GitHub</a></li>
                 </ul>
-            </div>
+        </section>
         </article>
     </nav>
 </header>
@@ -59,20 +60,20 @@
 
         <!-- IMAGES SECTION START -->
         <section class="github-img-container main-padding">
-            <section>
+            <section class="image-section">
                 <h2>Images showing part of commits history</h2>
                 <section class="image-grid">
-                    <img src="../img/github-history1.png" alt="commit1">
+                    <img src="../img/github-history1.png" alt="Github commit history.">
                     <div class= "vertical"></div>
-                    <img src="../img/github-history2.png" alt="commit2">
+                    <img src="../img/github-history2.png" alt="Github commit history.">
                 </section>
             </section>
-            <section>
+            <section class="image-section second-section">
                 <h2>Images showing a specific change</h2>
                 <section class="image-grid">
-                    <img src="../img/github-change1.png" alt="change1">
+                    <img src="../img/github-change1.png" alt="Github specific change.">
                     <div class= "vertical"></div>
-                    <img src="../img/github-change2.png" alt="change2">
+                    <img src="../img/github-change2.png" alt="Github specific change.">
                 </section>
             </section>
         </section>
@@ -82,7 +83,7 @@
         <!-- TEXT SECTION START -->
         <section class="main-padding">
             <h2 class="center-horizontal">A short list of benefits of Git and Github in VS code</h2>
-            <section class="image-grid">
+            <section class="text-grid">
                 <div>
                     <h3>Github can make collaborations easier</h3>
                     <p>
@@ -117,31 +118,47 @@
 </main>
 <!-- MAIN SECTION END -->
 
-
 <!-- FOOTER START -->
-<footer class="footerwrapper"> <!-- Footer navigation wrapper -->
-    <section class="footercontent">
-        <h2>newsletter</h2>
-        <button>subs</button>
+<footer>
+    <section class="footer-header">
+        <h2>Stay updated on OsloMet news and events.</h2>
+        <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Subscribe to the newsletter!</button></a>
     </section>
-
-    <section class="footercontent"> <!--Enda en nav bar for social links og andre ting-->
-
-        <i class="fa-solid fa-house"> There's no place like home</i> <!--Placeholder-->
-        <a href="INSERT LINK">newsletter link that doesn't work</a> <!--Placeholder-->
-        <nav class="social-links">
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
-                <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                </li>
-                <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
+        <section class="footer-wrapper">
+        <!-- Contact information -->
+        <section class="footer-content">
+            <h3>Contact information</h3>
+            <ul>
+                <li>Oslo Metropolitan University</li>
+                <li>Storbyuniversitetet</li>
+                <li>Postboks 4, St. Olavs plass</li>
+                <li>0130 Oslo</li>
+                <li>Phone nr.: <a href="tel:67235000">67 23 50 00</a></li>
+                <li>Email: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
             </ul>
-        </nav>
+        </section>
+        <!-- Navigational links -->
+        <section class="footer-content">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="activity.html">Activity</a></li>
+                <li><a href="github.html">GitHub</a></li>
+            </ul>    
+        </section>
+        <!-- Social media links -->
+        <section class="footer-content">
+            <h3>Follow us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
+                    <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
+                </ul>
+        </section>
     </section>
 </footer>
 <!-- FOOTER END -->
-
-
 </body>
 </html>
