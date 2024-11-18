@@ -467,6 +467,9 @@ input[type="checkbox"]:checked + label .icon span {
     grid-template-columns: 3fr 10px 1fr; /* Two equal columns */
     gap: 1rem; /* Gap between the images */
     padding-bottom: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
 }
 
 /*Carousel borrowed from https://devdevout.com/css/css-cards */
