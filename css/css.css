@@ -1,4 +1,33 @@
-/* ===================== Global Variables ===================== */
+/*
+==================================================
+TABLE OF CONTENTS
+==================================================
+-- The main sections are searchable with "||"--
+
+1. Global Styles
+2. Shared Components
+    (dette er forslag til komponenter)
+    2.1 Layout?
+    2.2 Typography?
+    2.3 Header?
+    2.4 Navigation?
+    2.5 Footer?
+    2.6 Buttons?
+3. Page-Specific Styles
+    3.1 Index Page
+    3.2 Accessibility Page
+    3.3 Activity Page
+    3.4 GitHub Page
+4. Utilities
+    4.1 Responsive design
+================================================== */
+
+
+/* ==================================================
+1. Global Styles ||
+================================================== */
+
+
 :root {
     /* General colors: */
     --main-background-color: #f0f0f0;
@@ -57,6 +86,11 @@ a:hover {
     color: var(--a-color);
     text-decoration: underline;
 }
+
+/* ==================================================
+2. Shared Components ||
+================================================== */
+
 
 /* ===================== Main Content Styles ===================== */
 .content {
@@ -284,60 +318,21 @@ footer ul {
     padding: 0.3rem;
 }
 
+/* ==================================================
+4. Page-Specific Styles ||
+================================================== */
 
-/* ===================== GitHub Page Specific ===================== */
 
-  .github-introduction-image {
-      margin-bottom: 5rem; /* Space between the sections */
-      background-image: url('../img/github-main-background.jpg'); /*Chooses image for the main heading */
-      text-shadow: 2px 2px #000000;
-  }
-  
-  /* Content divided into two equal columns woth a gap in between */
-  .image-grid, .text-grid {
-    display: grid; /* Grid is used to arrange the images within the container */
-    grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
-    gap: 1rem; /* Gap between the images */
-  }
+/* ===================== 4.1 Index Page Specific ===================== */
 
-  /* Adds space between the image sections*/
-  .image-section {
-    margin-bottom: 6rem;
-  }
-
-  /* Styles the text container */
-  .text-grid {
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 10px 10px 5px gray;
-    padding: 20px;
-  }
-  
-  /* Image styling */
-  .image-grid img {
-    width: 100%; /* Makes the images take up 100% of their columns width */
-    object-fit: cover;
-    border-radius: 8px; /* Makes the corners of the images round */
-    box-shadow: 10px 10px 5px gray;
-  }
-
- /* Vertical line for separation */ 
-.vertical {
-    border-left: 2px solid #aca7a2;
-    height: 5rem;
-    margin: auto;
-}
-
-/* ===================== Index (MatMod) Page Specific ===================== */
-
-  .grid-Container {
+.grid-Container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 20px;
     border-top: 1px solid black;
-  }
-  .grid-item {
+}
+.grid-item {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
     position: relative;
@@ -371,7 +366,9 @@ footer ul {
   }
 
 
-/* --- Accordion for MATMOD */
+}
+
+/* --- Accordion for index.html */
 /* Inspiration from https://www.w3schools.com/howto/howto_js_accordion.asp */
 
 /* Main container for the accordion */
@@ -449,14 +446,17 @@ input[type="checkbox"]:checked + label + .accordion-content-infobox {
 input[type="checkbox"]:checked + label .icon span {
     content: "-"; /* Changes the icon text to a minus sign when checked */
 }
-/* ===================== Accessibility Page Specific ===================== */
+
+
+/* ===================== 4.2 Accessibility Page Specific ===================== */
 
 .accessibility-introduction-image{ /*Chooses image for the main heading */
     background-image: url('../img/accessibility-header.png');
     text-shadow: 2px 2px #000000;
 }
 
-/* ===================== Activity Page Specific ===================== */
+
+/* ===================== 4.3 Activity Page Specific ===================== */
 
 .activity-introduction-image{ /*Chooses image for the main heading */
     background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg') ;
@@ -661,25 +661,61 @@ input:valid + label{
     bottom: 50px;
     transform: scale(.8);
 }
-/* ===================== Responsive Design ===================== */
- /*Action happening when the screen becomes smaller*/
 
- /* ===================== Medium Devices ===================== */
- @media screen and (max-width: 992px) {
-    /* General font size adjustments */
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-    p { font-size: 1rem; }
-    /* Main content padding and margins for smaller screens */
-    .content {
-       margin: 0 0;
-       padding: 0 10vw;
-   }
+
+/* ===================== 4.4 GitHub Page Specific ===================== */
+
+.github-introduction-image {
+    margin-bottom: 5rem; /* Space between the sections */
+    background-image: url('../img/github-main-background.jpg'); /*Chooses image for the main heading */
+    text-shadow: 2px 2px #000000;
 }
 
-/* ===================== Small Devices ===================== */
- @media screen and (max-width: 768px) {
+/* Content divided into two equal columns woth a gap in between */
+.image-grid, .text-grid {
+    display: grid; /* Grid is used to arrange the images within the container */
+    grid-template-columns: 1fr 1rem 1fr; /* Two equal columns */
+    gap: 1rem; /* Gap between the images */
+}
+
+/* Adds space between the image sections*/
+.image-section {
+    margin-bottom: 6rem;
+}
+
+/* Styles the text container */
+.text-grid {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
+    padding: 20px;
+}
+
+/* Image styling */
+.image-grid img {
+    width: 100%; /* Makes the images take up 100% of their columns width */
+    object-fit: cover;
+    border-radius: 8px; /* Makes the corners of the images round */
+    box-shadow: 10px 10px 5px gray;
+}
+
+/* Vertical line for separation */
+.vertical {
+    border-left: 2px solid #aca7a2;
+    height: 5rem;
+    margin: auto;
+}
+
+/* ==================================================
+5. Utilities ||
+================================================== */
+
+/* ===================== 5.1 Responsive Design ===================== */
+ /*Action happening when the screen becomes smaller or wider */
+
+
+/* ===================== 5.1.1 Small Devices ===================== */
+@media screen and (max-width: 768px) {
     /* General font size adjustments */
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.4rem; }
@@ -729,4 +765,19 @@ input:valid + label{
     .footer-content ul li {
         font-size: 1.1rem;
     }
-  }
+}
+
+
+ /* ===================== 5.1.2 Medium Devices ===================== */
+ @media screen and (max-width: 992px) {
+    /* General font size adjustments */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+    /* Main content padding and margins for smaller screens */
+    .content {
+       margin: 0 0;
+       padding: 0 10vw;
+   }
+}
