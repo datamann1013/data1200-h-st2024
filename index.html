@@ -5,22 +5,27 @@
         <!-- Configure the viewport for responsive design -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/css.css"/> <!-- Link to the external CSS file -->
+        <!-- Fetching font -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="icon" type="image/x-icon" href="img/graduation-cap-solid.ico">
+        <link rel="icon" type="image/x-icon" href="img/graduation-cap-solid.ico"> <!-- Favicon -->
         <title>Matematisk modellering</title>
     </head>
+
     <body>
+        <!-- HEADER START -->
         <header>
             <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
                 <section class="logo-box">
                     <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                     <img src="svg/OsloMET.svg" alt="OsloMET logo"/>
                 </section>
+                <!-- Search bar next to hamburger menu -->
                 <section id="search">
                     <div id="flex">
                         <img src="svg/search-icon.svg" alt="search-icon">
                     </div>
                 </section>
+                <!-- Hamburger menu -->
                 <section id="menuToggle">
                     <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
                     Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
@@ -38,46 +43,57 @@
                 </section>
             </nav>
         </header>
+        <!-- HEADER END -->
 
-    <!--  MATMOD PAGE-->
-
+        <!-- MAIN SECTION START -->
         <main class="content">
             <section class="matmod-video-format">
+                <!-- Video with student testimonials -->
                 <iframe class="matmod-video" title="Matematisk Modellering"
                     src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo%5fid=95216483" allowfullscreen
                     allow="autoplay; fullscreen"></iframe>
             </section>
 
-            <article class="article-padding"><!--Main info for denne siden-->
+            <!-- Introduction below video -->
+            <article class="article-padding">
                 <section>
                     <h1>Matematisk modelering og datavitenskap - Ingeniør</h1>
                     <p>Bachelorprogram</p>
                 </section>
+
+                <!-- Info box with quick facts -->
                 <section class="grid-Container">
+                    <!-- First info box item -->
                     <section class="grid-item">
                         <p><strong>Studiested:</strong></p>
                         <p>Pilestredet i Oslo</p>
                     </section>
+                    <!-- Second info box item -->
                     <section class="grid-item">
                         <p><strong>Varighet:</strong></p>
                         <p>3 år</p>
                     </section>
+                    <!-- Third info box item -->
                     <section class="grid-item">
                         <p><strong>Omfang:</strong></p>
                         <p>Heltid</p>
                     </section>
+                    <!-- Fourth info box item -->
                     <section class="grid-item">
                         <p><strong>Studiepoeng</strong></p>
                         <p>180</p>
                     </section>
+                    <!-- Fifth info box item -->
                     <section class="grid-item">
                         <p><strong>Studiestart</strong></p>
                         <p>August</p>
                     </section>
+                    <!-- Sixth info box item -->
                     <section class="grid-item">
                         <p><strong>Undervisningsspråk</strong></p>
                         <p>Norsk, engelsk</p>
                     </section>
+                    <!-- Seventh info box item -->
                     <section class="grid-item">
                         <p><strong>Studieplasser</strong></p>
                         <p>40</p>
@@ -147,41 +163,44 @@
                     </label>
                     <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
                         <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk,
-                            fysikk og
-                            statistikk.
+                            fysikk og statistikk.</p>
 
-                            Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i
-                            medisinsk kjemi,
-                            biologiske prosesser og ulike samfunnssystemer.
+                        <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i
+                            medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer.</p>
 
-                            Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi
-                            for å få en
-                            felles forståelse av tematikken.
+                        <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi
+                            for å få en felles forståelse av tematikken.</p>
 
-                            Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i
-                            arbeidslivet.
+                        <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i
+                            arbeidslivet.</p>
 
-                            Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
-                        <p>Statistiske metoder og datadrevne metoder</p>
+                        <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
+
+                        <!-- Legge inn header her? -->
+                        <h4>Statistiske metoder og datadrevne metoder</h4>
                         <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til
-                            å gjøre
-                            beregninger, for eksempel av fremtidige strømpriser.
-                            Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale
-                            datatyper.
-                            Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+                            å gjøre beregninger, for eksempel av fremtidige strømpriser.</p>
+
+                        <p>Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale
+                            datatyper. Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+
+                        <!-- Legger inn header -->
+                        <h4>Vitenskaplige beregninger</h4>
                         <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og
-                            fysiske
-                            problemer med numeriske metoder.
-                            Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske
+                            fysiske problemer med numeriske metoder.</p>
+
+                        <p>Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske
                             prosesser og annet.</p>
-                        <p>Matematikk og fysikk</p>
+
+                        <!-- Legger inn header -->
+                        <h4>Matematikk og fysikk</h4>
                         <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig
-                            intelligens.
+                            intelligens.</p>
 
-                            Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer,
-                            representasjonsteori og kategoriteori.
+                        <p>Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer,
+                            representasjonsteori og kategoriteori.</p>
 
-                            I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
+                        <p>I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
                     </section>
 
                     <!-- Fourth accordion item -->
