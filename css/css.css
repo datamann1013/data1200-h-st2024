@@ -59,12 +59,14 @@ body {
     font-family: Verdana, sans-serif;
     background-color: var(--main-background-color);
 }
+
 h1,h2,h3,h4,p,hr{
     /* Accessible line height, letter-spacing and word-breaks for better readability*/
     line-height: 1.3em;
     letter-spacing: 0.04rem;
     word-break: normal;
 }
+
 h1 {font-size: 3rem;}
 h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
