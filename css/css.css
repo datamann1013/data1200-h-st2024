@@ -79,7 +79,7 @@ img {
 
 /* Hyperlink styles */
 a {
-    color: var(--body-font-color);
+    color: var(--a-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
