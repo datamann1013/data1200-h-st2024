@@ -695,20 +695,12 @@ input:valid + .accordion-item-infobox{
 /* Adds space between the image sections*/
 .image-section {
     margin-bottom: 6rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1rem 1fr;
-    gap: 1rem;
 }
 
 
 /* Zoom on hover */
 .image-grid img:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transform-origin: center;
     z-index: 10;
 }
