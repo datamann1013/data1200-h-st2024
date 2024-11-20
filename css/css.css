@@ -680,7 +680,7 @@ input:valid + .accordion-item-infobox{
 /* ===================== 4.4 GitHub Page Specific ===================== */
 
 .github-introduction-image {
-    margin-bottom: 5rem; /* Space between the sections */
+    margin-bottom: 5rem; /*Space between the sections */
     background-image: url('../img/github-main-background.jpg'); /*Chooses image for the main heading */
     text-shadow: 2px 2px #000000;
 }
@@ -695,6 +695,21 @@ input:valid + .accordion-item-infobox{
 /* Adds space between the image sections*/
 .image-section {
     margin-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1rem 1fr;
+    gap: 1rem;
+}
+
+/* Zoom on hover */
+.image-grid img:hover {
+    transform: scale(1.5);
+    transform-origin: center;
+    z-index: 10;
 }
 
 /* Styles the text container and background-color container */
@@ -710,9 +725,11 @@ input:valid + .accordion-item-infobox{
 /* Image styling */
 .image-grid img {
     width: 100%; /* Makes the images take up 100% of their columns width */
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px; /* Makes the corners of the images round */
-    box-shadow: 10px 10px 5px gray;
+    transition: transform .2s;
+    position: relative;
 }
 
 /* Vertical line for separation */
