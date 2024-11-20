@@ -697,6 +697,7 @@ input:valid + .accordion-item-infobox{
     margin-bottom: 6rem;
 }
 
+
 /* Zoom on hover */
 .image-grid img:hover {
     transform: scale(1.2);
