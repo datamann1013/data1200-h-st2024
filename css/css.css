@@ -705,6 +705,7 @@ input:valid + .accordion-item-infobox{
     gap: 1rem;
 }
 
+
 /* Zoom on hover */
 .image-grid img:hover {
     transform: scale(1.5);
