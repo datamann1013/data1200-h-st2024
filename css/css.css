@@ -112,7 +112,6 @@ a:hover {
  .center-horizontal {
      text-align: center;
  }
-
 /* Heading placement, plays well with the background tags for each site */
 .top-text {
     display: flex;
@@ -545,22 +544,29 @@ input[type="checkbox"]:checked + label .icon span {
 /*Spesifically https://codepen.io/erfan74sh/pen/bGpRago */
 .survey-container {
     display: grid; /* Grid is used to arrange the images within the container */
-    grid-template-columns: 3fr 10px 1fr; /* Two equal columns */
+    grid-template-columns: 6fr 10px 1fr; /* Three columns */
     gap: 1rem; /* Gap between the images */
     padding-bottom: 1rem;
     border-radius: 8px;
-    background-color: var(--main-background-color);
+    background-color: var(--body-background-color);
     box-shadow: 10px 10px 5px gray;
 
 }
+.textbox-row-2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+  }
 
 .container-Form{
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
     background-image: linear-gradient(45deg, var(--secondary-background-color), #ffbe05);
-    height: 550px;
-    width: 350px;
+    height: 40rem;
+    width: 30rem;
+    margin: 0 auto;
 }
 
 .register-div{
@@ -583,6 +589,12 @@ input[type="checkbox"]:checked + label .icon span {
     position: absolute;
     width: 100%;
     top: 170px;
+}
+.background-color{
+    align-self: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
 }
 
 .input-div{
@@ -681,13 +693,15 @@ input:valid + label{
     margin-bottom: 6rem;
 }
 
-/* Styles the text container */
-.text-grid {
+/* Styles the text container and background-color container */
+.text-grid, .background-color {
     border-radius: 8px;
     background-color: white;
     box-shadow: 10px 10px 5px gray;
     padding: 20px;
 }
+
+
 
 /* Image styling */
 .image-grid img {
@@ -741,10 +755,7 @@ input:valid + label{
     .image-grid, .text-grid, .survey-container{
         grid-template-columns: 1fr;
     }
-    .container-Form{
-        padding-left: 20%;
-        padding-right: 22%;
-    }
+
     .vertical{
         display: none;
     }
