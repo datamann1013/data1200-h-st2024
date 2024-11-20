@@ -385,7 +385,7 @@ footer ul {
 /* Accordion component styles */
 .accordion-infobox {
     /* border-top: 1px solid black; */ /* Adds a black top border to the accordion FUNKER IKKE :(*/
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 /* Individual accordion item styling */
@@ -424,10 +424,12 @@ footer ul {
 /* Content area of the accordion */
 .accordion-content-infobox {
     display: none; /* Hides the content area of the accordion by default */
-    margin-top: -50px !important;
+    margin-top: 1rem !important;
     padding-top: 0 !important; /* Adds vertical padding to the content area */
     padding-bottom: 30px;
     border-bottom: 1px solid var(--main-background-color); /* Adds a light gray bottom border */
+    margin-left: 7rem;
+
 }
 
 /* Hiding the checkbox input */
@@ -436,12 +438,12 @@ input[type="checkbox"] {
 }
 
 /* Displaying content when checkbox is checked */
-input[type="checkbox"]:checked + .label + .accordion-content-infobox {
+input[type="checkbox"]:checked + .accordion-item-infobox + .accordion-content-infobox {
     display: block; /* Displays the accordion content when the checkbox is checked */
 }
 
 /* Changing icon text when accordion is expanded */
-input[type="checkbox"]:checked + .label .icon span {
+input[type="checkbox"]:checked + .accordion-item-infobox .icon span {
     content: "-"; /* Changes the icon text to a minus sign when checked */
 }
 
@@ -459,6 +461,7 @@ input[type="checkbox"]:checked + .label .icon span {
 .activity-introduction-image{ /*Chooses image for the main heading */
     background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg') ;
 }
+
 
 /*Carousel borrowed from https://devdevout.com/css/css-cards */
 
@@ -662,13 +665,13 @@ input[type=button]:hover{
     cursor: text;
 }
 
-input:focus + .label{
+input:focus + .accordion-item-infobox{
     bottom: 50px;
     transform: scale(.8);
     font-weight: 400;
 }
 
-input:valid + .label{
+input:valid + .accordion-item-infobox{
     bottom: 50px;
     transform: scale(.8);
 }
