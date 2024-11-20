@@ -11,36 +11,53 @@
     <title>Matematisk modellering</title>
 </head>
 <body>
+    <!-- HEADER START -->
     <header>
         <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
-            <section class="logo-box">
+            <div id="logoImg" class="navImgs">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-                <img src="svg/OsloMET.svg" alt="OsloMET logo"/>
-            </section>
-            <section id="search">
-                <div id="flex">
-                    <img src="svg/search-icon.svg" alt="search-icon">
-                </div>
-            </section>
-                <section id="menuToggle">
-                    <!-- A fake / hidden checkbox is used as click reciever,so the :checked selector can be used on it.
-                    Aria-label for screenreaders. Aria-checked=false, to not imply a checkbox is present-->
-                    <input type="checkbox" aria-label="Open navigation menu" aria-checked="false"/>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <ul id="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="html/accessibility.html">Accessibility</a></li>
-                        <li><a href="html/activity.html">Activity</a></li>
-                        <li><a href="html/github.html">GitHub</a></li>
-                    </ul>
-            </section>
+                <img src="../svg/OsloMET.svg" alt="OsloMET logo"/>
+            </div>
+            <ul id="menu" class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html/accessibility.html">Accessibility</a></li>
+                <li><a href="html/activity.html">Activity</a></li>
+                <li><a href="html/github.html">GitHub</a></li>
+            </ul>
+            <div id="searchImg" class="navImgs">
+                <img src="../svg/search-icon.svg" alt="search icon" class="search">
+            </div>
         </nav>
     </header>
 
+    <!--ARIA ER IKKE RIKTIG, MEN PUSHA FOR Å GI TILGANG TIL NAVBAR -->
 
+    <!-- Mobile header and navigation for smaller screens -->
+    <nav class="navPhone" role="navigation" aria-label="Main menu">
+        <a href="index.html">
+            <h1>OsloMet</h1>
+        </a>
+        <!-- Hamburger menu for mobile view -->
+        <input type="checkbox" id="Toggle" aria-label="main-menu"/>
+        <label for="Toggle">
+            <div class="hamburgerContainer">
+                <div class="line" id="active"></div>
+            </div>
+        </label>
+        <!-- Dropdown navigation menu for mobile screens. A fake / hidden checkbox is used 
+         as a click reciever, so the :checked selector can be used on it.
+         Aria roles, states and properties are added for an accessible hamburgermenu.
+         https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
+        <button class="navPhoneDropDown" aria-expanded="true" aria-controls="main-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html/accessibility.html">Accessibility</a></li>
+                <li><a href="html/activity.html">Activity</a></li>
+                <li><a href="html/github.html">GitHub</a></li>
+            </ul>
+        </button>
+    </nav>
+    <!-- HEADER END -->
 
     <!--  MATMOD PAGE-->
 
