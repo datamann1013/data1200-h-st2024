@@ -664,7 +664,7 @@ input:valid + label{
 /* ===================== 4.4 GitHub Page Specific ===================== */
 
 .github-introduction-image {
-    margin-bottom: 5rem; /* Space between the sections */
+    margin-bottom: 5rem; /*Space between the sections */
     background-image: url('../img/github-main-background.jpg'); /*Chooses image for the main heading */
     text-shadow: 2px 2px #000000;
 }
@@ -679,6 +679,12 @@ input:valid + label{
 /* Adds space between the image sections*/
 .image-section {
     margin-bottom: 6rem;
+}
+
+/* Zoom on hover */
+.image-section:hover .image-grid:hover {
+    transform: scale(1.5);
+    opacity: 1;
 }
 
 /* Styles the text container */
