@@ -435,12 +435,12 @@ input[type="checkbox"] {
 }
 
 /* Displaying content when checkbox is checked */
-input[type="checkbox"]:checked + label + .accordion-content-infobox {
+input[type="checkbox"]:checked + .label + .accordion-content-infobox {
     display: block; /* Displays the accordion content when the checkbox is checked */
 }
 
 /* Changing icon text when accordion is expanded */
-input[type="checkbox"]:checked + label .icon span {
+input[type="checkbox"]:checked + .label .icon span {
     content: "-"; /* Changes the icon text to a minus sign when checked */
 }
 
@@ -652,7 +652,7 @@ input[type=button]:hover{
     transform: translateX(15px);
 }
 
-label{
+.label{
     display: inline-block;
     position: relative;
     bottom: 27px;
@@ -661,13 +661,13 @@ label{
     cursor: text;
 }
 
-input:focus + label{
+input:focus + .label{
     bottom: 50px;
     transform: scale(.8);
     font-weight: 400;
 }
 
-input:valid + label{
+input:valid + .label{
     bottom: 50px;
     transform: scale(.8);
 }
@@ -752,8 +752,12 @@ input:valid + label{
     }
 
     /* Makes a one column layout */
-    .image-grid, .text-grid, .survey-container{
+    .image-grid, .text-grid, .survey-container, .container-Form{
         grid-template-columns: 1fr;
+    }
+    .container-Form{
+        display: grid; /* Grid is used to arrange the images within the container */
+        gap: 1rem; /* Gap between the images */
     }
 
     .vertical{
