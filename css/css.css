@@ -679,12 +679,21 @@ input:valid + label{
 /* Adds space between the image sections*/
 .image-section {
     margin-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1rem 1fr;
+    gap: 1rem;
 }
 
 /* Zoom on hover */
-.image-section:hover .image-grid:hover {
+.image-grid img:hover {
     transform: scale(1.5);
-    opacity: 1;
+    transform-origin: center;
+    z-index: 10;
 }
 
 /* Styles the text container */
@@ -698,9 +707,11 @@ input:valid + label{
 /* Image styling */
 .image-grid img {
     width: 100%; /* Makes the images take up 100% of their columns width */
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px; /* Makes the corners of the images round */
-    box-shadow: 10px 10px 5px gray;
+    transition: transform .2s;
+    position: relative;
 }
 
 /* Vertical line for separation */
