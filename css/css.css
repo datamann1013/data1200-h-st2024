@@ -113,38 +113,52 @@ a:hover {
 ================================================== */
 
 /* ===================== Navbar ===================== */
+.nav-wrapper, .menu, .menu li, .menu li a, .nav-img, .top-text, .footer-wrapper, .footer-header, .footer-content,
+.accordion-item-infobox, .accordion-item-infobox .icon, .form-container{
+    /* Use flexbox layout */
+    display: flex;
+}
+
+.nav-wrapper, .menu, .footer-wrapper, .footer-header, .footer-content{
+    justify-content: space-around;
+}
+
+.nav-wrapper, .menu li a, .footer-header, .footer-content, .faglig-leder, .accordion-item-infobox,
+.accordion-item-infobox .icon, .form-container{
+    /* Vertically centers items within the flex container */
+    align-items: center;
+}
+
+.menu, .menu li, .matmod-video {
+    height: 100%;
+    width: 100%;
+}
+
+.center-horizontal, .menu, .top-text, .footer-header {
+    text-align: center;
+}
+
+.grid-container, .faglig-leder, .survey-container, .image-grid, .text-grid {
+    /* Grid is used to arrange items within the container */
+    display: grid;
+}
+
 .nav-wrapper {
     padding: 0 10vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: var(--secondary-background-color);
     /* Shadow for 3D effect */
-    box-shadow: 0 0px 7px rgb(200, 200, 200);
+    box-shadow: 0 0 7px rgb(200, 200, 200);
     min-height: 5rem;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-around;
     list-style: none;
     /* Removes default list styling */
-    text-align: center;
-    height: 100%;
-    width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.menu li {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
 .menu li a {
-    display: flex;
-    align-items: center;
     justify-content: center;
     height: 100%;
     width: 13vw;
@@ -156,13 +170,18 @@ a:hover {
 /* Hover effect for links in the menu */
 .menu li a:hover {
     background: var(--secondary-background-color);
-    box-shadow: 0 0px 7px rgb(200, 200, 200);
+    box-shadow: 0 0 7px rgb(200, 200, 200);
     /* Shadow for 3D effect */
 }
 
 /* Current page indicator (e.g., highlights current page in navbar) */
-#current {
+.accordion-item-infobox .icon span, .accordion-item-infobox .text, #current {
+    /* Makes the icon text bold */
     font-weight: bold;
+}
+
+.footer-content, .top-text, .info-grid {
+    flex-direction: column;
 }
 
 /*HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
@@ -171,7 +190,6 @@ a:hover {
 
 /* Navbar images (logo, search icon) */
 .nav-img {
-    display: flex;
     min-width: 5vw;
     min-height: 8vh;
 }
@@ -180,13 +198,19 @@ a:hover {
     height: 3rem;
 }
 
+.search-icon {
+    display: flex;
+
+    min-height: 90rem;
+}
+
 /* ===================== Main Content Styles ===================== */
 /* Background color for the main tag on all sites */
 .content {
     margin: 0 15vw;
     padding: 3vh 4vw;
     background-color: var(--main-background-color);
-    box-shadow: 0 0px 7px rgb(200, 200, 200);
+    box-shadow: 0 0 7px rgb(200, 200, 200);
     /* Shadow for 3D effect */
 }
 
@@ -195,22 +219,14 @@ a:hover {
     padding-bottom: 0.5rem;
 }
 
-/*Main functionality??? */
-.center-horizontal {
-    text-align: center;
-}
-
 /* Heading placement, plays well with the background tags for each site */
 .top-text {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 0 3%;
-    text-align: center;
     color: var(--textbox-background-color);
     text-shadow: 8px -4px 20px black;
 }
@@ -223,46 +239,35 @@ footer {
     padding-bottom: 1%;
     border-bottom: 1px solid;
 }
+footer ul, .footer-content, .btn-newsletter{
+    font-size: 1.2rem;
+}
 
 footer ul {
     list-style-type: none;
     font-family: Verdana, sans-serif;
     margin: 0.3rem;
     padding: 0;
-    font-size: 1.2rem;
 }
 
 .footer-wrapper {
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-content: baseline;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid;
 }
 
 .footer-header {
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     border-bottom: 1px solid;
-    text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.2rem;
-}
+
 
 .btn-newsletter {
     background-color: #000000;
     color: var(--textbox-background-color);
     font-family: Verdana, sans-serif;
-    font-size: 1.2rem;
     padding: 0.6rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -292,54 +297,48 @@ footer ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     /* Ensures video covers the area without distortion */
 }
 
 .grid-container {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
-    gap: 20px;
-    border-top: 1px solid black;
+    padding: 1.25rem;
+    gap: 1.25rem;
+    border-top: 0.063rem solid black;
 }
 
 .grid-item {
-    border-bottom: 1px solid black;
-    padding-bottom: 20px;
+    border-bottom: 0.063rem solid black;
+    padding-bottom: 1.25rem;
     position: relative;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .grid-container .faglig-leder {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-    gap: 5px;
-    border-top: 1px solid #cccc;
+    padding: 16rem;
+    gap: 0.313rem;
+    border-top: 0.063rem solid #cccc;
     background-color: #f9f9f9;
 }
 
 .faglig-leder {
-    display: grid;
     grid-template-columns: auto 1fr;
-    gap: 15px;
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #cccc;
+    gap: 0.938rem;
+    margin-top: 1.25rem;
+    padding: 0.625rem;
+    border: 0.063rem solid #cccc;
     background-color: #f9f9f9;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     justify-content: start;
-    align-items: center;
     box-shadow: 10px 10px 5px gray;
 }
 
 .faglig-leder img {
     height: auto;
-    max-width: 150px;
-    margin-right: 50px;
+    max-width: 9.375rem;
+    margin-right: 3.125rem;
 }
 
 /* --- Accordion for index.html */
@@ -368,10 +367,6 @@ footer ul {
 
 /* Individual accordion item styling */
 .accordion-item-infobox {
-    display: flex;
-    /* Uses flexbox layout for the accordion item */
-    align-items: center;
-    /* Vertically centers items within the flex container */
     padding: 15px 0;
     /* Adds vertical padding to the item */
     border-bottom: 1px solid black;
@@ -388,10 +383,6 @@ footer ul {
     /* Sets a fixed height for the icon */
     background-color: var(--secondary-background-color);
     /* Sets a gold background color for the icon */
-    display: flex;
-    /* Uses flexbox layout for the icon container */
-    align-items: center;
-    /* Centers the icon content vertically */
     justify-content: center;
     /* Centers the icon content horizontally */
     margin-right: 1rem;
@@ -402,16 +393,12 @@ footer ul {
 .accordion-item-infobox .icon span {
     font-size: 24px;
     /* Sets the font size for the icon text */
-    font-weight: bold;
-    /* Makes the icon text bold */
 }
 
 /* Main text styling for accordion items */
 .accordion-item-infobox .text {
     font-size: 18px;
     /* Sets the font size for the accordion item text */
-    font-weight: bold;
-    /* Makes the item text bold */
     color: var(--body-font-color);
 }
 
@@ -543,8 +530,6 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 /* Survey form borowed from https://wpdean.com/css-forms/ */
 /*Spesifically https://codepen.io/erfan74sh/pen/bGpRago */
 .survey-container {
-    display: grid;
-    /* Grid is used to arrange the images within the container */
     grid-template-columns: 6fr 10px 1fr;
     /* Three columns */
     gap: 1rem;
@@ -562,8 +547,6 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 }
 
 .form-container {
-    display: flex;
-    align-items: center;
     position: relative;
     justify-content: center;
     background-image: linear-gradient(45deg, var(--secondary-background-color), #ffbe05);
@@ -688,10 +671,7 @@ input:valid+.label {
 }
 
 /* Content divided into two equal columns woth a gap in between */
-.image-grid,
-.text-grid {
-    display: grid;
-    /* Grid is used to arrange the images within the container */
+.image-grid, .text-grid {
     grid-template-columns: 1fr 1rem 1fr;
     /* Two equal columns */
     gap: 1rem;
@@ -699,8 +679,12 @@ input:valid+.label {
 }
 
 /* Adds space between the image sections*/
-.image-section {
+.image-section, .image-section-second-section {
     margin-bottom: 6rem;
+}
+
+.text-grid {
+    margin-bottom: 3rem;
 }
 
 /* Zoom on hover */
@@ -711,13 +695,13 @@ input:valid+.label {
 }
 
 /* Styles the text container and background-color container */
-.text-grid,
-.background-color {
+.text-grid, .background-color {
     border-radius: 8px;
     background-color: white;
     box-shadow: 10px 10px 5px gray;
     padding: 20px;
 }
+
 
 /* Image styling */
 .image-grid img {
@@ -746,13 +730,10 @@ input:valid+.label {
 /*Action happening when the screen becomes smaller or wider */
 
 /* ===================== 5.1.1 Navigation Phone ===================== */
-/* Hiding mobile navigation in larger screens */
-.nav-phone {
-    display: none;
-}
 
+/* Hiding mobile navigation in larger screens */
 /* Dropdown menu styling */
-.nav-phone-dropdown {
+.nav-phone, .nav-phone-dropdown {
     display: none;
 }
 
@@ -783,7 +764,7 @@ input:valid+.label {
     }
 
     /* Adjust info-grid layout for mobile devices */
-    .info-grid {
+    .info-grid, .footer-wrapper, .socials, .footer-header {
         flex-direction: column;
     }
 
@@ -812,14 +793,8 @@ input:valid+.label {
     }
 
     /* Social media icons layout change for mobile */
-    .socials {
-        flex-direction: column;
-        align-items: center;
-    }
-
     /* For footer */
-    .footer-wrapper {
-        flex-direction: column;
+    .footer-wrapper, .socials {
         /* Stack footer sections vertically on small screens */
         align-items: center;
         /* Center align content */
@@ -827,7 +802,6 @@ input:valid+.label {
 
     .footer-header {
         display: flex wrap;
-        flex-direction: column;
     }
 
     .footer-content {
@@ -880,28 +854,27 @@ input:valid+.label {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 10vh;
+            height: 15vh;
             width: 100%;
             background-color: var(--secondary-background-color);
             box-shadow: 0 3px 3px rgb(177, 177, 177);
             margin-bottom: 1vh;
         }
-      
-        .nav-phone a {
+
+        .hamburger-container, .nav-phone a{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 15vh;
+        }
+
+        .nav-phone a {
             width: 50vw;
             margin-left: 10px;
         }
 
         /* Hamburger menu styling */
         .hamburger-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 15vh;
             width: 40vw;
             cursor: pointer;
         }
@@ -935,6 +908,26 @@ input:valid+.label {
             content: '';
             top: 12px;
         }
+        .background-color h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+        }
+        .grid-container{
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            position: relative;
+            justify-content: center;
+            margin: 0;
+            padding: 1rem;
+        }
+        .faglig-leder{
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
 
         /* Rotates the first line to transfrom the hamburger menu to an 'X' */
         #toggle:checked+label #active {
