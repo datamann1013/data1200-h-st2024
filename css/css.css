@@ -23,6 +23,223 @@ TABLE OF CONTENTS
 ================================================== */
 
 
+
+
+
+
+/* ****** GLOBALS ****** */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+thead th {
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+tbody th {
+    background-color: #f4f4f4;
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+    width: 15%;
+}
+
+tbody td {
+    background-color: #fff;
+    padding: 15px;
+    font-size: 1.0rem;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+/* Styling for Semester Headers */
+table tbody tr th[scope="rowgroup"] {
+    display: table-cell; /* Ensures they act as standalone headers */
+    vertical-align: middle; /* Align text in the middle */
+    background-color: var(--secondary-background-color); /* Yellow background */
+    color: #333; /* Dark text for contrast */
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    font-size: 1.2rem;
+    text-align: left; /* Align text to the left */
+    padding: 15px;
+    border-radius: 5px 5px 0 0; /* Rounded top corners for card effect */
+    margin-bottom: 40px; /* Add space below the header */
+    margin-top: 40px; /* Add space between rowgroups */
+    border-top: 2px solid #ddd; /* Divider line */
+}
+
+
+/* ********************** KLASSER ******************** */
+
+.separator-row td {
+    background-color: #f4f4f4; /* Light gray background */
+    height: 10px; /* Adjust the height of the row */
+    border-bottom: 2px solid #ddd; /* Optional: Add a bottom border */
+    padding: 0; /* Remove padding for a clean line */
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ***************. TESTER RESPONSIVE ***************** */
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    table {
+        display: block; /* Make the table a block-level element */
+        width: 100%;
+        font-size: 0.8rem;
+        border: none;
+    }
+
+    /* Add spacing around the semester card */
+    table tbody {
+        margin-bottom: 20px;
+    }
+
+    table thead {
+        display: none; /* Hide the table header */
+    }
+
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        border: 1px solid #ddd; /* Add a border around each row */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px;
+        background-color: #fff; /* White background for contrast */
+    }
+
+    table tbody tr th {
+        display: none; /* Hide the rowgroup header (like "1. semester") */
+    }
+
+    table tbody tr th[scope="rowgroup"] {
+        text-align: center; /* Center-align text for smaller screens */
+        font-size: 1.2rem; /* Adjust size for better visibility */
+        padding: 10px; /* Reduce padding */
+        border-radius: 5px 5px 0 0; /* Maintain rounded corners */
+    }
+
+    table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 15px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+
+    table tbody tr td:last-child {
+        border-bottom: none;
+    }
+
+    table tbody tr td:before {
+        content: attr(data-label); /* Add data-label for context */
+        font-weight: bold;
+        flex: 0 0 50%; /* Reserve space for the label */
+        color: #333;
+    }
+
+    .separator-row {
+        display: none;
+    }
+
+    .year-header {
+        padding: 10px; /* Reduce padding for small devices */
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    .semester-header {
+        display: block;
+        width: calc(100% - 40px); /* Match card width (adjust based on padding) */
+        margin: 0 auto; /* Center-align */
+        background-color: var(--secondary-background-color); /* Yellow background */
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners to match cards */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    }
+}
+
+
+
+/* SLUTT PÅ TESTING AV TABELL */
+
+
+
+/* ********. YEAR HEADER  ********* */
+
+.year-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #fafcfb; /* Keep the background clean */
+    border-left: 5px solid var(--secondary-background-color); /* Gold vertical bar */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.year-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* ******** SLUTT PÅ YEAR HEADER ****/
+
+.emnegruppe-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text */
+    padding: 15px 25px;
+    margin: 25px 0;
+    background: #fed400; /* A brighter yellow to stand out */
+    border-radius: 8px; /* Smooth rounded edges */
+    border: 2px solid #f0f0f0; /* A soft border to frame the section */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+}
+
+.emnegruppe-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333; /* Darker text for readability */
+    font-weight: normal; /* Emphasize the header text */
+    letter-spacing: 0.5px; /* Slight spacing for better readability */
+    text-transform: uppercase; /* Optional for a distinctive look */
+}
+
+
+
+
+
+
+
 /* ==================================================
 1. Global Styles ||
 ================================================== */
@@ -32,11 +249,11 @@ TABLE OF CONTENTS
     --body-background-color: #dadada;
     --main-background-color: #f3f3f3;
     --textbox-background-color: #ffffff;
-    --secondary-background-color: #fed400;
+    --secondary-background-color: #33aa8e;
     --body-font-color: #000000;
     /* Link colors */
-    --a-color: #4D4DFF;
-    --a-color-visited: #551A8B;
+    --a-color: #1F009C;
+    --a-color-visited: #531440;
     /* For the site with a different theme */
     /* VI MÅ HUSKE DETTE */
     --diff-background-color: #77000e;
@@ -97,7 +314,7 @@ img {
 
 /* Hyperlink styles */
 a {
-    color: var(--a-color);
+    color: var(--body-font-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -201,8 +418,9 @@ table tbody tr th[scope="rowgroup"] {
     padding: 0 10vw;
     background-color: var(--secondary-background-color);
     /* Shadow for 3D effect */
-    box-shadow: 0 0 7px rgb(200, 200, 200);
-    min-height: 5rem;
+    box-shadow: 0 0px 7px rgb(200, 200, 200); /* Shadow for 3D effect */
+    height: 13vh;
+    min-height: 13vh;
 }
 
 .menu {
@@ -214,18 +432,18 @@ table tbody tr th[scope="rowgroup"] {
 
 .menu li a {
     justify-content: center;
-    height: 100%;
-    width: 13vw;
-    min-width: 130px;
+    min-width: 100%;
     transition: background-color 0.3s;
-    font-size: 22px;
+    font-size: 1.5rem;
 }
 
 /* Hover effect for links in the menu */
 .menu li a:hover {
-    background: var(--secondary-background-color);
-    box-shadow: 0 0 7px rgb(200, 200, 200);
+    text-decoration: none;
+    color:var(--body-font-color);
     /* Shadow for 3D effect */
+    background: #28ae8f;
+    box-shadow: 0 0px 7px rgb(77, 100, 90);
 }
 
 /* Current page indicator (e.g., highlights current page in navbar) */
@@ -244,18 +462,12 @@ table tbody tr th[scope="rowgroup"] {
 
 /* Navbar images (logo, search icon) */
 .nav-img {
-    min-width: 5vw;
-    min-height: 8vh;
+    max-width: 20vw;
+    max-height: 20vh;
 }
 
 .logo {
     height: 3rem;
-}
-
-.search-icon {
-    display: flex;
-
-    min-height: 90rem;
 }
 
 /* ===================== Main Content Styles ===================== */
@@ -316,8 +528,6 @@ footer ul {
     border-bottom: 1px solid;
 }
 
-
-
 .btn-newsletter {
     background-color: #000000;
     color: var(--textbox-background-color);
@@ -354,6 +564,7 @@ footer ul {
     object-fit: cover;
     /* Ensures video covers the area without distortion */
 }
+
 
 .grid-container {
     grid-template-columns: repeat(3, 1fr);
@@ -421,52 +632,40 @@ footer ul {
 
 /* Individual accordion item styling */
 .accordion-item-infobox {
-    padding: 15px 0;
-    /* Adds vertical padding to the item */
-    border-bottom: 1px solid black;
-    /* Adds a black bottom border */
-    cursor: pointer;
-    /* Changes the cursor to a pointer to indicate clickable items */
+    padding: 15px 0; /* Adds vertical padding to the item */
+    border-bottom: 1px solid black; /* Adds a black bottom border */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate clickable items */
 }
 
 /* Icon styling within each accordion item */
 .accordion-item-infobox .icon {
-    width: 40px;
-    /* Sets a fixed width for the icon */
-    height: 40px;
-    /* Sets a fixed height for the icon */
-    background-color: var(--secondary-background-color);
-    /* Sets a gold background color for the icon */
-    justify-content: center;
-    /* Centers the icon content horizontally */
-    margin-right: 1rem;
-    /* Adds space to the right of the icon */
+    width: 40px; /* Sets a fixed width for the icon */
+    height: 40px; /* Sets a fixed height for the icon */
+    background-color: var(--secondary-background-color); /* Sets a gold background color for the icon */
+    justify-content: center; /* Centers the icon content horizontally */
+    margin-right: 1rem; /* Adds space to the right of the icon */
 }
 
 /* Icon text styling */
 .accordion-item-infobox .icon span {
-    font-size: 24px;
-    /* Sets the font size for the icon text */
+    font-size: 24px; /* Sets the font size for the icon text */
 }
 
 /* Main text styling for accordion items */
 .accordion-item-infobox .text {
-    font-size: 18px;
-    /* Sets the font size for the accordion item text */
+    font-size: 18px; /* Sets the font size for the accordion item text */
     color: var(--body-font-color);
 }
 
 /* Content area of the accordion */
 .accordion-content-infobox {
-    display: none;
-    /* Hides the content area of the accordion by default */
+    display: none; /* Hides the content area of the accordion by default */
     margin-top: 1rem !important;
-    padding-top: 0 !important;
-    /* Adds vertical padding to the content area */
+    padding-top: 0 !important; /* Adds vertical padding to the content area */
     padding-bottom: 30px;
     border-bottom: 1px solid var(--main-background-color);
     /* Adds a light gray bottom border */
-    margin-left: 7rem;
+    margin-left: 2rem;
 }
 
 .separator-row td {
@@ -529,19 +728,16 @@ footer ul {
 
 /* Hiding the checkbox input */
 input[type="checkbox"] {
-    display: none;
-    /* Hides the checkbox input element */
+    display: none; /* Hides the checkbox input element */
 }
 
 input[type="checkbox"]:checked+.accordion-item-infobox+.accordion-content-infobox {
-    display: block;
-    /* Displays the accordion content when the checkbox is checked */
+    display: block; /* Displays the accordion content when the checkbox is checked */
 }
 
 /* Changing icon text when accordion is expanded */
 input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
-    content: "-";
-    /* Changes the icon text to a minus sign when checked */
+    content: "-"; /* Changes the icon text to a minus sign when checked */
 }
 
 /* ===================== 4.2 Accessibility Page Specific ===================== */
@@ -557,9 +753,9 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 /* ===================== 4.3 Activity Page Specific ===================== */
 
 .activity-introduction-image {
-    /*Chooses image for the main heading */
     margin: 0;
     height: 35vh;
+    /*Chooses image for the main heading */
     background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg');
     text-shadow: 2px 2px #000000;
 }
@@ -642,10 +838,8 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 /* Survey form borowed from https://wpdean.com/css-forms/ */
 /*Spesifically https://codepen.io/erfan74sh/pen/bGpRago */
 .survey-container {
-    grid-template-columns: 6fr 10px 1fr;
-    /* Three columns */
-    gap: 1rem;
-    /* Gap between the images */
+    grid-template-columns: 6fr 10px 1fr; /* Three columns */
+    gap: 1rem; /* Gap between the images */
     padding-bottom: 1rem;
     border-radius: 8px;
     background-color: var(--body-background-color);
@@ -661,7 +855,7 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 .form-container {
     position: relative;
     justify-content: center;
-    background-image: linear-gradient(45deg, var(--secondary-background-color), #ffbe05);
+    background-image: linear-gradient(45deg, var(--secondary-background-color), #09ef3f);
     height: 35rem;
     width: 30rem;
     margin: 0 auto;
@@ -790,11 +984,13 @@ input:valid+.label {
     /* Gap between the images */
 }
 
-/* Adds space between the image sections*/
+/* Adds space between the elements*/
 .image-section, .image-section-second-section {
     margin-bottom: 6rem;
+    margin-top: 3rem;
 }
 
+/* Adds space */
 .text-grid {
     margin-bottom: 3rem;
 }
@@ -1037,29 +1233,19 @@ input:valid+.label {
         margin-bottom: 1vh;
     }
 
-    .hamburger-container, .nav-phone a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 15vh;
-    }
+        /* Hamburger menu placement and cursor change on items */
+        .hamburger-container, .nav-phone a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15vh;
+            cursor: pointer;
+        }
 
-    .nav-phone a {
-        width: 50vw;
-        margin-left: 10px;
-    }
-
-    /* Hamburger menu styling */
-    .hamburger-container {
-        width: 40vw;
-        cursor: pointer;
-    }
-
-    /* Makes the checkbox used for the hamburger menu invisible */
-    #toggle {
-        display: none;
         /* Makes the checkbox used for the hamburger menu invisible */
-    }
+        #toggle {
+            display: none;
+        }
 
     /* For the three lines included in the hamburger menu */
     .line,
@@ -1144,26 +1330,26 @@ input:valid+.label {
         display: none;
     }
 
-    /* Hamburger dropdown menu design */
-    .nav-phone-dropdown {
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        /* z-index makes the dropdown menu appear on top of other elements */
-        z-index: 10;
-        top: 10vh;
-        max-height: 70vh;
-        width: 100%;
-        background-color: var(--secondary-background-color);
-        padding-bottom: 1vh;
-        overflow: hidden;
-        box-shadow: 0 3px 3px rgba(97, 105, 114, 0.8);
-        /* Code for the visual transition of the hamburger menu */
-        height: auto;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: 0.2s ease;
-    }
+        /* Hamburger dropdown menu design */
+        .nav-phone-dropdown {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            /* z-index makes the dropdown menu appear on top of other elements */
+            z-index: 10;
+            top: 15vh;
+            max-height: 70vh;
+            width: 100%;
+            background-color: var(--secondary-background-color);
+            padding-bottom: 1vh;
+            overflow: hidden;
+            box-shadow: 0 3px 3px rgba(97, 105, 114, 0.8);
+            /* Code for the visual transition of the hamburger menu */
+            height: auto;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: 0.2s ease;
+        }
 
     /* Makes the dropdown visible when hamburger clicked */
     #toggle:checked+label+.nav-phone-dropdown {
@@ -1178,24 +1364,32 @@ input:valid+.label {
         list-style-type: none;
     }
 
-    /* For dropdown menu individual items */
-    .nav-phone-dropdown ul li {
-        border-bottom: solid;
-        border-width: 0.1rem;
-        border-color: rgb(51, 51, 51);
-    }
+        /* For dropdown menu individual items */
+        .nav-phone-dropdown li a {
+            margin: 0;
+            height: 10vh;
+            width: 100%;
+            font-size: larger;
+            text-transform: uppercase;
+            justify-content: center;
+            transition: background-color 0.3s;
+            border-bottom: solid;
+            border-width: 0.1rem;
+            border-color: rgb(51, 51, 51);
+        }
+        /* For links within the dropdown menu */
+        .nav-phone-dropdown li a:hover {
 
-    /* For links within the dropdown menu */
-    .nav-phone-dropdown ul li a {
-        margin: 0;
-        height: 10vh;
-        width: 100%;
-        font-size: larger;
-        text-transform: uppercase;
-    }
+            /* Shadow for 3D effect */
+            background: #28ae8f;
+            box-shadow: 0 0px 7px rgb(77, 100, 90);
+            text-decoration: none;
+            color: var(--body-font-color);
+        }
 
     .emnegruppe-header h3 {
         font-size: 1.2rem; /* Smaller size for mobile */
         width: 80%; /* Default width (responsive to parent container) */
     }
+}
 }

@@ -19,12 +19,12 @@
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                 <!--Remember to add aria labels to href.-->
-                <a href="index.html"><img src="svg/OsloMET.svg" alt="OsloMET logo"/></a>
+                <a href="index.html" aria-label="Link to hjem"><img src="svg/OsloMET.svg" alt=""/></a>
             </div>
             <ul id="menu" class="menu">
-                <li><a href="index.html" id="current">Home</a></li>
-                <li><a href="html/accessibility.html">Accessibility</a></li>
-                <li><a href="html/activity.html">Activity</a></li>
+                <li><a href="index.html" id="current">Hjem</a></li>
+                <li><a href="html/accessibility.html">Tilgjengelighet</a></li>
+                <li><a href="html/activity.html">OsloMet Gaming</a></li>
                 <li><a href="html/github.html">GitHub</a></li>
             </ul>
         </nav>
@@ -33,11 +33,11 @@
     <!--ARIA ER IKKE RIKTIG, MEN PUSHA FOR Å GI TILGANG TIL NAVBAR -->
 
     <!-- Mobile header and navigation for smaller screens -->
-    <nav class="nav-phone" role="navigation" aria-label="Main menu">
+    <nav class="nav-phone" role="navigation" aria-label="Hovedmeny">
         <div class="nav-img">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
             <!--Remember to add aria labels to href.-->
-            <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
+            <a href="../index.html" aria-label="Link to home"><img src="svg/OsloMET.svg" alt="OsloMET logo"/></a>
         </div>
         <!-- Hamburger menu for mobile view -->
         <input type="checkbox" id="toggle" aria-label="main-menu"/>
@@ -52,9 +52,9 @@
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
         <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
-                <li><a href="index.html" id="current">Home</a></li>
-                <li><a href="html/accessibility.html">Accessibility</a></li>
-                <li><a href="html/activity.html">Activity</a></li>
+                <li><a href="index.html" id="current">Hjem</a></li>
+                <li><a href="html/accessibility.html">Tilgjengelighet</a></li>
+                <li><a href="html/activity.html">OsloMet Gaming</a></li>
                 <li><a href="html/github.html">GitHub</a></li>
             </ul>
         </button>
@@ -64,13 +64,14 @@
         <!-- MAIN SECTION START -->
         <main class="content">
             <section>
-                <h1>Matematisk modelering og datavitenskap - Ingeniør</h1>
+                <h1>Matematisk modellering og datavitenskap - Ingeniør</h1>
             </section>
             <section class="matmod-video-format">
                 <!-- Video with student testimonials -->
                 <iframe class="matmod-video" title="Matematisk Modellering"
                     src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo%5fid=95216483" allowfullscreen
-                    allow="autoplay; fullscreen"></iframe>
+                    allow="autoplay; fullscreen"
+                    aria-label="Video - studiehverdag. Trykk play for avspilling."></iframe>
             </section>
 
             <!-- Introduction below video -->
@@ -124,15 +125,11 @@
                         <p>Få innsikt i matematiske og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige
                             oppgaver.</p>
                         <p>Informasjon om program, timeplaner, pensum, fadderuker og mye mer finner du på studiestartsiden
-                            for
-                            matematisk modellering og datavitenskap - ingeniør (student.oslomet.no).
-
+                            for matematisk modellering og datavitenskap - ingeniør (student.oslomet.no).
                             NB! Vær obs på at timeplanen som ligger på studiestartsiden er en timeplan for alle studentene
                             på kullet.
-
                             For å se din personlige timeplan må du logge deg inn på "Min side" (student.oslomet.no) etter at
-                            du har
-                            aktivert IT-kontoen din og du er blitt plassert i klasse/gruppe. Dette skjer vanligvis uken før
+                            du har aktivert IT-kontoen din og du er blitt plassert i klasse/gruppe. Dette skjer vanligvis uken før
                             studiestart.</p>
                     </section>
                 </section>
@@ -141,47 +138,44 @@
                 <!-- Accordion component that contains multiple items -->
                 <section class="accordion-infobox">
                     <!-- First accordion item -->
-                    <input type="checkbox" id="item1"> <!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item1" class="accordion-item-infobox">
+                    <input type="checkbox" id="item1" aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
+                    <label for="item1" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item1">
                         <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Opptakskrav og poeng</section> <!-- Title of the accordion item -->
                     </label>
-                    <section class="accordion-content-infobox text-margin"> <!-- Content displayed when the item is expanded -->
+
+                    <section class="accordion-content-infobox text-margin" aria-labelledby="item1"> <!-- Content displayed when the item is expanded -->
                         <p>For å søke på dette programmet må du ha
                             generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse
-                            matematikk R1 og R2
-                            fysikk 1
+                            matematikk R1 og R2 fysikk 1.
                             Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.
-
                             Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du
-                            søke på dette
-                            studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
+                            søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
                     </section>
 
                     <!-- Second accordion item -->
-                    <input type="checkbox" id="item2"> <!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item2" class="accordion-item-infobox">
+                    <input type="checkbox" id="item2" aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
+                    <label for="item2" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item2">
                         <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Slik søker du</section> <!-- Title of the accordion item -->
                     </label>
-                    <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                    <section class="accordion-content-infobox" aria-labelledby="item2"> <!-- Content displayed when the item is expanded -->
                         <p>Du søker på Samordna opptak med studiekode 215 503.
-
                             15. april: ordinær søknadsfrist
                             1. mars: frist for enkelte søkere</p>
                         <p>Mer om å søke på bachelor.</p>
                     </section>
 
                     <!-- Third accordion item -->
-                    <input type="checkbox" id="item3"> <!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item3" class="accordion-item-infobox">
-                        <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                    <input type="checkbox" id="item3" aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->                
+                    <label for="item3" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item3">
+                        <section class="icon" ><span>+</span></section> <!-- Icon indicating expandable content -->
+                
                         <section class="text">Hva lærer du?</section> <!-- Title of the accordion item -->
                     </label>
-                    <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                    <section class="accordion-content-infobox" aria-labelledby="item3"> <!-- Content displayed when the item is expanded -->
                         <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk,
                             fysikk og statistikk.</p>
-
                         <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i
                             medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer.</p>
 
@@ -221,12 +215,12 @@
                     </section>
 
                     <!-- Fourth accordion item -->
-                    <input type="checkbox" id="item4"><!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item4" class="accordion-item-infobox">
+                    <input type="checkbox" id="item4" aria-hidden="true"><!-- Hidden checkbox for toggling content visibility -->
+                    <label for="item4" class="accordion-item-infobox" role="button" aria-expanded="false" aria-control="item4">
                         <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Studiets oppbygging</section> <!-- Title of the accordion item -->
                     </label>
-                    <section class="accordion-content-infobox">
+                    <section class="accordion-content-infobox" aria-labelledby="item4">
                         <p>Her finner du informasjon om studiets oppbygging.</p>
                         <!-- Content displayed when the item is expanded -->
 
@@ -965,12 +959,12 @@
                     </section>
                 </section>
                 <!-- Fifth accordion item -->
-                <input type="checkbox" id="item5"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item5" class="accordion-item-infobox">
-                    <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <input type="checkbox" id="item5" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item5" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item5">
+                    <section class="icon" aria-label="Femte accordion item - Trykk"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Hvordan foregår undervisningen?</section> <!-- Title of the accordion item -->
                 </label>
-                <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <section class="accordion-content-infobox" aria-labelledby="item5"> <!-- Content displayed when the item is expanded -->
                     <p>Undervisningen er en kombinasjon av</p>
 
                     <ul>
@@ -988,23 +982,23 @@
                        arbeid gjennom hele semesteret.</p>
                 </section>
                 <!-- Sixth accordion item -->
-                <input type="checkbox" id="item6"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item6" class="accordion-item-infobox">
+                <input type="checkbox" id="item6" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item6" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item6">
                     <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Hva koster det?</section> <!-- Title of the accordion item -->
                 </label>
-                <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <section class="accordion-content-infobox" aria-labelledby="item6"> <!-- Content displayed when the item is expanded -->
                     <p>Det er ikke studieavgift på dette studiet. Du betaler en semesteravgift hvert semester</p>
                     <p>(student.oslomet.no).</p>
 
                 </section>
                 <!-- Seventh accordion item -->
-                <input type="checkbox" id="item7"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item7" class="accordion-item-infobox">
+                <input type="checkbox" id="item7" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item7" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item7">
                     <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Hva kan du jobbe som?</section> <!-- Title of the accordion item -->
                 </label>
-                <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <section class="accordion-content-infobox" aria-labelledby="item7"> <!-- Content displayed when the item is expanded -->
                     <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger
                        spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
                     <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du
@@ -1015,22 +1009,22 @@
 
                 </section>
                 <!-- Eight'th accordion item -->
-                <input type="checkbox" id="item8"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item8" class="accordion-item-infobox">
+                <input type="checkbox" id="item8" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item8" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item8">
                     <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Utveksling</section> <!-- Title of the accordion item -->
                 </label>
-                <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <section class="accordion-content-infobox" aria-labelledby="item8"> <!-- Content displayed when the item is expanded -->
                     <p>Du kan dra på utveksling i femte semester.</p>
 
                 </section>
                 <!-- Nine'th accordion item -->
-                <input type="checkbox" id="item9"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item9" class="accordion-item-infobox">
-                    <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <input type="checkbox" id="item9" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <label for="item9" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item9">
+                    <section class="icon" aria-expanded="false" aria-controls="item9"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Videre studiemuligheter ved Oslomet</section> <!-- Title of the accordion item -->
                 </label>
-                <section class="accordion-content-infobox"> <!-- Content displayed when the item is expanded -->
+                <section class="accordion-content-infobox" aria-labelledby="item9"> <!-- Content displayed when the item is expanded -->
                     <p>Videre studiemuligheter ved OsloMet:
                     <p> Anvendt data- og informasjonsteknologi (ACIT)</p>
                     <p>Masterprogram 2 år Pilestredet i Oslo Heltid</p>
@@ -1061,13 +1055,13 @@
         <!-- FOOTER START -->
         <footer>
             <section class="footer-header">
-                <h2>Stay updated on OsloMet news and events.</h2>
+                <h2>Hold deg oppdatert på OsloMet sine nyheter og arrangementer.</h2>
                 <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Subscribe to the newsletter!</button></a>
             </section>
             <section class="footer-wrapper">
                 <!-- Contact information -->
                 <section class="footer-content">
-                    <h3>Contact information</h3>
+                    <h3>Kontaktinformasjon</h3>
                     <ul>
                         <li>Oslo Metropolitan University</li>
                         <li>Storbyuniversitetet</li>
@@ -1079,17 +1073,17 @@
                 </section>
                 <!-- Navigational links -->
                 <section class="footer-content">
-                    <h3>Navigation</h3>
+                    <h3>Navigasjon</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="html/accessibility.html">Accessibility</a></li>
-                        <li><a href="html/activity.html">Activity</a></li>
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="html/accessibility.html">Tilgjengelighet</a></li>
+                        <li><a href="html/activity.html">OsloMet Gaming</a></li>
                         <li><a href="html/github.html">GitHub</a></li>
                     </ul>
                 </section>
                 <!-- Social media links -->
                 <section class="footer-content">
-                    <h3>Follow us</h3>
+                    <h3>Følg oss</h3>
                     <ul>
                         <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                         <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>

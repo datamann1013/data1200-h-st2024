@@ -23,9 +23,9 @@
                 <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
             </div>
             <ul id="menu" class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html" id="current">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
+                <li><a href="../index.html">Hjem</a></li>
+                <li><a href="accessibility.html" id="current">Tilgjengelighet</a></li>
+                <li><a href="activity.html">OsloMet Gaming</a></li>
                 <li><a href="github.html">GitHub</a></li>
             </ul>
         </nav>
@@ -53,9 +53,9 @@
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
         <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html" id="current">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
+                <li><a href="../index.html">Hjem</a></li>
+                <li><a href="accessibility.html" id="current">Tilgjengelighet</a></li>
+                <li><a href="activity.html">OsloMet Gaming</a></li>
                 <li><a href="github.html">GitHub</a></li>
             </ul>
         </button>
@@ -77,8 +77,8 @@
     <main class="content">
         <!-- INTRODUCTION SECTION START -->
         <section class="top-text accessibility-introduction-image">
-            <h1>Accessibility</h1>
-                <p>Presentation of accessibility for our site.</p>
+            <h1>Tilgjengelighet</h1>
+                <p>Presentasjon av hvordan vi gjorde siden tilgjengelig for alle med universell utforming.</p>
         </section>
         <!-- INTRODUCTION SECTION END -->
 
@@ -87,58 +87,46 @@
                 you made for universal design beyond what an automated test could tell you.-->
 
         <article class="container-infobox main-padding">
-            <!-- Description section providing insight into the content -->
-            <section class="description-infobox">
-                <p>This page covers how we made our site accessible for all users by making coding choices for universal design.</p>
+            
+            <section class="info-section">
+                <h3>Struktur</h3>
+                    <p>Generell layout, tydelige overskrifter og høyoppløselige bilder.
+                        Sidene har brede marger for å holde innholdet samlet og i midtfokus. Dette er gjort både for estetiske grunner, men hovedsakelig 
+                        for å gjøre siden tilgjengelig for folk med tunnelsyn, eller retinitis pigmentosa som gjør synet innsnevret.
+                        Forståelig: Implisitt implisitt innholdet uten å måtte lese alt.
+                        Holde overskrifter i riktig rekkefølge og bruke semantiske tagger.</p>
             </section>
             <section class="info-section">
-                <h3>Structure</h3>
-                    <p>General layout, clear headers and high-resolution images.
-                        The pages has wide margins for 
-                        Understandable: Implicitly imply the content without needing to read everything.
-                        Keeping headers in correct order and using semantic tags.</p>
-            </section>
-            <section class="info-section">
-                <h3>Readability</h3>
-                    <p>We chose the font Verdana, with sans-serif as a backup. The justification for this choice was based on it's 
-                        legibility and accessible design by being simple and unembellished. The font should clearly differentiate 
-                        the letters well even in small text sizes. We've avoided fonts featuring “imposter letter shapes”. These include characters 
-                        that are visually similar, but not the same, for example uppercase and lowercase Is, lowercase Ls, and the number 1 (Iil1).
-                        We've ensured that the font size is in a relative unit, like rem and percentages, to scale it properly based on individual user needs.
-                        This is because using absolute units, like pixels, limits the option to increase or decrease text size without 
-                        zooming in on everything else on the page.
+                <h3>Leslighet</h3>
+                    <p>Vi valgte fonten Verdana, med sans-serif som backup. Begrunnelsen for dette valget var basert på lesbarheten ved å være enkel og usmykket. 
+                        Skriften skal tydelig skille bokstavene godt selv i små tekststørrelser. Vi har unngått fonter med “imposter letter shapes” eller bokstaver 
+                        og tegn som ser visuelt like ut og kan forveksles. For eksempel bokstavene l, I og tallet 1.
+                        Vi har sørget for at skriftstørrelsen er i en relativ enhet, som rem, for å skalere den riktig basert på individuelle brukerbehov.
+                        Dette er fordi bruk av absolutte enheter, som piksler, begrenser muligheten til å øke eller redusere tekststørrelsen uten å måtte 
+                        zoome inn på alt annet på siden.
 
-                        All paragraphs use 1.3em line-height and letter-spacing is set to 0.04rem to make the text easier to read.
-                        
+                        All tekst bruker 1.3em linjehøyde og bokstavavstand er satt til 0.04rem for å gjøre teksten lettere å lese. 
                         <!-- https://betterwebtype.com/5-keys-to-accessible-web-typography/ and https://www.siteimprove.com/glossary/accessible-fonts/ -->
                     </p>
             </section>
             <section class="info-section">
-                <h3>Colors</h3>
-                    <p>We implemented both light and dark modes with high contrast to enhance readability. Links are
-                        adjusted to be clearly visible in both modes while maintaining association with traditional
-                        hyperlink colors.</p>
-            </section>
-            <section class="info-section">
-                <h3>Choices and justification</h3>
-                    <p>Lightmode and darkmode = contrast on both!
-                        darkmode links are lighter than lightmode links while still being assosiated to hyperlinks</p>
+                <h3>Farger</h3>
+                    <p>Vi forsikret at alle farger hadde tilstrekkelig kontrast mellom bakgrunn og tekst, for eksempel på hyperlenkene i footer 
+                        fikk en mørkere blåfarge for å være leslig mot bakgrunnen, men fortsatt beholde assosiasjonen til de originale hyperlenkefargene.
+                        <!-- https://snook.ca/technical/colour_contrast/colour.html#fg=1F009C,bg=33AA8E --></p>
             </section>
 
             <section class="info-section">
-                <h3>Images</h3>
-                    <p>We've made sure to include a descriptive alternative text on every image for visually impaired users,
-                        but also in case any images should fail to load.
-                        !Images AND icons should have this!
-                        PNG, WebP, JPEG
-                        Backup image formatting nescessary?
-                        Multiple versions of one image to support different screen sizes</p>
+                <h3>Bilder</h3>
+                    <p>Vi har sørget for å inkludere en beskrivende alternativ tekst på hvert bilde for synshemmede brukere,
+                        men også i tilfelle noen bilder ikke kan lastes inn.
+                        !Bilder OG ikoner bør ha dette!</p>
                     <!-- Content displayed when the item is expanded -->
             </section>
 
             <section class="info-section">
-                <h3>Interactivity</h3>
-                    <p>Screen readers (aria-label).
+                <h3>Interaktivitet</h3>
+                    <p>Aria(aria-label).
                     Tabindex for non-mouse users</p>
                 <!--(convinceandconvert.com)-->
                 <!-- Content displayed when the item is expanded -->
@@ -147,34 +135,35 @@
             <!-- Lighthouse Test Results -->
             <section class="info-section">
                 <h3>Lighthouse Testing</h3>
-                    <p>We started testing the accessibility of our site by using the automated Lighthouse tests in Google Chrome.
-                        The first test gave a score of 22/25 and highlighted missing labels in forms and problematic lists.
-                        The main source of this was the hamburger menu items starting with anchor-tags instead of list-tags and missing
-                        labels for the input type checkbox that is used as a click receiver.</p>
+                    <p>Vi begynte å teste tilgjengeligheten til nettstedet vårt ved å bruke de automatiserte Lighthouse-testene i Google Chrome.
+                        Den første testen ga en poengsum på 22/25 og markerte manglende etiketter i skjemaer og problematiske lister.
+                        Hovedkilden til dette var hamburgermenyelementene som startet med anker-tagger i stedet for liste-tagger og manglet
+                        etiketter for avmerkingsboksen for input siden denne brukes som klikkmottaker.</p>
             <section class="image-grid">
-                <img src="../img/ac-lighthouse-test-github-1.png"
-                    alt="Lighthouse testresults showing 22/25 accessibility score, but encourages testing manually to ensure universal design.">
+                <img src="../img/ac-lighthouse-test-1.png"
+                    alt="Lighthouse testresultater viser 22 av 25 tilgjengelighetspoeng.">
                 <div class= "vertical"></div>
                 <img src="../img/ac-code-problem-1.png"
-                     alt="Improved code to enhance site accessibility.">
+                     alt="Kode for problematisk liste for hamburgermeny">
             </section>
-                <p>The second test gave an overall score of 25/25 after we rearranged the menu item tags and added labels to our code. 
-                    This prompted us to dig deeper and manually check for code improvement opportunities.</p>
+                <p>Den andre testen ga en samlet poengsum på 25/25 etter at vi omorganiserte menyelement-taggene og la til etiketter i koden vår. 
+                    Dette fikk oss til å grave dypere og manuelt se etter muligheter for kodeforbedring.</p>
             <section class="image-grid">
-                <img src="../img/ac-lighthouse-test-github-2.png"
-                    alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
+                <img src="../img/ac-lighthouse-test-2.png"
+                    alt="Lighthouse testresultater viser 25 av 25 tilgjengelighetspoeng, men oppfordrer til manuell testing for å sikre universell utforming.">
                 <div class= "vertical"></div>
                 <img src="../img/ac-code-improvement-1.png"
-                    alt="Improved code to enhance site accessibility.">
+                    alt="Kode for forbedret hamburgermeny.">
             </section>
-                <p>Later in the semester, another Lighthouse test was done while the hamburger menu was opened. This third test gave a score of 
-                    24/25 based on ARIA attributes not being used as specified for the elements role.</p>
+                <p>Senere i semesteret ble det gjort nok en Lighthouse-test mens hamburgermenyen ble åpnet. Denne tredje testen ga en poengsum på 
+                    24/25 basert på at ARIA-attributter ikke brukes som spesifisert for elementrollen. Vi bestemte oss samtidig for å implementere 
+                en annen løsning for navigasjonen med en åpen løsning på stor skjerm og hamburgermeny på mindre skjermer.</p>
             <section class="image-grid">
-                <img src="../img/ac-lighthouse-test-github-3.png"
+                <img src="../img/ac-lighthouse-test-3.png"
                     alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
                 <div class= "vertical"></div>
                 <img class="image-grid" src="../img/"
-                    alt="Improved code to enhance site accessibility.">
+                    alt="Kode for ny navigasjonsbar .">
             </section>
                 <p>The coding choices made to enhance xyz was implementet by xyz</p>
 
@@ -198,49 +187,52 @@
             </section>
                 <p>The coding choices made to enhance xyz was implementet by xyz</p>
         </article>
-
     </main>
     <!-- MAIN SECTION END -->
 
     <!-- FOOTER START -->
     <footer>
         <section class="footer-header">
-            <h2>Stay updated on OsloMet news and events.</h2>
-            <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Subscribe to the newsletter!</button></a>
+            <h2>Hold deg oppdatert på OsloMet sine nyheter og arrangementer.</h2>
+            <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Abonner på nyhetsbrevet!</button></a>
         </section>
         <section class="footer-wrapper">
             <!-- Contact information -->
             <section class="footer-content">
-                <h3>Contact information</h3>
+                <h3>Kontaktinformasjon</h3>
                 <ul>
                     <li>Oslo Metropolitan University</li>
                     <li>Storbyuniversitetet</li>
                     <li>Postboks 4, St. Olavs plass</li>
                     <li>0130 Oslo</li>
-                    <li>Phone nr.: <a href="tel:67235000">67 23 50 00</a></li>
+                    <li>Tlf.: <a href="tel:67235000">67 23 50 00</a></li>
                     <li>Email: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
                 </ul>
             </section>
             <!-- Navigational links -->
-            <nav class="footer-content">
-                <h3>Navigation</h3>
+            <section class="footer-content">
+                <h3>Navigasjon</h3>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="activity.html">Activity</a></li>
+                    <li><a href="../index.html">Hjem</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
+                    <li><a href="activity.html">OsloMet Gaming</a></li>
                     <li><a href="github.html">GitHub</a></li>
-                </ul>    
-            </nav>
-            <!-- Social media links -->
-            <nav class="footer-content">
-                <h3>Follow us</h3>
-                <ul>
-                    <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                    <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
-                    <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                    <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
                 </ul>
-            </nav>
+            </section>
+            <!-- Social media links -->
+            <section class="footer-content">
+                <h3>Følg oss</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                    </li>
+                    <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a>
+                    </li>
+                    <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    </li>
+                    <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                    </li>
+                </ul>
+            </section>
         </section>
     </footer>
     <!-- FOOTER END -->
