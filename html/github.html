@@ -21,13 +21,13 @@
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                 <!--Remember to add aria labels to href.-->
-                <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
+                <a href="../index.html" aria-label="Gå til hjemmesiden"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
             </div>
             <ul id="menu" class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="github.html" id="current">GitHub</a></li>
+                <li><a href="../index.html" aria-label="Naviagate to Home">Hjem</a></li>
+                <li><a href="accessibility.html" aria-label="Navigate to Accessibility">Tilgjengelighet</a></li>
+                <li><a href="activity.html" aria-label="Navigate to Activity">Aktivitet</a></li>
+                <li><a href="github.html" aria-label="Navigate to Github" id="current">GitHub</a></li>
             </ul>
         </nav>
     </header>
@@ -39,10 +39,10 @@
         <div class="nav-img">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
             <!--Remember to add aria labels to href.-->
-            <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
+            <a href="../index.html" aria-label="Go to homepage"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
         </div>
         <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="toggle" aria-label="main-menu" />
+        <input type="checkbox" id="toggle" aria-label="Open main-menu" />
         <label for="toggle">
             <div class="hamburger-container">
                 <div class="line" id="active"></div>
@@ -54,10 +54,10 @@
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
         <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="github.html" id="current">GitHub</a></li>
+                <li><a href="../index.html" aria-label="Naviagate to Home">Hjem</a></li>
+                <li><a href="accessibility.html" aria-label="Navigate to Accessibility">Tilgjengelighet</a></li>
+                <li><a href="activity.html" aria-label="Navigate to Activity">Aktivitet</a></li>
+                <li><a href="github.html" aria-label="Navigate to Github" id="current">GitHub</a></li>
             </ul>
         </button>
     </nav>
@@ -69,10 +69,8 @@
             <!-- INTRODUCTION SECTION START -->
             <section class="top-text github-introduction-image">
 
-                <h1>Welcome to Github</h1>
-                <p>In this page you will find images showing part of commits history and specific changes. There will
-                    also
-                    be a short text about collaboration in repositories like GitHub.</p>
+                <h1>Velkommen til Github</h1>
+                <p>På denne siden vil du finne bilder som viser deler av "commit" historikk og spesifikke endringer. Det vil også være en kort tekst om sammarbeid i "repositories" som GitHub </p>
             </section>
             <!-- INTRODUCTION SECTION END -->
 
@@ -80,19 +78,19 @@
             <!-- IMAGES SECTION START -->
             <section>
                 <section class="image-section">
-                    <h2>Images showing part of commits history</h2>
+                    <h2>Bilder som viser deler av "commit" historikk</h2>
                     <section class="image-grid">
-                        <img src="../img/github-history1.png" alt="Github commit history.">
+                        <img src="../img/github-history1.png" alt="Github commit historikk.">
                         <div class="vertical"></div>
-                        <img src="../img/github-history2.png" alt="Github commit history.">
+                        <img src="../img/github-history2.png" alt="Github commit historikk.">
                     </section>
                 </section>
                 <section class="image-section-second-section">
-                    <h2>Images showing a specific change</h2>
+                    <h2>Bilder som viser en spesifikk endring</h2>
                     <section class="image-grid">
-                        <img src="../img/github-change1.png" alt="Github specific change.">
+                        <img src="../img/github-change1.png" alt="Github spesifikk endring.">
                         <div class="vertical"></div>
-                        <img src="../img/github-change2.png" alt="Github specific change.">
+                        <img src="../img/github-change2.png" alt="Github spesifikk endring.">
                     </section>
                 </section>
             </section>
@@ -101,41 +99,19 @@
 
             <!-- TEXT SECTION START -->
             <section>
-                <h2 class="center-horizontal">A short list of benefits of Git and Github in VS code</h2>
+                <h2 class="center-horizontal">En kort liste over fordelene med Git og Github i Visual Studio Code</h2>
                 <section class="text-grid">
                     <div>
-                        <h3>Easier to collaborate</h3>
+                        <h3>Enklere å sammarbeide</h3>
                         <p>
-                            When working in a team, collaboration and code reviews are important to keep the code
-                            quality high and to make sure that
-                            everyone´s contributions are in sync. Github together with Visual Studio Code can make
-                            collaboration easier since you can use GitHub´s tools inside Visual Studio Code. This makes
-                            it possible for developers to review code,
-                            create and manage pull requests, leave comments, and work together in present time. It can
-                            make
-                            it easier to collaborate
-                            with other people because you wont have to switch to a web browser. You can stay
-                            within Visual Studio Code and still use
-                            all of GitHub´s tools.
+                            Når man jobber i et team er det viktig å sammarbeide sammen og gå gjennom koden for å sikre at det blir god kvalitet på koden. Github sammen med Visual Studio Code kan gjøre det enklere å samarbeide med andre siden man får tilgang til GitHub sine verktøy i Visual Studio Code. Dette gjør det mulig for utviklere å se gjennom kode, opprette og administrere "pull"-forespørsler, legge til kommentarer og arbeide sammen i nå-tid. Dette gjør at man slipper å måtte bytte til en nettleser, da man kan bli i Visual Studio Code og fortsatt ha tilgang til Github sine verktøy.  
                         </p>
                     </div>
                     <div class="vertical"></div>
                     <div>
-                        <h3>Git branches</h3>
+                        <h3>Git "branches"</h3>
                         <p>
-                            Branches are an importan part of using Git becuase they can make it possible for developers
-                            to
-                            work on different
-                            features without
-                            affecting the main code. In Visual Studio Code, you can create new branches, switch
-                            between them, and merge
-                            them back into the main branch when needed. By creating these branches, developers can work
-                            and
-                            test their changes separately from the main branch. This can help to keep the work organized
-                            and reduce the chance of conflicts arising between different pieces of code. Each branch can
-                            focus on a specific task or
-                            feature, making it easier to
-                            review and merge changes once the work is complete.
+                            "Branches" er en viktig del av Git fordi de kan gjøre det mulig for utviklere å jobbe med forskjellige funksjoner uten å påvirke "main"-koden. I Visual Studio Code kan man opprette nye "branches", byte mellom dem, og slå de sammen med "main-branch" ved behov. Ved å opprette disse "brances" kan utviklere jobbe og teste endringene sine separat fra "main-branch". Dette kan bidra til å holde arbeidet organisert, og redusere sjansen for at det oppstår konflikter mellom ulike deler av kode. Hver "Branch" kan fokusere på en spesifikk oppgave eller funksjon, noe som kan gjøre det enklere å gjennomgå og slå sammen endringer underveis .
                         </p>
                     </div>
                 </section>
@@ -152,36 +128,35 @@
     <!-- FOOTER START -->
     <footer>
         <section class="footer-header">
-            <h2>Stay updated on OsloMet news and events.</h2>
-            <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Subscribe to the
-                    newsletter!</button></a>
+            <h2>Hold deg oppdatert på OsloMet sine nyheter og arrangementer</h2>
+            <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Abonner på nyhetsbrevet!</button></a>
         </section>
         <section class="footer-wrapper">
             <!-- Contact information -->
             <section class="footer-content">
-                <h3>Contact information</h3>
+                <h3>Kontakt informasjon</h3>
                 <ul>
                     <li>Oslo Metropolitan University</li>
                     <li>Storbyuniversitetet</li>
                     <li>Postboks 4, St. Olavs plass</li>
                     <li>0130 Oslo</li>
-                    <li>Phone nr.: <a href="tel:67235000">67 23 50 00</a></li>
+                    <li>Tlf.: <a href="tel:67235000">67 23 50 00</a></li>
                     <li>Email: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
                 </ul>
             </section>
             <!-- Navigational links -->
             <section class="footer-content">
-                <h3>Navigation</h3>
+                <h3>Navigasjon</h3>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="activity.html">Activity</a></li>
+                    <li><a href="../index.html">Hjem</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
+                    <li><a href="activity.html">Aktivitet</a></li>
                     <li><a href="github.html">GitHub</a></li>
                 </ul>
             </section>
             <!-- Social media links -->
             <section class="footer-content">
-                <h3>Follow us</h3>
+                <h3>Følg oss</h3>
                 <ul>
                     <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a>
                     </li>
