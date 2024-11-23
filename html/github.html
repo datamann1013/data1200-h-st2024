@@ -21,13 +21,13 @@
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                 <!--Remember to add aria labels to href.-->
-                <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
+                <a href="../index.html" aria-label="Gå til hjemmesiden"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
             </div>
             <ul id="menu" class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="github.html" id="current">GitHub</a></li>
+                <li><a href="../index.html" aria-label="Naviagate to Home">Home</a></li>
+                <li><a href="accessibility.html" aria-label="Navigate to Accessibility">Accessibility</a></li>
+                <li><a href="activity.html" aria-label="Navigate to Activity">Activity</a></li>
+                <li><a href="github.html" aria-label="Navigate to Github" id="current">GitHub</a></li>
             </ul>
         </nav>
     </header>
@@ -39,10 +39,10 @@
         <div class="nav-img">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
             <!--Remember to add aria labels to href.-->
-            <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
+            <a href="../index.html" aria-label="Go to homepage"><img src="../svg/OsloMET.svg" alt="OsloMET logo" /></a>
         </div>
         <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="toggle" aria-label="main-menu" />
+        <input type="checkbox" id="toggle" aria-label="Open main-menu" />
         <label for="toggle">
             <div class="hamburger-container">
                 <div class="line" id="active"></div>
@@ -54,10 +54,10 @@
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
         <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="github.html" id="current">GitHub</a></li>
+                <li><a href="../index.html" aria-label="Naviagate to Home">Home</a></li>
+                <li><a href="accessibility.html" aria-label="Navigate to Accessibility">Accessibility</a></li>
+                <li><a href="activity.html" aria-label="Navigate to Activity">Activity</a></li>
+                <li><a href="github.html" aria-label="Navigate to Github" id="current">GitHub</a></li>
             </ul>
         </button>
     </nav>
