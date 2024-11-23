@@ -23,10 +23,6 @@ TABLE OF CONTENTS
 ================================================== */
 
 
-
-
-
-
 /* ****** GLOBALS ****** */
 
 table {
@@ -693,7 +689,7 @@ footer ul {
     justify-content: center; /* Center the text */
     padding: 15px 25px;
     margin: 25px 0;
-    background: #fed400; /* A brighter yellow to stand out */
+    background: var(--secondary-background-color); /* A brighter yellow to stand out */
     border-radius: 8px; /* Smooth rounded edges */
     border: 2px solid #f0f0f0; /* A soft border to frame the section */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
