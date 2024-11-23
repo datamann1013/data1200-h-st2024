@@ -693,7 +693,7 @@ input:valid+.label {
 }
 
 /* Adds space between the image sections*/
-.image-section {
+.image-section, .image-section-second-section {
     margin-bottom: 6rem;
 }
 
