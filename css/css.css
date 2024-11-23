@@ -74,19 +74,19 @@ hr {
 }
 
 h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-}
-
-h3 {
     font-size: 2rem;
 }
 
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
 p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 img {
@@ -448,6 +448,8 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 /* ===================== 4.2 Accessibility Page Specific ===================== */
 
 .accessibility-introduction-image {
+    margin: 0;
+    height: 30vh;
     /*Chooses image for the main heading */
     background-image: url('../img/accessibility-header.png');
     text-shadow: 2px 2px #000000;
@@ -457,7 +459,10 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 
 .activity-introduction-image {
     /*Chooses image for the main heading */
+    margin: 0;
+    height: 35vh;
     background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg');
+    text-shadow: 2px 2px #000000;
 }
 
 
@@ -674,7 +679,8 @@ input:valid+.label {
 /* ===================== 4.4 GitHub Page Specific ===================== */
 
 .github-introduction-image {
-    margin-bottom: 5rem;
+    margin: 0;
+    height: 30vh;
     /*Space between the sections */
     background-image: url('../img/github-main-background.jpg');
     /*Chooses image for the main heading */
@@ -755,19 +761,19 @@ input:valid+.label {
 
     /* General font size adjustments */
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     p {
-        font-size: smaller;
+        font-size: 0.7;
     }
 
     /* Main content padding and margins for smaller screens */
@@ -831,27 +837,28 @@ input:valid+.label {
     .footer-content ul li {
         font-size: 1.1rem;
     }
+ 
 
     /* ===================== 5.1.3 Medium Devices ===================== */
     @media screen and (max-width: 992px) {
 
         /* General font size adjustments */
         h1 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
 
         h2 {
-            font-size: 2rem;
-        }
-
-        h3 {
             font-size: 1.5rem;
         }
 
-        p {
-            font-size: 1rem;
+        h3 {
+            font-size: 1.3rem;
         }
 
+        p {
+            font-size: 0.8rem;
+        }
+        
         /* Main content padding and margins for smaller screens */
         .content {
             margin: 0 0;
@@ -880,7 +887,6 @@ input:valid+.label {
             margin-bottom: 1vh;
         }
       
-
         .nav-phone a {
             display: flex;
             justify-content: center;
@@ -953,11 +959,11 @@ input:valid+.label {
             position: fixed;
             /* z-index makes the dropdown menu appear on top of other elements */
             z-index: 10;
-            top: 15vh;
-            max-height: 90vh;
+            top: 10vh;
+            max-height: 70vh;
             width: 100%;
             background-color: var(--secondary-background-color);
-            padding-bottom: 2vh;
+            padding-bottom: 1vh;
             overflow: hidden;
             box-shadow: 0 3px 3px rgba(97, 105, 114, 0.8);
             /* Code for the visual transition of the hamburger menu */
@@ -976,7 +982,6 @@ input:valid+.label {
         /* For dropdown menu items */
         .nav-phone-dropdown ul {
             padding: 0;
-
             width: 90%;
             list-style-type: none;
         }
@@ -991,7 +996,7 @@ input:valid+.label {
         /* For links within the dropdown menu */
         .nav-phone-dropdown ul li a {
             margin: 0;
-            height: 15vh;
+            height: 10vh;
             width: 100%;
             font-size: larger;
             text-transform: uppercase;
