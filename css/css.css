@@ -682,8 +682,7 @@ input:valid+.label {
 }
 
 /* Content divided into two equal columns woth a gap in between */
-.image-grid,
-.text-grid {
+.image-grid, .text-grid {
     display: grid;
     /* Grid is used to arrange the images within the container */
     grid-template-columns: 1fr 1rem 1fr;
@@ -697,6 +696,10 @@ input:valid+.label {
     margin-bottom: 6rem;
 }
 
+.text-grid {
+    margin-bottom: 3rem;
+}
+
 /* Zoom on hover */
 .image-grid img:hover {
     transform: scale(1.2);
@@ -705,13 +708,13 @@ input:valid+.label {
 }
 
 /* Styles the text container and background-color container */
-.text-grid,
-.background-color {
+.text-grid, .background-color {
     border-radius: 8px;
     background-color: white;
     box-shadow: 10px 10px 5px gray;
     padding: 20px;
 }
+
 
 /* Image styling */
 .image-grid img {
