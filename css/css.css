@@ -114,15 +114,14 @@ a:hover {
 
 /* ===================== Navbar ===================== */
 .nav-wrapper {
-    padding: 0 8vw;
+    padding: 0 10vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--secondary-background-color);
-    box-shadow: 0 0px 7px rgb(200, 200, 200);
     /* Shadow for 3D effect */
-    height: 13vh;
-    min-height: 80px;
+    box-shadow: 0 0px 7px rgb(200, 200, 200);
+    min-height: 5rem;
 }
 
 .menu {
@@ -132,7 +131,7 @@ a:hover {
     /* Removes default list styling */
     text-align: center;
     height: 100%;
-    width: 52vw;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -179,12 +178,6 @@ a:hover {
 
 .logo {
     height: 3rem;
-}
-
-.search-icon {
-    display: flex;
-    
-    min-height: 90rem;
 }
 
 /* ===================== Main Content Styles ===================== */
@@ -254,6 +247,7 @@ footer ul {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid;
+    text-align: center;
 }
 
 .footer-content {
@@ -879,12 +873,13 @@ input:valid+.label {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 15vh;
+            height: 10vh;
             width: 100%;
             background-color: var(--secondary-background-color);
             box-shadow: 0 3px 3px rgb(177, 177, 177);
             margin-bottom: 1vh;
         }
+      
 
         .nav-phone a {
             display: flex;
