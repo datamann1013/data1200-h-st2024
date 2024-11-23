@@ -714,13 +714,10 @@ input:valid+.label {
 /*Action happening when the screen becomes smaller or wider */
 
 /* ===================== 5.1.1 Navigation Phone ===================== */
-/* Hiding mobile navigation in larger screens */
-.nav-phone {
-    display: none;
-}
 
+/* Hiding mobile navigation in larger screens */
 /* Dropdown menu styling */
-.nav-phone-dropdown {
+.nav-phone, .nav-phone-dropdown {
     display: none;
 }
 
@@ -751,7 +748,7 @@ input:valid+.label {
     }
 
     /* Adjust info-grid layout for mobile devices */
-    .info-grid {
+    .info-grid, .footer-wrapper, .socials, .footer-header {
         flex-direction: column;
     }
 
@@ -782,7 +779,6 @@ input:valid+.label {
     /* Social media icons layout change for mobile */
     /* For footer */
     .footer-wrapper, .socials {
-        flex-direction: column;
         /* Stack footer sections vertically on small screens */
         align-items: center;
         /* Center align content */
@@ -790,7 +786,6 @@ input:valid+.label {
 
     .footer-header {
         display: flex wrap;
-        flex-direction: column;
     }
 
     .footer-content {
@@ -848,23 +843,21 @@ input:valid+.label {
             box-shadow: 0 3px 3px rgb(177, 177, 177);
             margin-bottom: 1vh;
         }
-      
 
-        .nav-phone a {
+        .hamburger-container, .nav-phone a{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 15vh;
+        }
+
+        .nav-phone a {
             width: 50vw;
             margin-left: 10px;
         }
 
         /* Hamburger menu styling */
         .hamburger-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 15vh;
             width: 40vw;
             cursor: pointer;
         }
