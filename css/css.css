@@ -503,6 +503,7 @@ footer ul {
     /* Ensures video covers the area without distortion */
 }
 
+
 .grid-container {
     grid-template-columns: repeat(3, 1fr);
     padding: 1.25rem;
@@ -614,7 +615,7 @@ footer ul {
     padding-bottom: 30px;
     border-bottom: 1px solid var(--main-background-color);
     /* Adds a light gray bottom border */
-    margin-left: 7rem;
+    margin-left: 2rem;
 }
 
 /* Hiding the checkbox input */
