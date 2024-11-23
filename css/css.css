@@ -248,7 +248,7 @@ table tbody tr th[scope="rowgroup"] {
     --body-font-color: #000000;
     /* Link colors */
     --a-color: #1F009C;
-    --a-color-visited: #551A8B;
+    --a-color-visited: #531440;
     /* For the site with a different theme */
     /* VI MÅ HUSKE DETTE */
     --diff-background-color: #77000e;
@@ -275,7 +275,7 @@ body {
 /* ===================== General Content Styles ===================== */
 /* Accessible line height, letter-spacing and word-breaks for better readability*/
 h1, h2, h3, h4, p, hr {
-    line-height: 1.3em;
+    line-height: 1.5em;
     letter-spacing: 0.04rem;
     word-break: normal;
 }
@@ -464,8 +464,6 @@ footer ul {
     border-bottom: 1px solid;
 }
 
-
-
 .btn-newsletter {
     background-color: #000000;
     color: var(--textbox-background-color);
@@ -569,69 +567,53 @@ footer ul {
 
 /* Individual accordion item styling */
 .accordion-item-infobox {
-    padding: 15px 0;
-    /* Adds vertical padding to the item */
-    border-bottom: 1px solid black;
-    /* Adds a black bottom border */
-    cursor: pointer;
-    /* Changes the cursor to a pointer to indicate clickable items */
+    padding: 15px 0; /* Adds vertical padding to the item */
+    border-bottom: 1px solid black; /* Adds a black bottom border */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate clickable items */
 }
 
 /* Icon styling within each accordion item */
 .accordion-item-infobox .icon {
-    width: 40px;
-    /* Sets a fixed width for the icon */
-    height: 40px;
-    /* Sets a fixed height for the icon */
-    background-color: var(--secondary-background-color);
-    /* Sets a gold background color for the icon */
-    justify-content: center;
-    /* Centers the icon content horizontally */
-    margin-right: 1rem;
-    /* Adds space to the right of the icon */
+    width: 40px; /* Sets a fixed width for the icon */
+    height: 40px; /* Sets a fixed height for the icon */
+    background-color: var(--secondary-background-color); /* Sets a gold background color for the icon */
+    justify-content: center; /* Centers the icon content horizontally */
+    margin-right: 1rem; /* Adds space to the right of the icon */
 }
 
 /* Icon text styling */
 .accordion-item-infobox .icon span {
-    font-size: 24px;
-    /* Sets the font size for the icon text */
+    font-size: 24px; /* Sets the font size for the icon text */
 }
 
 /* Main text styling for accordion items */
 .accordion-item-infobox .text {
-    font-size: 18px;
-    /* Sets the font size for the accordion item text */
+    font-size: 18px; /* Sets the font size for the accordion item text */
     color: var(--body-font-color);
 }
 
 /* Content area of the accordion */
 .accordion-content-infobox {
-    display: none;
-    /* Hides the content area of the accordion by default */
+    display: none; /* Hides the content area of the accordion by default */
     margin-top: 1rem !important;
-    padding-top: 0 !important;
-    /* Adds vertical padding to the content area */
+    padding-top: 0 !important; /* Adds vertical padding to the content area */
     padding-bottom: 30px;
-    border-bottom: 1px solid var(--main-background-color);
-    /* Adds a light gray bottom border */
+    border-bottom: 1px solid var(--main-background-color);  /* Adds a light gray bottom border */
     margin-left: 7rem;
 }
 
 /* Hiding the checkbox input */
 input[type="checkbox"] {
-    display: none;
-    /* Hides the checkbox input element */
+    display: none; /* Hides the checkbox input element */
 }
 
 input[type="checkbox"]:checked+.accordion-item-infobox+.accordion-content-infobox {
-    display: block;
-    /* Displays the accordion content when the checkbox is checked */
+    display: block; /* Displays the accordion content when the checkbox is checked */
 }
 
 /* Changing icon text when accordion is expanded */
 input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
-    content: "-";
-    /* Changes the icon text to a minus sign when checked */
+    content: "-"; /* Changes the icon text to a minus sign when checked */
 }
 
 /* ===================== 4.2 Accessibility Page Specific ===================== */
@@ -647,9 +629,9 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 /* ===================== 4.3 Activity Page Specific ===================== */
 
 .activity-introduction-image {
-    /*Chooses image for the main heading */
     margin: 0;
     height: 35vh;
+    /*Chooses image for the main heading */
     background-image: url('../img/OsloMETGaming/OsloMETgamingrom.jpg');
     text-shadow: 2px 2px #000000;
 }
@@ -732,10 +714,8 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 /* Survey form borowed from https://wpdean.com/css-forms/ */
 /*Spesifically https://codepen.io/erfan74sh/pen/bGpRago */
 .survey-container {
-    grid-template-columns: 6fr 10px 1fr;
-    /* Three columns */
-    gap: 1rem;
-    /* Gap between the images */
+    grid-template-columns: 6fr 10px 1fr; /* Three columns */
+    gap: 1rem; /* Gap between the images */
     padding-bottom: 1rem;
     border-radius: 8px;
     background-color: var(--body-background-color);
