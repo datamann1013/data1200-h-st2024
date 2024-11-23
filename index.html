@@ -138,9 +138,9 @@
                 <!-- Accordion component that contains multiple items -->
                 <section class="accordion-infobox">
                     <!-- First accordion item -->
-                    <input type="checkbox" id="item1" aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
+                    <input type="checkbox" id="item1"  aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
                     <label for="item1" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item1">
-                        <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                        <section class="icon" aria-label="Første accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Opptakskrav og poeng</section> <!-- Title of the accordion item -->
                     </label>
 
@@ -154,9 +154,9 @@
                     </section>
 
                     <!-- Second accordion item -->
-                    <input type="checkbox" id="item2" aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
+                    <input type="checkbox" id="item2"  aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
                     <label for="item2" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item2">
-                        <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                        <section class="icon" aria-label="Andre accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Slik søker du</section> <!-- Title of the accordion item -->
                     </label>
                     <section class="accordion-content-infobox" aria-labelledby="item2"> <!-- Content displayed when the item is expanded -->
@@ -167,10 +167,9 @@
                     </section>
 
                     <!-- Third accordion item -->
-                    <input type="checkbox" id="item3" aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->                
+                    <input type="checkbox" id="item3"  aria-hidden="true" aria-label="Tredje accordion element - knapp"> <!-- Hidden checkbox for toggling content visibility -->                
                     <label for="item3" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item3">
-                        <section class="icon" ><span>+</span></section> <!-- Icon indicating expandable content -->
-                
+                        <section class="icon" aria-label="Tredje accordion element - knapp" ><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Hva lærer du?</section> <!-- Title of the accordion item -->
                     </label>
                     <section class="accordion-content-infobox" aria-labelledby="item3"> <!-- Content displayed when the item is expanded -->
@@ -215,9 +214,9 @@
                     </section>
 
                     <!-- Fourth accordion item -->
-                    <input type="checkbox" id="item4" aria-hidden="true"><!-- Hidden checkbox for toggling content visibility -->
+                    <input type="checkbox" id="item4"  aria-hidden="true" aria-label="Fjerde accordion element - knapp"><!-- Hidden checkbox for toggling content visibility -->
                     <label for="item4" class="accordion-item-infobox" role="button" aria-expanded="false" aria-control="item4">
-                        <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                        <section class="icon" aria-label="Fjerde accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                         <section class="text">Studiets oppbygging</section> <!-- Title of the accordion item -->
                     </label>
                     <section class="accordion-content-infobox" aria-labelledby="item4">
@@ -982,9 +981,9 @@
                        arbeid gjennom hele semesteret.</p>
                 </section>
                 <!-- Sixth accordion item -->
-                <input type="checkbox" id="item6" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <input type="checkbox" id="item6" aria-label="Sjette accordion element - knapp" aria-hidden="false" > <!-- Hidden checkbox for toggling content visibility -->
                 <label for="item6" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item6">
-                    <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                    <section class="icon" aria-label="Sjette accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Hva koster det?</section> <!-- Title of the accordion item -->
                 </label>
                 <section class="accordion-content-infobox" aria-labelledby="item6"> <!-- Content displayed when the item is expanded -->
@@ -993,9 +992,10 @@
 
                 </section>
                 <!-- Seventh accordion item -->
+
                 <input type="checkbox" id="item7" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
                 <label for="item7" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item7">
-                    <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                    <section class="icon" aria-label="Syvende accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Hva kan du jobbe som?</section> <!-- Title of the accordion item -->
                 </label>
                 <section class="accordion-content-infobox" aria-labelledby="item7"> <!-- Content displayed when the item is expanded -->
@@ -1009,9 +1009,9 @@
 
                 </section>
                 <!-- Eight'th accordion item -->
-                <input type="checkbox" id="item8" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
+                <input type="checkbox" id="item8" aria-hidden="false" > <!-- Hidden checkbox for toggling content visibility -->
                 <label for="item8" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item8">
-                    <section class="icon"><span>+</span></section> <!-- Icon indicating expandable content -->
+                    <section class="icon" aria-label="Åttende accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Utveksling</section> <!-- Title of the accordion item -->
                 </label>
                 <section class="accordion-content-infobox" aria-labelledby="item8"> <!-- Content displayed when the item is expanded -->
@@ -1020,8 +1020,9 @@
                 </section>
                 <!-- Nine'th accordion item -->
                 <input type="checkbox" id="item9" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item9" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item9">
-                    <section class="icon" aria-expanded="false" aria-controls="item9"><span>+</span></section> <!-- Icon indicating expandable content -->
+                <label for="item9" class="accordion-item-infobox" role="button"
+                 aria-expanded="false" aria-controls="item9">
+                    <section class="icon" aria-label="Niende accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
                     <section class="text">Videre studiemuligheter ved Oslomet</section> <!-- Title of the accordion item -->
                 </label>
                 <section class="accordion-content-infobox" aria-labelledby="item9"> <!-- Content displayed when the item is expanded -->
