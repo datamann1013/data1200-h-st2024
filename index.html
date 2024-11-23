@@ -22,7 +22,7 @@
                 <a href="index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
             </div>
             <ul id="menu" class="menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" id="current">Home</a></li>
                 <li><a href="html/accessibility.html">Accessibility</a></li>
                 <li><a href="html/activity.html">Activity</a></li>
                 <li><a href="html/github.html">GitHub</a></li>
@@ -37,9 +37,11 @@
 
     <!-- Mobile header and navigation for smaller screens -->
     <nav class="nav-phone" role="navigation" aria-label="Main menu">
-        <a href="index.html">
-            <h1>OsloMet</h1>
-        </a>
+        <div class="nav-img">
+            <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
+            <!--Remember to add aria labels to href.-->
+            <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
+        </div>
         <!-- Hamburger menu for mobile view -->
         <input type="checkbox" id="toggle" aria-label="main-menu"/>
         <label for="toggle">
@@ -53,7 +55,7 @@
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
         <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" id="current">Home</a></li>
                 <li><a href="html/accessibility.html">Accessibility</a></li>
                 <li><a href="html/activity.html">Activity</a></li>
                 <li><a href="html/github.html">GitHub</a></li>
