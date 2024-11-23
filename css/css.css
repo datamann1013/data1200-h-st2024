@@ -113,7 +113,7 @@ a:hover {
 ================================================== */
 
 /* ===================== Navbar ===================== */
-.navwrapper {
+.nav-wrapper {
     padding: 0 8vw;
     display: flex;
     justify-content: space-between;
@@ -301,7 +301,7 @@ footer ul {
     /* Ensures video covers the area without distortion */
 }
 
-.grid-Container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
@@ -316,7 +316,7 @@ footer ul {
     gap: 20px;
 }
 
-.grid-Container .faglig-leder {
+.grid-container .faglig-leder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
@@ -474,7 +474,7 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
     box-sizing: border-box;
 }
 
-.carousel__container {
+.carousel-container {
     white-space: nowrap;
     margin: 70px 0;
     padding-bottom: 10px;
@@ -501,23 +501,23 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
     transform: translate3d(100px, 0, 0);
 }
 
-.carousel__container:hover .carousel-item {
+.carousel-container:hover .carousel-item {
     opacity: 0.3;
 }
 
-.carousel__container:hover .carousel-item:hover {
+.carousel-container:hover .carousel-item:hover {
     transform: scale(1.5);
     opacity: 1;
 }
 
-.carousel-item__img {
+.carousel-item-img {
     width: 200px;
     height: 250px;
     -o-object-fit: cover;
     object-fit: cover;
 }
 
-.carousel-item__details {
+.carousel-item-details {
     font-size: 10px;
     opacity: 0;
     -webkit-transition: 450ms opacity;
@@ -530,11 +530,11 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
     bottom: 0;
 }
 
-.carousel-item__details:hover {
+.carousel-item-details:hover {
     opacity: 1;
 }
 
-.carousel-item__details .controls {
+.carousel-item-details .controls {
     padding-top: 180px;
 }
 
@@ -559,7 +559,7 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
     grid-row: 2;
 }
 
-.container-form {
+.form-container {
     display: flex;
     align-items: center;
     position: relative;
@@ -793,11 +793,11 @@ input:valid+.label {
     .image-grid,
     .text-grid,
     .survey-container,
-    .container-form {
+    .form-container {
         grid-template-columns: 1fr;
     }
 
-    .container-form {
+    .form-container {
         display: grid;
         /* Grid is used to arrange the images within the container */
         gap: 1rem;
@@ -861,7 +861,7 @@ input:valid+.label {
             padding: 0 10vw;
         }
 
-        .navwrapper {
+        .nav-wrapper {
             display: none;
             width: 0;
             height: 0;
