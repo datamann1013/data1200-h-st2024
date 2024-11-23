@@ -235,11 +235,6 @@ table tbody tr th[scope="rowgroup"] {
 }
 
 
-
-
-
-
-
 /* ==================================================
 1. Global Styles ||
 ================================================== */
@@ -249,10 +244,10 @@ table tbody tr th[scope="rowgroup"] {
     --body-background-color: #dadada;
     --main-background-color: #f3f3f3;
     --textbox-background-color: #ffffff;
-    --secondary-background-color: #fed400;
+    --secondary-background-color: #33aa8e;
     --body-font-color: #000000;
     /* Link colors */
-    --a-color: #4D4DFF;
+    --a-color: #1F009C;
     --a-color-visited: #551A8B;
     /* For the site with a different theme */
     /* VI MÅ HUSKE DETTE */
@@ -279,12 +274,7 @@ body {
 
 /* ===================== General Content Styles ===================== */
 /* Accessible line height, letter-spacing and word-breaks for better readability*/
-h1,
-h2,
-h3,
-h4,
-p,
-hr {
+h1, h2, h3, h4, p, hr {
     line-height: 1.3em;
     letter-spacing: 0.04rem;
     word-break: normal;
@@ -314,7 +304,7 @@ img {
 /* Hyperlink styles */
 /* Hyperlink styles */
 a {
-    color: var(--a-color);
+    color: var(--body-font-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -364,8 +354,9 @@ a:hover {
     padding: 0 10vw;
     background-color: var(--secondary-background-color);
     /* Shadow for 3D effect */
-    box-shadow: 0 0 7px rgb(200, 200, 200);
-    min-height: 5rem;
+    box-shadow: 0 0px 7px rgb(200, 200, 200); /* Shadow for 3D effect */
+    height: 13vh;
+    min-height: 13vh;
 }
 
 .menu {
@@ -377,18 +368,18 @@ a:hover {
 
 .menu li a {
     justify-content: center;
-    height: 100%;
-    width: 13vw;
-    min-width: 130px;
+    min-width: 100%;
     transition: background-color 0.3s;
-    font-size: 22px;
+    font-size: 1.5rem;
 }
 
 /* Hover effect for links in the menu */
 .menu li a:hover {
-    background: var(--secondary-background-color);
-    box-shadow: 0 0 7px rgb(200, 200, 200);
+    text-decoration: none;
+    color:var(--body-font-color);
     /* Shadow for 3D effect */
+    background: #28ae8f;
+    box-shadow: 0 0px 7px rgb(77, 100, 90);
 }
 
 /* Current page indicator (e.g., highlights current page in navbar) */
@@ -407,18 +398,12 @@ a:hover {
 
 /* Navbar images (logo, search icon) */
 .nav-img {
-    min-width: 5vw;
-    min-height: 8vh;
+    max-width: 20vw;
+    max-height: 20vh;
 }
 
 .logo {
     height: 3rem;
-}
-
-.search-icon {
-    display: flex;
-
-    min-height: 90rem;
 }
 
 /* ===================== Main Content Styles ===================== */
@@ -1034,20 +1019,20 @@ input:valid+.label {
     @media screen and (max-width: 992px) {
 
         /* General font size adjustments */
-        h1 {
-            font-size: 1.8rem;
+        h1 { 
+            font-size: 1.7rem; 
         }
-
-        h2 {
-            font-size: 1.5rem;
+    
+        h2 { 
+            font-size: 1.4rem; 
         }
-
-        h3 {
-            font-size: 1.3rem;
+    
+        h3 { 
+            font-size: 1.2rem; 
         }
-
-        p {
-            font-size: 0.8rem;
+    
+        p { 
+            font-size: 0.7; 
         }
         
         /* Main content padding and margins for smaller screens */
@@ -1078,28 +1063,18 @@ input:valid+.label {
             margin-bottom: 1vh;
         }
 
+        /* Hamburger menu placement and cursor change on items */
         .hamburger-container, .nav-phone a{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 15vh;
-        }
-
-        .nav-phone a {
-            width: 50vw;
-            margin-left: 10px;
-        }
-
-        /* Hamburger menu styling */
-        .hamburger-container {
-            width: 40vw;
             cursor: pointer;
         }
 
         /* Makes the checkbox used for the hamburger menu invisible */
         #toggle {
             display: none;
-            /* Makes the checkbox used for the hamburger menu invisible */
         }
 
         /* For the three lines included in the hamburger menu */
@@ -1145,7 +1120,6 @@ input:valid+.label {
             padding: 1rem;
         }
 
-
         /* Rotates the first line to transfrom the hamburger menu to an 'X' */
         #toggle:checked+label #active {
             transform: rotate(45deg);
@@ -1169,7 +1143,7 @@ input:valid+.label {
             position: fixed;
             /* z-index makes the dropdown menu appear on top of other elements */
             z-index: 10;
-            top: 10vh;
+            top: 15vh;
             max-height: 70vh;
             width: 100%;
             background-color: var(--secondary-background-color);
@@ -1197,19 +1171,26 @@ input:valid+.label {
         }
 
         /* For dropdown menu individual items */
-        .nav-phone-dropdown ul li {
-            border-bottom: solid;
-            border-width: 0.1rem;
-            border-color: rgb(51, 51, 51);
-        }
-
-        /* For links within the dropdown menu */
-        .nav-phone-dropdown ul li a {
+        .nav-phone-dropdown li a {
             margin: 0;
             height: 10vh;
             width: 100%;
             font-size: larger;
             text-transform: uppercase;
+            justify-content: center;
+            transition: background-color 0.3s;
+            border-bottom: solid;
+            border-width: 0.1rem;
+            border-color: rgb(51, 51, 51);
+        }
+        /* For links within the dropdown menu */
+        .nav-phone-dropdown li a:hover {
+            
+            /* Shadow for 3D effect */
+            background: #28ae8f;
+            box-shadow: 0 0px 7px rgb(77, 100, 90);
+            text-decoration: none;
+            color: var(--body-font-color);
         }
     }
 }
