@@ -38,9 +38,11 @@
 
     <!-- Mobile header and navigation for smaller screens -->
     <nav class="nav-phone" role="navigation" aria-label="Main menu">
-        <a href="index.html">
-            <h1>OsloMet</h1>
-        </a>
+        <div class="nav-img">
+            <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
+            <!--Remember to add aria labels to href.-->
+            <a href="../index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
+        </div>
         <!-- Hamburger menu for mobile view -->
         <input type="checkbox" id="toggle" aria-label="main-menu"/>
         <label for="toggle">
@@ -55,8 +57,8 @@
         <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="accessibility.html" id="current">Accessibility</a></li>
-                <li><a href="activity.html">Activity</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="activity.html" id="current">Activity</a></li>
                 <li><a href="github.html">GitHub</a></li>
             </ul>
         </button>
