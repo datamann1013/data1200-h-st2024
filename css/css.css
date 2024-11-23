@@ -470,6 +470,7 @@ table tbody tr th[scope="rowgroup"] {
 /* Background color for the main tag on all sites */
 .content {
     margin: 0 15vw;
+    min-width: 15vw;
     padding: 3vh 4vw;
     background-color: var(--main-background-color);
     box-shadow: 0 0 7px rgb(200, 200, 200);
