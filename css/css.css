@@ -174,14 +174,17 @@ a:hover {
 .nav-img {
     display: flex;
     min-width: 5vw;
+    min-height: 8vh;
 }
 
 .logo {
     height: 3rem;
 }
 
-.search {
-    height: 2rem;
+.search-icon {
+    display: flex;
+    
+    min-height: 90rem;
 }
 
 /* ===================== Main Content Styles ===================== */
@@ -952,7 +955,9 @@ input:valid+.label {
         .nav-phone-dropdown {
             display: flex;
             justify-content: center;
-            position: absolute;
+            position: fixed;
+            /* z-index makes the dropdown menu appear on top of other elements */
+            z-index: 10;
             top: 15vh;
             max-height: 90vh;
             width: 100%;
