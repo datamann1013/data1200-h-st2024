@@ -27,7 +27,6 @@ TABLE OF CONTENTS
 1. Global Styles ||
 ================================================== */
 
-
 :root {
     /* General colors: */
     --body-background-color: #dadada;
@@ -172,7 +171,7 @@ a:hover {
 
 
 /* Navbar images (logo, search icon) */
-.navImgs {
+.nav-img {
     display: flex;
     min-width: 5vw;
 }
@@ -317,7 +316,7 @@ footer ul {
     gap: 20px;
 }
 
-.grid-Container .fagligLeder {
+.grid-Container .faglig-leder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
@@ -326,7 +325,7 @@ footer ul {
     background-color: #f9f9f9;
 }
 
-.fagligLeder {
+.faglig-leder {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 15px;
@@ -340,7 +339,7 @@ footer ul {
     box-shadow: 10px 10px 5px gray;
 }
 
-.fagligLeder img {
+.faglig-leder img {
     height: auto;
     max-width: 150px;
     margin-right: 50px;
@@ -560,7 +559,7 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
     grid-row: 2;
 }
 
-.container-Form {
+.container-form {
     display: flex;
     align-items: center;
     position: relative;
@@ -745,12 +744,12 @@ input:valid+.label {
 
 /* ===================== 5.1.1 Navigation Phone ===================== */
 /* Hiding mobile navigation in larger screens */
-.navPhone {
+.nav-phone {
     display: none;
 }
 
 /* Dropdown menu styling */
-.navPhoneDropDown {
+.nav-phone-dropdown {
     display: none;
 }
 
@@ -794,11 +793,11 @@ input:valid+.label {
     .image-grid,
     .text-grid,
     .survey-container,
-    .container-Form {
+    .container-form {
         grid-template-columns: 1fr;
     }
 
-    .container-Form {
+    .container-form {
         display: grid;
         /* Grid is used to arrange the images within the container */
         gap: 1rem;
@@ -868,12 +867,12 @@ input:valid+.label {
             height: 0;
         }
 
-        .navPhone h1 {
+        .nav-phone h1 {
             font-size: 2rem;
         }
 
         /* Phone navigation */
-        .navPhone {
+        .nav-phone {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -884,7 +883,7 @@ input:valid+.label {
             margin-bottom: 1vh;
         }
 
-        .navPhone a {
+        .nav-phone a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -894,7 +893,7 @@ input:valid+.label {
         }
 
         /* Hamburger menu styling */
-        .hamburgerContainer {
+        .hamburger-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -904,7 +903,7 @@ input:valid+.label {
         }
 
         /* Makes the checkbox used for the hamburger menu invisible */
-        #Toggle {
+        #toggle {
             display: none;
             /* Makes the checkbox used for the hamburger menu invisible */
         }
@@ -934,23 +933,23 @@ input:valid+.label {
         }
 
         /* Rotates the first line to transfrom the hamburger menu to an 'X' */
-        #Toggle:checked+label #active {
+        #toggle:checked+label #active {
             transform: rotate(45deg);
         }
 
         /* Rotates and moves the second line for the 'X' */
-        #Toggle:checked+label #active::before {
+        #toggle:checked+label #active::before {
             transform: rotate(-90deg)translateX(-12px);
             ;
         }
 
         /* Removes the third line for the 'X' */
-        #Toggle:checked+label #active::after {
+        #toggle:checked+label #active::after {
             display: none;
         }
 
         /* Hamburger dropdown menu design */
-        .navPhoneDropDown {
+        .nav-phone-dropdown {
             display: flex;
             justify-content: center;
             position: absolute;
@@ -969,13 +968,13 @@ input:valid+.label {
         }
 
         /* Makes the dropdown visible when hamburger clicked */
-        #Toggle:checked+label+.navPhoneDropDown {
+        #toggle:checked+label+.nav-phone-dropdown {
             max-height: auto;
             transform: scaleY(1);
         }
 
         /* For dropdown menu items */
-        .navPhoneDropDown ul {
+        .nav-phone-dropdown ul {
             padding: 0;
 
             width: 90%;
@@ -983,14 +982,14 @@ input:valid+.label {
         }
 
         /* For dropdown menu individual items */
-        .navPhoneDropDown ul li {
+        .nav-phone-dropdown ul li {
             border-bottom: solid;
             border-width: 0.1rem;
             border-color: rgb(51, 51, 51);
         }
 
         /* For links within the dropdown menu */
-        .navPhoneDropDown ul li a {
+        .nav-phone-dropdown ul li a {
             margin: 0;
             height: 15vh;
             width: 100%;

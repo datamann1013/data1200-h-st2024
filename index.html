@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <!-- Configure the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/css.css"/> <!-- Link to the external CSS file -->
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="../css/css.css"/>
+    <!-- Font-awesome stylesheet is imported for the favicon and social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/graduation-cap-solid.ico">
+    <!-- Favicon from above stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
     <title>Matematisk modellering</title>
 </head>
 <body>
     <!-- HEADER START -->
     <header>
         <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
-            <div id="logoImg" class="navImgs">
+            <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                 <!--Remember to add aria labels to href.-->
                 <a href="index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
@@ -24,7 +27,7 @@
                 <li><a href="html/activity.html">Activity</a></li>
                 <li><a href="html/github.html">GitHub</a></li>
             </ul>
-            <div id="searchImg" class="navImgs">
+            <div id="searchImg" class="nav-img">
                 <img src="../svg/search-icon.svg" alt="search icon" class="search">
             </div>
         </nav>
@@ -33,14 +36,14 @@
     <!--ARIA ER IKKE RIKTIG, MEN PUSHA FOR Å GI TILGANG TIL NAVBAR -->
 
     <!-- Mobile header and navigation for smaller screens -->
-    <nav class="navPhone" role="navigation" aria-label="Main menu">
+    <nav class="nav-phone" role="navigation" aria-label="Main menu">
         <a href="index.html">
             <h1>OsloMet</h1>
         </a>
         <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="Toggle" aria-label="main-menu"/>
-        <label for="Toggle">
-            <div class="hamburgerContainer">
+        <input type="checkbox" id="toggle" aria-label="main-menu"/>
+        <label for="toggle">
+            <div class="hamburger-container">
                 <div class="line" id="active"></div>
             </div>
         </label>
@@ -48,7 +51,7 @@
          as a click reciever, so the :checked selector can be used on it.
          Aria roles, states and properties are added for an accessible hamburgermenu.
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
-        <button class="navPhoneDropDown" aria-expanded="true" aria-controls="main-menu">
+        <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="html/accessibility.html">Accessibility</a></li>
@@ -689,7 +692,7 @@
                 <h4>Spørsmål om utdanningen?</h4>
                 <p><strong>Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</strong></p>
                 <h5>Faglig leder</h5>
-                <section class="grid-Container fagligLeder">
+                <section class="grid-Container faglig-leder">
                 <img src="img/matmod-faglig-leder.jpg" alt="Faglig leder for emnet">
                 
                 <section>
