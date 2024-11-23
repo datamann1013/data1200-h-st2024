@@ -235,6 +235,11 @@ table tbody tr th[scope="rowgroup"] {
 }
 
 
+
+
+
+
+
 /* ==================================================
 1. Global Styles ||
 ================================================== */
@@ -274,8 +279,13 @@ body {
 
 /* ===================== General Content Styles ===================== */
 /* Accessible line height, letter-spacing and word-breaks for better readability*/
-h1, h2, h3, h4, p, hr {
-    line-height: 1.5em;
+h1,
+h2,
+h3,
+h4,
+p,
+hr {
+    line-height: 1.3em;
     letter-spacing: 0.04rem;
     word-break: normal;
 }
@@ -301,7 +311,7 @@ img {
     height: auto;
 }
 
-/* Hyperlink styles */
+
 /* Hyperlink styles */
 a {
     color: var(--body-font-color);
@@ -314,6 +324,60 @@ a:hover {
     color: var(--a-color);
     text-decoration: underline;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+thead th {
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+tbody th {
+    background-color: #f4f4f4;
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+    width: 15%;
+}
+
+tbody td {
+    background-color: #fff;
+    padding: 15px;
+    font-size: 1.0rem;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+
+/* Styling for Semester Headers */
+table tbody tr th[scope="rowgroup"] {
+    display: table-cell; /* Ensures they act as standalone headers */
+    vertical-align: middle; /* Align text in the middle */
+    background-color: var(--secondary-background-color); /* Yellow background */
+    color: #333; /* Dark text for contrast */
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    font-size: 1.2rem;
+    text-align: left; /* Align text to the left */
+    padding: 15px;
+    border-radius: 5px 5px 0 0; /* Rounded top corners for card effect */
+    margin-bottom: 40px; /* Add space below the header */
+    margin-top: 40px; /* Add space between rowgroups */
+    border-top: 2px solid #ddd; /* Divider line */
+}
+
+
 
 /* ==================================================
 2. Shared Components ||
@@ -602,6 +666,64 @@ footer ul {
     border-bottom: 1px solid var(--main-background-color);
     /* Adds a light gray bottom border */
     margin-left: 2rem;
+}
+
+.separator-row td {
+    background-color: #f4f4f4; /* Light gray background */
+    height: 10px; /* Adjust the height of the row */
+    border-bottom: 2px solid #ddd; /* Optional: Add a bottom border */
+    padding: 0; /* Remove padding for a clean line */
+}
+
+/* Skjule innhold visuelt */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.emnegruppe-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text */
+    padding: 15px 25px;
+    margin: 25px 0;
+    background: #fed400; /* A brighter yellow to stand out */
+    border-radius: 8px; /* Smooth rounded edges */
+    border: 2px solid #f0f0f0; /* A soft border to frame the section */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+
+}
+
+.emnegruppe-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333; /* Darker text for readability */
+    font-weight: normal; /* Emphasize the header text */
+    letter-spacing: 0.5px; /* Slight spacing for better readability */
+    text-transform: uppercase; /* Optional for a distinctive look */
+}
+
+
+.year-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #fafcfb; /* Keep the background clean */
+    border-left: 5px solid var(--secondary-background-color); /* Gold vertical bar */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.year-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 /* Hiding the checkbox input */
@@ -924,6 +1046,9 @@ input:valid+.label {
 }
 
 /* ===================== 5.1.12 Small Devices ===================== */
+
+
+
 @media screen and (max-width: 768px) {
 
     /* General font size adjustments */
@@ -997,55 +1122,116 @@ input:valid+.label {
     .footer-content ul li {
         font-size: 1.1rem;
     }
- 
+}
 
-    /* ===================== 5.1.3 Medium Devices ===================== */
-    @media screen and (max-width: 992px) {
 
-        /* General font size adjustments */
-        h1 { 
-            font-size: 1.7rem; 
-        }
-    
-        h2 { 
-            font-size: 1.4rem; 
-        }
-    
-        h3 { 
-            font-size: 1.2rem; 
-        }
-    
-        p { 
-            font-size: 0.7; 
-        }
-        
-        /* Main content padding and margins for smaller screens */
-        .content {
-            margin: 0 0;
-            padding: 0 10vw;
-        }
+/* ===================== 5.1.3 Medium Devices ===================== */
+@media screen and (max-width: 992px) {
 
-        .nav-wrapper {
-            display: none;
-            width: 0;
-            height: 0;
-        }
 
-        .nav-phone h1 {
-            font-size: 2rem;
-        }
+    /* General font size adjustments */
+    h1 {
+        font-size: 1.8rem;
+    }
 
-        /* Phone navigation */
-        .nav-phone {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 15vh;
-            width: 100%;
-            background-color: var(--secondary-background-color);
-            box-shadow: 0 3px 3px rgb(177, 177, 177);
-            margin-bottom: 1vh;
-        }
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    /* Table globals */
+
+    table {
+        display: block; /* Make the table a block-level element */
+        width: 100%;
+        font-size: 0.8rem;
+        border: none;
+    }
+
+    /* Add spacing around the semester card */
+    table tbody {
+        margin-bottom: 20px;
+    }
+
+    table thead {
+        display: none; /* Hide the table header */
+    }
+
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        border: 1px solid #ddd; /* Add a border around each row */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px;
+        background-color: #fff; /* White background for contrast */
+    }
+
+    table tbody tr th {
+        display: none; /* Hide the rowgroup header (like "1. semester") */
+    }
+
+    table tbody tr th[scope="rowgroup"] {
+        text-align: center; /* Center-align text for smaller screens */
+        font-size: 1.2rem; /* Adjust size for better visibility */
+        padding: 10px; /* Reduce padding */
+        border-radius: 5px 5px 0 0; /* Maintain rounded corners */
+    }
+
+    table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.625rem 1rem;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+
+    table tbody tr td:last-child {
+        border-bottom: none;
+    }
+
+    table tbody tr td:before {
+        content: attr(data-label); /* Add data-label for context */
+        font-weight: bold;
+        flex: 0 0 50%; /* Reserve space for the label */
+        color: #333;
+    }
+
+
+    /* Main content padding and margins for smaller screens */
+    .content {
+        margin: 0 0;
+        padding: 0 10vw;
+    }
+
+    .nav-wrapper {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .nav-phone h1 {
+        font-size: 2rem;
+    }
+
+    /* Phone navigation */
+    .nav-phone {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 15vh;
+        width: 100%;
+        background-color: var(--secondary-background-color);
+        box-shadow: 0 3px 3px rgb(177, 177, 177);
+        margin-bottom: 1vh;
+    }
 
         /* Hamburger menu placement and cursor change on items */
         .hamburger-container, .nav-phone a{
@@ -1061,64 +1247,88 @@ input:valid+.label {
             display: none;
         }
 
-        /* For the three lines included in the hamburger menu */
-        .line,
-        .line::before,
-        .line::after {
-            position: absolute;
-            height: 7.5px;
-            width: 45px;
-            background-color: black;
-            transition: .4s ease;
-            border-radius: 3px;
-        }
+    /* For the three lines included in the hamburger menu */
+    .line,
+    .line::before,
+    .line::after {
+        position: absolute;
+        height: 7.5px;
+        width: 45px;
+        background-color: black;
+        transition: .4s ease;
+        border-radius: 3px;
+    }
 
-        /* Creates a second line over the first middle line */
-        .line::before {
-            content: '';
-            top: -12px;
-        }
+    /* Creates a second line over the first middle line */
+    .line::before {
+        content: '';
+        top: -12px;
+    }
 
-        /* Creates a third line under the first middle line */
-        .line::after {
-            content: '';
-            top: 12px;
-        }
-        .background-color h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-        }
-        .grid-container{
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            position: relative;
-            justify-content: center;
-            margin: 0;
-            padding: 1rem;
-        }
-        .faglig-leder{
-            grid-template-columns: 1fr;
-            gap: 0.5rem;
-            justify-content: center;
-            padding: 1rem;
-        }
+    /* Creates a third line under the first middle line */
+    .line::after {
+        content: '';
+        top: 12px;
+    }
+    .background-color h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        position: relative;
+        justify-content: center;
+        margin: 0;
+        padding: 1rem;
+    }
+    .faglig-leder{
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 1rem;
+    }
 
-        /* Rotates the first line to transfrom the hamburger menu to an 'X' */
-        #toggle:checked+label #active {
-            transform: rotate(45deg);
-        }
+    .separator-row {
+        display: none;
+    }
 
-        /* Rotates and moves the second line for the 'X' */
-        #toggle:checked+label #active::before {
-            transform: rotate(-90deg)translateX(-12px);
-            ;
-        }
+    .year-header {
+        padding: 10px; /* Reduce padding for small devices */
+        font-size: 1.2rem; /* Adjust text size */
+    }
 
-        /* Removes the third line for the 'X' */
-        #toggle:checked+label #active::after {
-            display: none;
-        }
+    .semester-header {
+        display: block;
+        width: calc(100% - 40px); /* Match card width (adjust based on padding) */
+        margin: 0 auto; /* Center-align */
+        background-color: var(--secondary-background-color); /* Yellow background */
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners to match cards */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        margin-bottom: 20px; /* Add space BELOW the header */
+    }
+
+
+    /* Rotates the first line to transfrom the hamburger menu to an 'X' */
+    #toggle:checked+label #active {
+        transform: rotate(45deg);
+    }
+
+    /* Rotates and moves the second line for the 'X' */
+    #toggle:checked+label #active::before {
+        transform: rotate(-90deg)translateX(-12px);
+    ;
+    }
+
+    /* Removes the third line for the 'X' */
+    #toggle:checked+label #active::after {
+        display: none;
+    }
 
         /* Hamburger dropdown menu design */
         .nav-phone-dropdown {
@@ -1141,18 +1351,18 @@ input:valid+.label {
             transition: 0.2s ease;
         }
 
-        /* Makes the dropdown visible when hamburger clicked */
-        #toggle:checked+label+.nav-phone-dropdown {
-            max-height: auto;
-            transform: scaleY(1);
-        }
+    /* Makes the dropdown visible when hamburger clicked */
+    #toggle:checked+label+.nav-phone-dropdown {
+        max-height: auto;
+        transform: scaleY(1);
+    }
 
-        /* For dropdown menu items */
-        .nav-phone-dropdown ul {
-            padding: 0;
-            width: 90%;
-            list-style-type: none;
-        }
+    /* For dropdown menu items */
+    .nav-phone-dropdown ul {
+        padding: 0;
+        width: 90%;
+        list-style-type: none;
+    }
 
         /* For dropdown menu individual items */
         .nav-phone-dropdown li a {
@@ -1169,12 +1379,17 @@ input:valid+.label {
         }
         /* For links within the dropdown menu */
         .nav-phone-dropdown li a:hover {
-            
+
             /* Shadow for 3D effect */
             background: #28ae8f;
             box-shadow: 0 0px 7px rgb(77, 100, 90);
             text-decoration: none;
             color: var(--body-font-color);
         }
+
+    .emnegruppe-header h3 {
+        font-size: 1.2rem; /* Smaller size for mobile */
+        width: 80%; /* Default width (responsive to parent container) */
     }
+}
 }
