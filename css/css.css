@@ -895,11 +895,13 @@ input:valid+.label {
     /* Gap between the images */
 }
 
-/* Adds space between the image sections*/
+/* Adds space between the elements*/
 .image-section, .image-section-second-section {
     margin-bottom: 6rem;
+    margin-top: 3rem;
 }
 
+/* Adds space */
 .text-grid {
     margin-bottom: 3rem;
 }
