@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <!-- Configure the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/css.css"/> <!-- Link to the external CSS file -->
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="../css/css.css"/>
+    <!-- Font-awesome stylesheet is imported for the favicon and social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/graduation-cap-solid.ico">
+    <!-- Favicon from above stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
     <title>Matematisk modellering</title>
 </head>
 <body>
     <!-- HEADER START -->
     <header>
-        <nav class="navwrapper"> <!-- Main navigation buttons wrapper -->
-            <div id="logoImg" class="navImgs">
+        <nav class="nav-wrapper"> <!-- Main navigation buttons wrapper -->
+            <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                 <!--Remember to add aria labels to href.-->
                 <a href="index.html"><img src="../svg/OsloMET.svg" alt="OsloMET logo"/></a>
@@ -24,7 +27,7 @@
                 <li><a href="html/activity.html">Activity</a></li>
                 <li><a href="html/github.html">GitHub</a></li>
             </ul>
-            <div id="searchImg" class="navImgs">
+            <div id="searchImg" class="nav-img">
                 <img src="../svg/search-icon.svg" alt="search icon" class="search">
             </div>
         </nav>
@@ -33,22 +36,22 @@
     <!--ARIA ER IKKE RIKTIG, MEN PUSHA FOR Å GI TILGANG TIL NAVBAR -->
 
     <!-- Mobile header and navigation for smaller screens -->
-    <nav class="navPhone" role="navigation" aria-label="Main menu">
+    <nav class="nav-phone" role="navigation" aria-label="Main menu">
         <a href="index.html">
             <h1>OsloMet</h1>
         </a>
         <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="Toggle" aria-label="main-menu"/>
-        <label for="Toggle">
-            <div class="hamb"
-    -l           <div class="line" id="active"></div>
+        <input type="checkbox" id="toggle" aria-label="main-menu"/>
+        <label for="toggle">
+            <div class="hamburger-container">
+                <div class="line" id="active"></div>
             </div>
         </label>
         <!-- Dropdown navigation menu for mobile screens. A fake / hidden checkbox is used 
          as a click reciever, so the :checked selector can be used on it.
          Aria roles, states and properties are added for an accessible hamburgermenu.
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
-        <button class="navPhoneDropDown" aria-expanded="true" aria-controls="main-menu">
+        <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="html/accessibility.html">Accessibility</a></li>
@@ -77,8 +80,8 @@
                     <h2>Bachelorprogram</h2>
                 </section>
                 <!-- Info box with quick facts -->
-                <section class=">
-    -l               <!-- First info box item -->
+                <section class="grid-container">
+                    <!-- First info box item -->
                     <section class="grid-item">
                         <p><strong>Studiested:</strong></p>
                         <p>Pilestredet i Oslo</p>
@@ -228,8 +231,8 @@
                         <p>Her finner du informasjon om studiets oppbygging.</p>
                         <!-- Content displayed when the item is expanded -->
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Valgfritt emne
                                     Løper over flere semestre
                                 <p>1. studieår</p>
@@ -237,8 +240,8 @@
                             </section>
                         </section>
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Diskret matematikk</p>
                                 <p>DAPE1300</p>
                                 <p>10 stp.</p>
@@ -259,13 +262,13 @@
                                 <p>5 stp.</p>
                             </section>
                         </section>
-                        <section class="gntaine-l">
+                        <section class="grid-container">
                             <section class="grid-item">
                                 <p>2. semester</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Matematikk 1000</p>
                                 <p>DAFE1000</p>
                                 <p>10 stp.</p>
@@ -281,14 +284,14 @@
                                 <p>10 stp.</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>2. studieår</p>
                                 <p>3. semester</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Matematikk 2000 med statistikk</p>
                                 <p>DAPE2000</p>
                                 <p>10 stp.</p>
@@ -300,39 +303,39 @@
                             </section>
                         </section>
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>4. semester</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Matematikk 4000</p>
                                 <p>DAVE3705</p>
                                 <p>10 stp.</p>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Emnegruppe: Matematikk og fysikk</p>
                                     <p>3. semester</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Lineær algebra og introduksjon til gruppeteori</p>
                                     <p>MAMO2300</p>
                                     <p>10 stp.</p>
                                 </section>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>4. semester</p>
                                 </section>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Termodynamikk og statistisk fysikk</p> MAMO2400
                                     <p>10 stp.</p>
                                 </section>
@@ -342,8 +345,8 @@
                                     <p>10 stp.</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Emnegruppe: Statistiske og datadrevne metoder</p>
                                     <p>3. semester</p>
                                 </section>
@@ -355,14 +358,14 @@
                             </section>
                         </section>
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>4. semester</p>
                             </section>
                         </section>
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Statistisk analyse</p>
                                 <p>MAMO3100</p>
                                 <p>10 stp.</p>
@@ -378,14 +381,14 @@
                                 <p>10 stp.</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Emnegruppe: Vitenskapelige beregninger</p>
                                 <p>4. semester</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Ressurseffektive programmer</p>
                                 <p>DAVE3606</p>
                                 <p>10 stp.</p>
@@ -396,41 +399,41 @@
                                 <p>10 stp.</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>3. studieår</p>
                                 <p>5. semester</p>
                             </section>
                         </section>
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Matematikk 3000</p>
                                 <p>DAVE3700</p>
                                 <p>10 stp.</p>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>6. semester</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Bacheloroppgave</p>
                                     <p>DATA3900</p>
                                     <p>20 stp.</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Emnegruppe: Matematikk og fysikk</p>
                                     <p>5. semester</p>
                                 </section>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Reell analyse</p>
                                     <p>MAMO3300</p>
                                     <p>10 stp.</p>
@@ -456,14 +459,14 @@
                                     <p>10 stp.</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>6. semester</p>
                                 </section>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Testing av programvare</p>
                                     <p>ADTS2310</p>
                                     <p>10 stp.</p>
@@ -485,14 +488,14 @@
                                     <p>10 stp.</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Emnegruppe: Statistiske og datadrevne metoder</p>
                                     <p>5. semester</p>
                                 </section>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Introduksjon til Kunstig Intelligens</p>
                                     <p>DAVE3625</p>
                                     <p>10 stp.</p>
@@ -520,14 +523,14 @@
                                 </section>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>6. semester</p>
                                 </section>
                             </section>
 
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>Testing av programvare
                                     <p>ADTS2310</p>
                                     <p>10 stp.</p>
@@ -546,14 +549,14 @@
                             </section>
                         </section>
 
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Emnegruppe: Vitenskapelige beregninger</p>
                                 <p>5. semester</p>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Simulering og visualisering</p>
                                 <p>MAMO3200</p>
                                 <p>10 stp.</p>
@@ -578,14 +581,14 @@
                                 <p>MAMO3300</p>
                                 <p>10 stp.</p>
                             </section>
-                            <section class=">
-    -l                           <section class="grid-item">
+                            <section class="grid-container">
+                                <section class="grid-item">
                                     <p>6. semester</p>
                                 </section>
                             </section>
                         </section>
-                        <section class=">
-    -l                       <section class="grid-item">
+                        <section class="grid-container">
+                            <section class="grid-item">
                                 <p>Visualisering</p>
                                 <p>ADSE3200</p>
                                 <p>10 stp.</p>
@@ -689,7 +692,7 @@
                 <h4>Spørsmål om utdanningen?</h4>
                 <p><strong>Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</strong></p>
                 <h5>Faglig leder</h5>
-                <section class="faglig-leder">
+                <section class="grid-container faglig-leder">
                 <img src="img/matmod-faglig-leder.jpg" alt="Faglig leder for emnet">
                 
                 <section>
