@@ -15,7 +15,7 @@
 <body>
     <!-- HEADER START -->
     <header>
-        <nav class="nav-wrapper" role="navigation"> <!-- Main navigation buttons wrapper -->
+        <nav class="nav-wrapper"> <!-- Main navigation buttons wrapper -->
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
                 <a href="index.html" aria-label="Lenke til hjem"><img src="img/OsloMET.svg" alt=""/></a>
@@ -27,33 +27,34 @@
                 <li><a href="html/github.html">GITHUB</a></li>
             </ul>
         </nav>
-    </header>
-    <!-- Mobile header and navigation for smaller screens -->
-    <nav class="nav-phone" role="navigation" aria-label="Hovedmeny">
-        <div class="nav-img">
-            <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-            <a href="index.html" aria-label="Lenke til hjem"><img src="img/OsloMET.svg" alt=""/></a>
-        </div>
-        <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="toggle" aria-label="main-menu"/>
-        <label for="toggle">
-            <div class="hamburger-container">
-                <div class="line" id="active"></div>
+        <!-- Mobile header and navigation for smaller screens -->
+        <nav class="nav-phone" aria-label="Hovedmeny">
+            <div class="nav-img">
+                <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
+                <a href="index.html" aria-label="Lenke til hjem"><img src="img/OsloMET.svg" alt=""/></a>
             </div>
-        </label>
-        <!-- Dropdown navigation menu for mobile screens. A fake / hidden checkbox is used 
-         as a click reciever, so the :checked selector can be used on it.
-         Aria roles, states and properties are added for an accessible hamburgermenu.
-         https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
-        <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
-            <ul>
-                <li><a href="index.html" id="current">HJEM</a></li>
-                <li><a href="html/accessibility.html">TILGJENGELIGHET</a></li>
-                <li><a href="html/activity.html">OSLOMET GAMING</a></li>
-                <li><a href="html/github.html">GITHUB</a></li>
-            </ul>
-        </button>
-    </nav>
+            <!-- Hamburger menu for mobile view -->
+            <input type="checkbox" id="toggle" aria-label="Åpne navigasjonsmeny"/>
+            <label for="toggle">
+                <!-- https://codepen.io/erikterwan/pen/grOZxx*/ -->
+                <div class="hamburger-container">
+                    <div class="line" id="active"></div>
+                </div>
+            </label>
+            <!-- Dropdown navigation menu for mobile screens. A fake / hidden checkbox is used 
+            as a click reciever, so the :checked selector can be used on it.
+            Aria roles, states and properties are added for an accessible hamburgermenu.
+            https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
+            <button class="nav-phone-dropdown">
+                <ul>
+                    <li><a href="index.html" id="current">HJEM</a></li>
+                    <li><a href="html/accessibility.html">TILGJENGELIGHET</a></li>
+                    <li><a href="html/activity.html">OSLOMET GAMING</a></li>
+                    <li><a href="html/github.html">GITHUB</a></li>
+                </ul>
+            </button>
+        </nav>
+    </header>
     <!-- HEADER END -->
 
         <!-- MAIN SECTION START -->
