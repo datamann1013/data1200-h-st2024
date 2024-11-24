@@ -231,9 +231,6 @@ table tbody tr th[scope="rowgroup"] {
     flex-direction: column;
 }
 
-/*HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/
-/*Where I got the information to make the hamburger menu purely in css https://codepen.io/erikterwan/pen/grOZxx*/
-
 
 /* Navbar images (logo, search icon) */
 .nav-img {
@@ -244,6 +241,11 @@ table tbody tr th[scope="rowgroup"] {
 .logo {
     height: 3rem;
 }
+
+#menu li a {
+    color: black;
+}
+
 
 /* ===================== Main Content Styles ===================== */
 /* Background color for the main tag on all sites */
