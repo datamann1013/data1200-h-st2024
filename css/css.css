@@ -522,7 +522,8 @@ input[type="checkbox"]:checked+.accordion-item-infobox .icon span {
 .accessibility-introduction-image {
     margin: 0;
     height: 30vh;
-    /*Chooses image for the main heading */
+    /*Chooses image for the main heading. Image has been enhanced, but was originally borrowed from
+    this site: https://www.bluearrow.co.uk/blog/working-in-a-warehouse-with-a-disability/ */
     background-image: url('../img/accessibility-header.png');
     text-shadow: 2px 2px #000000;
 }
@@ -1016,6 +1017,7 @@ input:valid+.label {
             align-items: center;
             height: 15vh;
             cursor: pointer;
+            color: var(--body-font-color);
         }
 
         /* Makes the checkbox used for the hamburger menu invisible */

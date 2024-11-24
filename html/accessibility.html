@@ -84,15 +84,15 @@
         <article class="container-infobox main-padding">
             
             <section class="info-section">
-                <h3>Struktur</h3>
-                    <p>Generell layout, tydelige overskrifter og høyoppløselige bilder.
-                        Sidene har brede marger for å holde innholdet samlet og i midtfokus. Dette er gjort både for estetiske grunner, men hovedsakelig 
+                <h2>Struktur</h2>
+                    <p>Sidene har brede marger for å holde innholdet samlet og i midtfokus. Dette er gjort både for estetiske grunner, men hovedsakelig 
                         for å gjøre siden tilgjengelig for folk med tunnelsyn, eller retinitis pigmentosa som gjør synet innsnevret.
-                        Forståelig: Implisitt implisitt innholdet uten å måtte lese alt.
-                        Holde overskrifter i riktig rekkefølge og bruke semantiske tagger.</p>
+                        Vi har gjort innholdet på sidene oppfattelig og forståelig uten å måtte lese alt lengre ned på siden. Vi har også lagt inn
+                        elementene på siden ved å bruke semantiske tagger i riktig rekkefølge. For eksempel overskriftene brukt på sidene starter med én h1 
+                        og fortsetter med h2, h3, osv.</p>
             </section>
             <section class="info-section">
-                <h3>Leslighet</h3>
+                <h2>Leslighet</h2>
                     <p>Vi valgte fonten Verdana, med sans-serif som backup. Begrunnelsen for dette valget var basert på lesbarheten ved å være enkel og usmykket. 
                         Skriften skal tydelig skille bokstavene godt selv i små tekststørrelser. Vi har unngått fonter med “imposter letter shapes” eller bokstaver 
                         og tegn som ser visuelt like ut og kan forveksles. For eksempel bokstavene l, I og tallet 1.
@@ -105,51 +105,44 @@
                     </p>
             </section>
             <section class="info-section">
-                <h3>Farger</h3>
+                <h2>Farger og Bilder</h2>
                     <p>Vi forsikret at alle farger hadde tilstrekkelig kontrast mellom bakgrunn og tekst, for eksempel på hyperlenkene i footer 
                         fikk en mørkere blåfarge for å være leslig mot bakgrunnen, men fortsatt beholde assosiasjonen til de originale hyperlenkefargene.
-                        <!-- https://snook.ca/technical/colour_contrast/colour.html#fg=1F009C,bg=33AA8E --></p>
+                        <!-- https://snook.ca/technical/colour_contrast/colour.html#fg=1F009C,bg=33AA8E -->
+                        Vi har sørget for å inkludere en beskrivende alternativ tekst på hvert bilde for synshemmede brukere,
+                        men også i tilfelle noen bilder ikke kan lastes inn.</p>
             </section>
-
             <section class="info-section">
-                <h3>Bilder</h3>
-                    <p>Vi har sørget for å inkludere en beskrivende alternativ tekst på hvert bilde for synshemmede brukere,
-                        men også i tilfelle noen bilder ikke kan lastes inn.
-                        !Bilder OG ikoner bør ha dette!</p>
-                    <!-- Content displayed when the item is expanded -->
-            </section>
-
-            <section class="info-section">
-                <h3>Interaktivitet</h3>
+                <h2>Interaktivitet</h2>
                     <p>Aria-labels ble lagt inn på linker og accordions for å hjelpe screen-readers, men ble mest sannsynligvis ikke gjort helt 
-                        optimalt. Dette er et læringspunkt vi ønkser å forbedre, men hadde ikke nok kunnskap om og gikk tomme for tid.
+                        optimalt. Dette er et læringspunkt vi ønkser å forbedre, men vi hadde ikke nok kunnskap og vi gikk dessverre tomme for tid.
+                        <!-- https://www.w3.org/TR/html-aria/#docconformance -->
                     </p>
-                <!--(convinceandconvert.com)-->
-                <!-- Content displayed when the item is expanded -->
             </section>
             <hr>
             <!-- Lighthouse Test Results -->
             <section class="info-section">
-                <h3>Lighthouse Testing</h3>
+                <h2>Lighthouse Testing</h2>
                     <p>Vi begynte å teste tilgjengeligheten til nettstedet vårt ved å bruke de automatiserte Lighthouse-testene i Google Chrome.
-                        Vi startet med "Snapshot"-tester for de første tre testene og fortsatte med "Navigation"-tester etter dette.
-                        Den første testen ga en poengsum på tjueto av tjuefem og markerte manglende etiketter i skjemaer og problematiske lister.
+                        Vi startet med "Snapshot"-tester for de første tre testene og brukte "Navigation"-testen på den siste testen.</p>
+                    <p>Den første testen ga en poengsum på tjueto av tjuefem og markerte manglende etiketter i skjemaer og problematiske lister.
                         Hovedkilden til dette var hamburgermenyelementene som startet med anker-tagger i stedet for liste-tagger og manglet
                         etiketter for avmerkingsboksen for input siden denne brukes som klikkmottaker.</p>
             <section class="image-grid">
                 <img src="../img/ac-lighthouse-test-1.png"
                     alt="Lighthouse testresultater viser tjueto av tjuefem tilgjengelighetspoeng.">
                 <div class= "vertical"></div>
-                <img src="../img/ac-code-problem-1.png"
+                <img src="../img/ac-code-hamburgermenu-before.png"
                      alt="Kode for problematisk liste for hamburgermeny">
             </section>
                 <p>Den andre testen ga en samlet poengsum på tjuefem av tjuefem etter at vi omorganiserte menyelement-taggene og la til etiketter i koden vår. 
-                    Dette fikk oss til å grave dypere og manuelt se etter muligheter for kodeforbedring.</p>
+                    Dette fikk oss til å grave dypere og manuelt se etter muligheter for kodeforbedring. Vi prøvde å implementere ARIA-attributter for å 
+                    gjøre hamburgermenyen mer tilgjengelig.</p>
             <section class="image-grid">
                 <img src="../img/ac-lighthouse-test-2.png"
                     alt="Lighthouse testresultater viser tjuefem av tjuefem tilgjengelighetspoeng, men oppfordrer til manuell testing for å sikre universell utforming.">
                 <div class= "vertical"></div>
-                <img src="../img/ac-code-improvement-1.png"
+                <img src="../img/ac-code-hamburgermenu-after.png"
                     alt="Kode for forbedret hamburgermeny.">
             </section>
                 <p>Senere i semesteret ble det gjort nok en Lighthouse-test mens hamburgermenyen ble åpnet. Denne tredje testen ga en poengsum på 
@@ -159,26 +152,16 @@
                 <img src="../img/ac-lighthouse-test-3.png"
                     alt="Lighthouse testresultater viser tjuefire av tjuefem tilgjengelighetspoeng.">
                 <div class= "vertical"></div>
-                <img class="image-grid" src="../img/"
+                <img class="image-grid" src="../img/ac-code-navbar-change.png"
                     alt="Kode for ny navigasjonsbar .">
             </section>
-                <p>Den fjerde testen ga oss nittien poeng av hundre for tilgjengelighet. Dette gjorde oss klare over manglende og feilstavede aria attributter
-                     og for små "touch targets" for linker.</p>
+                <p>Den siste testen ga oss nittien poeng av hundre for tilgjengelighet. Dette gjorde oss klare over manglende og feilstavede ARIA attributter
+                     og for små "touch targets" for linker. Testen pekte hovedsakelig til accordions når det gjaldt ARIA.</p>
             <section class="image-grid">    
-                <img src="../img/ac-lighthouse-test-4.png"
+                <img src="../img/ac-lighthouse-test-4a.png"
                     alt="Lighthouse testresultater viser nittien av hundre tilgjengelighetspoeng, med fokus på feil bruk av ARIA.">
                 <div class= "vertical"></div>
-                <img src="../img/"
-                    alt="Improved code to enhance site accessibility.">
-            </section>
-
-                <p>Den siste testen har vi IKKE GJORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-                    The final test gave an overall score of ... and this prompted us to make the following changes: ...</p>
-            <section class="image-grid"> 
-                <img src="../img/"
-                    alt="Lighthouse testresults showing an accessibility score, but encourages testing manually to ensure universal design.">
-                <div class= "vertical"></div>
-                <img src="../img/"
+                <img src="../img/ac-lighthouse-test-4b.png"
                     alt="Improved code to enhance site accessibility.">
             </section>
         </article>
