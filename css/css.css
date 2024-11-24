@@ -1388,4 +1388,13 @@ input:valid+.label {
         width: 80%; /* Default width (responsive to parent container) */
     }
 }
+
+@media screen and (min-width: 1000px) {
+    main {
+        width: 800px;
+    }
+    .content {
+        margin-left: 25vw;
+        margin-right: 1vw;
+    }
 }
