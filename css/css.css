@@ -242,7 +242,7 @@ table tbody tr th[scope="rowgroup"] {
     height: 3rem;
 }
 
-#menu li a {
+#menu li a, #footer li a {
     color: black;
 }
 
