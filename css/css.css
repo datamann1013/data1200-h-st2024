@@ -257,7 +257,6 @@ table tbody tr th[scope="rowgroup"] {
 /* Background color for the main tag on all sites */
 .content {
     margin: 0 15vw;
-    min-width: 15vw;
     padding: 3vh 4vw;
     background-color: var(--main-background-color);
     box-shadow: 0 0 7px rgb(200, 200, 200);
@@ -1174,5 +1173,15 @@ input:valid+.label {
     .emnegruppe-header h3 {
         font-size: 1.2rem; /* Smaller size for mobile */
         width: 80%; /* Default width (responsive to parent container) */
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        width: 800px;
+    }
+    .content {
+        margin-left: 25vw;
+        margin-right: 1vw;
     }
 }
