@@ -97,7 +97,7 @@ img {
 
 /* Hyperlink styles */
 a {
-    color: var(--body-font-color);
+    color: var(--a-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -199,6 +199,7 @@ table tbody tr th[scope="rowgroup"] {
 
 .nav-wrapper {
     padding: 0 10vw;
+    color: var(--body-font-color);
     background-color: var(--secondary-background-color);
     /* Shadow for 3D effect */
     box-shadow: 0 0px 7px rgb(200, 200, 200); /* Shadow for 3D effect */
