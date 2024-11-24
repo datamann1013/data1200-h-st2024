@@ -1016,6 +1016,7 @@ input:valid+.label {
             align-items: center;
             height: 15vh;
             cursor: pointer;
+            color: var(--body-font-color);
         }
 
         /* Makes the checkbox used for the hamburger menu invisible */
