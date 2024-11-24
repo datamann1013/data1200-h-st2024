@@ -17,12 +17,10 @@
 <body>
     <!-- HEADER START -->
     <header>
-        <nav class="nav-wrapper"> <!-- Main navigation buttons wrapper -->
+        <nav class="nav-wrapper" role="navigation"> <!-- Main navigation buttons wrapper -->
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-                <!--Remember to add aria labels to href.-->
-                <a href="../index.html" aria-label="Lenke til hjem"><img src="../img/OsloMET.svg"
-                        alt="OsloMET logo" /></a>
+                <a href="../index.html" aria-label="Lenke til hjem"><img src="../img/OsloMET.svg" alt=""/></a>
             </div>
             <ul id="menu" class="menu">
                 <li><a href="../index.html">HJEM</a></li>
@@ -32,15 +30,11 @@
             </ul>
         </nav>
     </header>
-
-    <!--ARIA ER IKKE RIKTIG, MEN PUSHA FOR Å GI TILGANG TIL NAVBAR -->
-
     <!-- Mobile header and navigation for smaller screens -->
-    <nav class="nav-phone" role="navigation" aria-label="Main menu">
+    <nav class="nav-phone" role="navigation">
         <div class="nav-img">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-            <!--Remember to add aria labels to href.-->
-            <a href="../index.html" aria-label="Go to homepage"><img src="../img/OsloMET.svg" alt="OsloMET logo" /></a>
+            <a href="../index.html" aria-label="Lenke til hjem"><img src="../img/OsloMET.svg" alt=""/></a>
         </div>
         <!-- Hamburger menu for mobile view -->
         <input type="checkbox" id="toggle" aria-label="Open main-menu" />

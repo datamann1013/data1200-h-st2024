@@ -16,11 +16,10 @@
 <body>
     <!-- HEADER START -->
     <header>
-        <nav class="nav-wrapper"> <!-- Main navigation buttons wrapper -->
+        <nav class="nav-wrapper" role="navigation"> <!-- Main navigation buttons wrapper -->
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-                <!--Remember to add aria labels to href.-->
-                <a href="../index.html"><img src="../img/OsloMET.svg" alt="OsloMET logo"/></a>
+                <a href="../index.html" aria-label="Lenke til hjem"><img src="../img/OsloMET.svg" alt=""/></a>
             </div>
             <ul id="menu" class="menu">
                 <li><a href="../index.html">HJEM</a></li>
@@ -30,18 +29,14 @@
             </ul>
         </nav>
     </header>
-
-    <!--ARIA ER IKKE RIKTIG, MEN PUSHA FOR Å GI TILGANG TIL NAVBAR -->
-
     <!-- Mobile header and navigation for smaller screens -->
-    <nav class="nav-phone" role="navigation" aria-label="Main menu">
+    <nav class="nav-phone" role="navigation">
         <div class="nav-img">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-            <!--Remember to add aria labels to href.-->
-            <a href="../index.html"><img src="../img/OsloMET.svg" alt="OsloMET logo"/></a>
+            <a href="../index.html" aria-label="Lenke til hjem"><img src="../img/OsloMET.svg" alt=""/></a>
         </div>
         <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="toggle" aria-label="main-menu"/>
+        <input type="checkbox" id="toggle" aria-label="Åpne navigasjonsmeny."/>
         <label for="toggle">
             <div class="hamburger-container">
                 <div class="line" id="active"></div>
@@ -51,7 +46,7 @@
          as a click reciever, so the :checked selector can be used on it.
          Aria roles, states and properties are added for an accessible hamburgermenu.
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
-        <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
+        <button class="nav-phone-dropdown" aria-expanded="true" aria-label="Åpne hamburgermeny.">
             <ul>
                 <li><a href="../index.html">HJEM</a></li>
                 <li><a href="accessibility.html" id="current">TILGJENGELIGHET</a></li>
@@ -127,7 +122,7 @@
             <section class="info-section">
                 <h3>Interaktivitet</h3>
                     <p>Aria(aria-label).
-                    Tabindex for non-mouse users</p>
+                    </p>
                 <!--(convinceandconvert.com)-->
                 <!-- Content displayed when the item is expanded -->
             </section>
