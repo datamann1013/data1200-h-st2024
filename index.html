@@ -1,1094 +1,977 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <!-- Configure the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
+    <title>Matematisk Modellering – OsloMet</title>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/css.css"/>
-    <!-- Font-awesome stylesheet is imported for the favicon and social media icons -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Font-awesome stylesheet for favicon and icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!-- Favicon from above stylesheet -->
-    <link rel="icon" type="image/x-icon" href="../img/graduation-cap-solid.ico">
-    <title>Matematisk modellering</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/graduation-cap-solid.ico">
+    <!-- Description for SEO and accessibility -->
+    <meta name="description" content="Matematisk modellering – Bachelorprogram ved OsloMet. Lær matematiske og datadrevne metoder som brukes i praktiske løsninger innen teknologi og samfunn.">
+    <!-- Keywords for search engines -->
+    <meta name="keywords" content="Matematisk modellering, OsloMet, bachelorprogram, teknologi, ingeniør, utdanning">
+    <!-- Author of the webpage -->
+    <meta name="author" content="OsloMet">
 </head>
+
 <body>
     <!-- HEADER START -->
     <header>
-        <nav class="nav-wrapper" role="navigation"> <!-- Main navigation buttons wrapper -->
+        <!-- Computer navigation -->
+        <nav class="nav-wrapper" aria-label="Hovedmeny">
             <div class="nav-img">
                 <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-                <a href="index.html" aria-label="Lenke til hjem"><img src="img/OsloMET.svg" alt=""/></a>
+                <!-- Link to index.html-->
+                <a href="index.html" aria-label="Lenke til hjem">
+                    <img src="img/OsloMET.svg" alt="OsloMet logo"/>
+                </a>
             </div>
+            <!-- Main navigation menu -->
             <ul id="menu" class="menu">
-                <li><a href="index.html" id="current">HJEM</a></li>
+                <li><a href="index.html" id="current" aria-current="page">HJEM</a></li>
                 <li><a href="html/accessibility.html">TILGJENGELIGHET</a></li>
                 <li><a href="html/activity.html">OSLOMET GAMING</a></li>
                 <li><a href="html/github.html">GITHUB</a></li>
             </ul>
         </nav>
     </header>
+
     <!-- Mobile header and navigation for smaller screens -->
     <nav class="nav-phone" role="navigation" aria-label="Hovedmeny">
         <div class="nav-img">
             <!--Link to recourse on how to use SVG files https://www.freecodecamp.org/news/use-svg-images-in-css-html/-->
-            <a href="index.html" aria-label="Lenke til hjem"><img src="img/OsloMET.svg" alt=""/></a>
+            <!-- Logo with a link back to index.html -->
+            <a href="index.html" aria-label="Lenke til hjem"><img src="img/OsloMET.svg" alt="OsloMet logo"/></a>
         </div>
         <!-- Hamburger menu for mobile view -->
-        <input type="checkbox" id="toggle" aria-label="main-menu"/>
-        <label for="toggle">
-            <div class="hamburger-container">
-                <div class="line" id="active"></div>
-            </div>
-        </label>
+        <button class="hamburger-menu" aria-expanded="false" aria-controls="main-menu" aria-label="Åpne hovedmeny">
+            <span class="hamburger-container" aria-hidden="true">
+                <span class="line"></span>
+            </span>
+        </button>
         <!-- Dropdown navigation menu for mobile screens. A fake / hidden checkbox is used 
          as a click reciever, so the :checked selector can be used on it.
          Aria roles, states and properties are added for an accessible hamburgermenu.
          https://www.accede-web.com/en/guidelines/rich-interface-components/hamburger-menu/ -->
-        <button class="nav-phone-dropdown" aria-expanded="true" aria-controls="main-menu">
+        <!-- Button to toggle the menu -->
+        <button class="hamburger-menu" aria-expanded="false" aria-controls="main-menu" aria-label="Åpne hovedmeny">
+            <span class="hamburger-container" aria-hidden="true">
+                <span class="line"></span>
+            </span>
+        </button>
+
+        <!-- Dropdown navigation menu -->
+        <nav id="main-menu" class="nav-phone-dropdown" role="menu">
             <ul>
                 <li><a href="index.html" id="current">HJEM</a></li>
                 <li><a href="html/accessibility.html">TILGJENGELIGHET</a></li>
                 <li><a href="html/activity.html">OSLOMET GAMING</a></li>
                 <li><a href="html/github.html">GITHUB</a></li>
             </ul>
-        </button>
+        </nav>
+
     </nav>
     <!-- HEADER END -->
 
-        <!-- MAIN SECTION START -->
-        <main class="content">
-            <section>
-                <h1>Matematisk modellering og datavitenskap - Ingeniør</h1>
-            </section>
-            <section class="matmod-video-format">
-                <!-- Video with student testimonials -->
-                <iframe class="matmod-video" title="Matematisk Modellering"
-                    src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo%5fid=95216483" allowfullscreen
-                    allow="autoplay; fullscreen"
-                    aria-label="Video - studiehverdag. Trykk play for avspilling."></iframe>
-            </section>
+    <!-- MAIN SECTION START -->
+    <main id="main-content" class="content">
+        <!-- Page title section -->
+        <section aria-labelledby="page-title">
+            <h1 id="page-title">Matematisk modellering og datavitenskap - Ingeniør</h1>
+        </section>
 
-            <!-- Introduction below video -->
-            <article class="article-padding">
-                <section class="background-color">
-                    <h2>Bachelorprogram</h2>
+        <!-- Video Section -->
+        <section class="matmod-video-format">
+            <figure>
+                <!-- Video embed -->
+                <iframe class="matmod-video"
+                        title="Matematisk Modellering - En introduksjonsvideo"
+                        src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo%5fid=95216483"
+                        allowfullscreen
+                        allow="autoplay; fullscreen"
+                        aria-label="Video - studiehverdag. Trykk play for avspilling.">
+                </iframe>
+                <figcaption>
+                    Videoen gir innsikt i studiehverdagen og erfaringer fra studenter på bachelorprogrammet i Matematisk Modellering.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Introduction below video -->
+        <article class="article-padding">
+            <section class="background-color">
+                <h2 id="bachelorprogram-title">Bachelorprogram</h2>
 
                 <!-- Info box with quick facts -->
-                <section class="grid-container">
-                    <!-- First info box item -->
-                    <section class="grid-item">
+                <section class="grid-container" aria-labelledby="bachelorprogram-title">
+                    <!-- Each grid item -->
+                    <div class="grid-item">
                         <p><strong>Studiested:</strong></p>
                         <p>Pilestredet i Oslo</p>
-                    </section>
-                    <!-- Second info box item -->
-                    <section class="grid-item">
+                    </div>
+                    <div class="grid-item">
                         <p><strong>Varighet:</strong></p>
                         <p>3 år</p>
-                    </section>
-                    <!-- Third info box item -->
-                    <section class="grid-item">
+                    </div>
+                    <div class="grid-item">
                         <p><strong>Omfang:</strong></p>
                         <p>Heltid</p>
-                    </section>
-                    <!-- Fourth info box item -->
-                    <section class="grid-item">
+                    </div>
+                    <div class="grid-item">
                         <p><strong>Studiepoeng</strong></p>
                         <p>180</p>
-                    </section>
-                    <!-- Fifth info box item -->
-                    <section class="grid-item">
+                    </div>
+                    <div class="grid-item">
                         <p><strong>Studiestart</strong></p>
                         <p>August</p>
-                    </section>
-                    <!-- Sixth info box item -->
-                    <section class="grid-item">
+                    </div>
+                    <div class="grid-item">
                         <p><strong>Undervisningsspråk</strong></p>
                         <p>Norsk, engelsk</p>
-                    </section>
-                    <!-- Seventh info box item -->
-                    <section class="grid-item">
-                        <p><strong>Studieplasser</strong></p>
-                        <p>40</p>
-                    </section>
+                    </div>
+                    <div class="grid-item">
+                        <p><strong>Studieplasser</strong></p><p>40</p>
+                    </div>
                 </section>
-                </section>
-
-                <section>
-                    <!-- Description section providing insight into the content -->
-                    <section class="description-infobox">
-                        <p>Få innsikt i matematiske og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige
-                            oppgaver.</p>
-                        <p>Informasjon om program, timeplaner, pensum, fadderuker og mye mer finner du på studiestartsiden
-                            for matematisk modellering og datavitenskap - ingeniør (student.oslomet.no).
-                            NB! Vær obs på at timeplanen som ligger på studiestartsiden er en timeplan for alle studentene
-                            på kullet.
-                            For å se din personlige timeplan må du logge deg inn på "Min side" (student.oslomet.no) etter at
-                            du har aktivert IT-kontoen din og du er blitt plassert i klasse/gruppe. Dette skjer vanligvis uken før
-                            studiestart.</p>
-                    </section>
-                </section>
-            </article>
-            <article class="article-padding">
-                <!-- Accordion component that contains multiple items -->
-                <section class="accordion-infobox">
-                    <!-- First accordion item -->
-                    <input type="checkbox" id="item1"  aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item1" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item1">
-                        <section class="icon" aria-label="Første accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                        <section class="text">Opptakskrav og poeng</section> <!-- Title of the accordion item -->
-                    </label>
-
-                    <section class="accordion-content-infobox text-margin" aria-labelledby="item1"> <!-- Content displayed when the item is expanded -->
-                        <p>For å søke på dette programmet må du ha
-                            generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse
-                            matematikk R1 og R2 fysikk 1.
-                            Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.
-                            Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du
-                            søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
-                    </section>
-
-                    <!-- Second accordion item -->
-                    <input type="checkbox" id="item2"  aria-hidden="true"> <!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item2" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item2">
-                        <section class="icon" aria-label="Andre accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                        <section class="text">Slik søker du</section> <!-- Title of the accordion item -->
-                    </label>
-                    <section class="accordion-content-infobox" aria-labelledby="item2"> <!-- Content displayed when the item is expanded -->
-                        <p>Du søker på Samordna opptak med studiekode 215 503.
-                            15. april: ordinær søknadsfrist
-                            1. mars: frist for enkelte søkere</p>
-                        <p>Mer om å søke på bachelor.</p>
-                    </section>
-
-                    <!-- Third accordion item -->
-                    <input type="checkbox" id="item3"  aria-hidden="true" aria-label="Tredje accordion element - knapp"> <!-- Hidden checkbox for toggling content visibility -->                
-                    <label for="item3" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item3">
-                        <section class="icon" aria-label="Tredje accordion element - knapp" ><span>+</span></section> <!-- Icon indicating expandable content -->
-                        <section class="text">Hva lærer du?</section> <!-- Title of the accordion item -->
-                    </label>
-                    <section class="accordion-content-infobox" aria-labelledby="item3"> <!-- Content displayed when the item is expanded -->
-                        <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk,
-                            fysikk og statistikk.</p>
-                        <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i
-                            medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer.</p>
-
-                        <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi
-                            for å få en felles forståelse av tematikken.</p>
-
-                        <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i
-                            arbeidslivet.</p>
-
-                        <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
-
-                        <!-- Legge inn header her? -->
-                        <h4>Statistiske metoder og datadrevne metoder</h4>
-                        <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til
-                            å gjøre beregninger, for eksempel av fremtidige strømpriser.</p>
-
-                        <p>Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale
-                            datatyper. Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
-
-                        <!-- Legger inn header -->
-                        <h4>Vitenskaplige beregninger</h4>
-                        <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og
-                            fysiske problemer med numeriske metoder.</p>
-
-                        <p>Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske
-                            prosesser og annet.</p>
-
-                        <!-- Legger inn header -->
-                        <h4>Matematikk og fysikk</h4>
-                        <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig
-                            intelligens.</p>
-
-                        <p>Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer,
-                            representasjonsteori og kategoriteori.</p>
-
-                        <p>I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
-                    </section>
-
-                    <!-- Fourth accordion item -->
-                    <input type="checkbox" id="item4"  aria-hidden="true" aria-label="Fjerde accordion element - knapp"><!-- Hidden checkbox for toggling content visibility -->
-                    <label for="item4" class="accordion-item-infobox" role="button" aria-expanded="false" aria-control="item4">
-                        <section class="icon" aria-label="Fjerde accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                        <section class="text">Studiets oppbygging</section> <!-- Title of the accordion item -->
-                    </label>
-                    <section class="accordion-content-infobox" aria-labelledby="item4">
-                        <p>Her finner du informasjon om studiets oppbygging.</p>
-                        <!-- Content displayed when the item is expanded -->
-
-
-                        <!-- https://www.w3.org/WAI/tutorials/tables/irregular/ -->
-                        <!-- https://codepen.io/tutsplus/pen/MWXYXwP -->
-
-
-                        <section class="studiets-oppbygning">
-                            <h2>Studiets oppbygning</h2>
-
-                            <section class="year">
-                                <div class="year-header">
-                                    <h3>1. studieår</h3>
-                                </div>
-                            </section>
-
-
-                            <!-- TABLES -->
-
-                            <!-- TABLES FOR FIRST YEAR -->
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 1. studieår
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="4" scope="rowgroup" class="semester-header">1. semester</th>
-                                    <td data-label="Emnenavn">Diskret matematikk</td>
-                                    <td data-label="Emnekode">DAPE1300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Programmering</td>
-                                    <td data-label="Emnekode">DAPE1400</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Teknologi og samfunn for programmerere</td>
-                                    <td data-label="Emnekode">DATA1100</td>
-                                    <td data-label="Studiepoeng">5 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Innføring i modeller og beregninger</td>
-                                    <td data-label="Emnekode">MAMO1100</td>
-                                    <td data-label="Studiepoeng">5 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">2. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 1000</td>
-                                    <td data-label="Emnekode">DAFE1000</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Fysikk og kjemi</td>
-                                    <td data-label="Emnekode">DAPE2101</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Databaser</td>
-                                    <td data-label="Emnekode">DATA1500</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-                            <section class="year">
-                                <div class="year-header">
-                                    <h3>2. studieår</h3>
-                                </div>
-                            </section>
-
-
-
-                            <!-- TABLES FOR SECOND YEAR -->
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Emnegruppe: matematikk og fysikk</h3>
-                                </div>
-                            </section>
-
-                            <!-- EMNEGRUPPE: MATEMATIKK OG FYSIKK -->
-
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 2. studieår - retning matematikk og fysikk
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">3. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 2000 med statistikk</td>
-                                    <td data-label="Emnekode">DAPE2000</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Moderne fysikk</td>
-                                    <td data-label="Emnekode">MAMO2100</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Lineær algebra og introduksjon til gruppeteori</td>
-                                    <td data-label="Emnekode">MAMO2300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">4. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 4000</td>
-                                    <td data-label="Emnekode">DAVE3705</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Termodynamikk og statistisk fysikk</td>
-                                    <td data-label="Emnekode">MAMO2400</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Symmetrier og algebraiske strukturer</td>
-                                    <td data-label="Emnekode">MAMO2500</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-
-                            <!-- EMNEGRUPPE: STATISTISKE OG DATADREVNE METODER -->
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Emnegruppe: Statistiske og datadrevne metoder</h3>
-                                </div>
-                            </section>
-
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 2. studieår - retning statistiske og datadrevne metoder
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">3. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 2000 med statistikk</td>
-                                    <td data-label="Emnekode">DAPE2000</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Moderne fysikk</td>
-                                    <td data-label="Emnekode">MAMO2100</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Algoritmer og datastrukturer</td>
-                                    <td data-label="Emnekode">DATS2300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">4. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 4000</td>
-                                    <td data-label="Emnekode">DAVE3705</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Statistisk analyse</td>
-                                    <td data-label="Emnekode">MAMO3100</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-
-
-                            <!-- EMNEGRUPPE: VITENSKAPLIGE BEREGNINGER -->
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Emnegruppe: vitenskaplige beregninger</h3>
-                                </div>
-                            </section>
-
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 2. studieår - retning vitenskaplige beregniner
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">3. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 2000 med statistikk</td>
-                                    <td data-label="Emnekode">DAPE2000</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Moderne fysikk</td>
-                                    <td data-label="Emnekode">MAMO2100</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Algoritmer og datastrukturer</td>
-                                    <td data-label="Emnekode">DATS2300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">4. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 4000</td>
-                                    <td data-label="Emnekode">DAVE3705</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Ressurseffektive programmer</td>
-                                    <td data-label="Emnekode">DAVE3606</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Avansert modellering og beregninger</td>
-                                    <td data-label="Emnekode">MAMO2200</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-                            <!-- TABLES FOR THIRD YEAR -->
-
-                            <section class="year">
-                                <div class="year-header">
-                                    <h3>3. studieår</h3>
-                                </div>
-                            </section>
-
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Emnegruppe: matematikk og fysikk</h3>
-                                </div>
-                            </section>
-
-                            <!-- EMNEGRUPPE: MATEMATIKK OG FYSIKK -->
-
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 3. studieår - retning matematikk og fysikk
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">5. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 3000</td>
-                                    <td data-label="Emnekode">DAVE3700</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Reell analyse</td>
-                                    <td data-label="Emnekode">MAMO3300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="2" scope="rowgroup" class="semester-header">6. semester</th>
-                                    <td data-label="Emnenavn">Bacheloroppgave</td>
-                                    <td data-label="Emnekode">DATA3900</td>
-                                    <td data-label="Studiepoeng">20 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-
-                            <!-- EMNEGRUPPE: STATISTISKE OG DATADREVNE METODER -->
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Emnegruppe: Statistiske og datadrevne metoder</h3>
-                                </div>
-                            </section>
-
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 2. studieår - retning statistiske og datadrevne metoder
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">5. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 3000</td>
-                                    <td data-label="Emnekode">DAVE3700</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Introduksjon til kunstig intelligens</td>
-                                    <td data-label="Emnekode">DAVE3625</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="2" scope="rowgroup" class="semester-header">6. semester</th>
-                                    <td data-label="Emnenavn">Bacheloroppgave</td>
-                                    <td data-label="Emnekode">DATA3900</td>
-                                    <td data-label="Studiepoeng">20 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-                            <!-- EMNEGRUPPE: VITENSKAPLIGE BEREGNINGER -->
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Emnegruppe: vitenskaplige beregninger</h3>
-                                </div>
-                            </section>
-
-                            <table>
-                                <caption class="visually-hidden">
-                                    Emner for 2. studieår - retning vitenskaplige beregniner
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">5. semester</th>
-                                    <td data-label="Emnenavn">Matematikk 3000</td>
-                                    <td data-label="Emnekode">DAVE3700</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Simulering og visualisering</td>
-                                    <td data-label="Emnekode">MAMO3200</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="2" scope="rowgroup" class="semester-header">6. semester</th>
-                                    <td data-label="Emnenavn">Bacheloroppgave</td>
-                                    <td data-label="Emnekode">DATA3900</td>
-                                    <td data-label="Studiepoeng">20 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Valgfag</td>
-                                    <td data-label="Emnekode">Valgfag</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-                            <!-- VALGFAG -->
-
-                            <section class="year">
-                                <div class="year-header">
-                                    <h3>Valgfag</h3>
-                                </div>
-                            </section>
-
-                            <section class="year">
-                                <div class="emnegruppe-header">
-                                    <h3>Høst</h3>
-                                </div>
-                            </section>
-
-                            <table>
-                                <caption class="visually-hidden">
-                                   Valgfag på høstsemesteret.
-                                </caption>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Studieretning</th>
-                                    <th scope="col">Emnenavn</th>
-                                    <th scope="col">Emnekode</th>
-                                    <th scope="col">Studiepoeng</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th rowspan="4" scope="rowgroup" class="semester-header">Matematikk og fysikk</th>
-                                    <td data-label="Emnenavn">Introduksjon til IT-forskning</td>
-                                    <td data-label="Emnekode">DATA3730</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Introduction to Data Science with Scripting</td>
-                                    <td data-label="Emnekode">DATA3800</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Datasikkerhet</td>
-                                    <td data-label="Emnekode">ITPE3100</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Simulering og visualisering</td>
-                                    <td data-label="Emnekode">MAMO3200</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="3" scope="rowgroup" class="semester-header">Statistiske og datadrevne metoder</th>
-                                    <td data-label="Emnenavn">Introduksjon til IT-forskning</td>
-                                    <td data-label="Emnekode">DATA3730</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Anvendt kunstig intelligens og data science prosjekt</td>
-                                    <td data-label="Emnekode">DATA3750</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Simulering og visualisering</td>
-                                    <td data-label="Emnekode">MAMO3200</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr class="separator-row" aria-hidden="true">
-                                    <td colspan="4"></td>
-                                </tr>
-
-                                <tr>
-                                    <th rowspan="4" scope="rowgroup" class="semester-header">Vitenskaplige beregninger</th>
-                                    <td data-label="Emnenavn">Introduksjon til IT-forskning</td>
-                                    <td data-label="Emnekode">DATA3730</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Datasikkerhet</td>
-                                    <td data-label="Emnekode">ITPE3100</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Lineær algebra og intro til gruppeteori</td>
-                                    <td data-label="Emnekode">MAMO2300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-label="Emnenavn">Reell analyse</td>
-                                    <td data-label="Emnekode">MAMO3300</td>
-                                    <td data-label="Studiepoeng">10 stp.</td>
-                                </tr>
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-                                <section class="year">
-                                    <div class="emnegruppe-header">
-                                        <h3>Vår</h3>
-                                    </div>
-                                </section>
-
-                                <table>
-                                    <caption class="visually-hidden">
-                                        Valgfag på vårsemesteret.
-                                    </caption>
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">Studieretning</th>
-                                        <th scope="col">Emnenavn</th>
-                                        <th scope="col">Emnekode</th>
-                                        <th scope="col">Studiepoeng</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th rowspan="4" scope="rowgroup" class="semester-header">Matematikk og fysikk</th>
-                                        <td data-label="Emnenavn">Testing av programvare</td>
-                                        <td data-label="Emnekode">ADTS2310</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Datanettverk og skytjenester</td>
-                                        <td data-label="Emnekode">DATA2410</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Ressurseffektiv programmer</td>
-                                        <td data-label="Emnekode">DAVE3606</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Avansert modellering og beregninger</td>
-                                        <td data-label="Emnekode">MAMO2200</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr class="separator-row" aria-hidden="true">
-                                        <td colspan="4"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <th rowspan="5" scope="rowgroup" class="semester-header">Statistiske og datadrevne metoder</th>
-                                        <td data-label="Emnenavn">Visualisering</td>
-                                        <td data-label="Emnekode">ADSE3200</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Avansert modellering og beregninger</td>
-                                        <td data-label="Emnekode">MAMO2200</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Testing av programvare</td>
-                                        <td data-label="Emnekode">ADTS2310</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Datanettverk og skytjenester</td>
-                                        <td data-label="Emnekode">DATA2410</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Ressurseffektiv programmering </td>
-                                        <td data-label="Emnekode">DAVE3606</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr class="separator-row" aria-hidden="true">
-                                        <td colspan="4"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <th rowspan="4" scope="rowgroup" class="semester-header">Vitenskaplige beregninger</th>
-                                        <td data-label="Emnenavn">Visualisering</td>
-                                        <td data-label="Emnekode">ADSE3200</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Testing av programvare</td>
-                                        <td data-label="Emnekode">ADTS2310</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Datanettverk og skytjenester</td>
-                                        <td data-label="Emnekode">DATA2410</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Emnenavn">Symmetrier og algebraiske strukturer</td>
-                                        <td data-label="Emnekode">MAMO2500</td>
-                                        <td data-label="Studiepoeng">10 stp.</td>
-                                    </tr>
-
-
-
-                                </tbody>
-                                <tfooter>
-                                </tfooter>
-                            </table>
-
-
-
-
-
-                    </section>
-                </section>
-                <!-- Fifth accordion item -->
-                <input type="checkbox" id="item5" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item5" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item5">
-                    <section class="icon" aria-label="Femte accordion item - Trykk"><span>+</span></section> <!-- Icon indicating expandable content -->
-                    <section class="text">Hvordan foregår undervisningen?</section> <!-- Title of the accordion item -->
-                </label>
-                <section class="accordion-content-infobox" aria-labelledby="item5"> <!-- Content displayed when the item is expanded -->
-                    <p>Undervisningen er en kombinasjon av</p>
-
-                    <ul>
-                        <li>prosjektarbeid</li>
-                        <li>workshop</li>
-                        <li>presentasjoner</li>
-                        <li>veiledninger</li>
-                        <li>diskusjoner og refleksjoner</li>
-                        <li>forelesninger</li>
-                        <li>selvstudier</li>
-                        <li>gruppearbeid</li>
-                        <li>arbeidslivsrelevant bacheloroppgave</li>
-                    </ul>
-                    <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert
-                       arbeid gjennom hele semesteret.</p>
-                </section>
-                <!-- Sixth accordion item -->
-                <input type="checkbox" id="item6" aria-label="Sjette accordion element - knapp" aria-hidden="false" > <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item6" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item6">
-                    <section class="icon" aria-label="Sjette accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                    <section class="text">Hva koster det?</section> <!-- Title of the accordion item -->
-                </label>
-                <section class="accordion-content-infobox" aria-labelledby="item6"> <!-- Content displayed when the item is expanded -->
-                    <p>Det er ikke studieavgift på dette studiet. Du betaler en semesteravgift hvert semester</p>
-                    <p>(student.oslomet.no).</p>
-
-                </section>
-                <!-- Seventh accordion item -->
-
-                <input type="checkbox" id="item7" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item7" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item7">
-                    <section class="icon" aria-label="Syvende accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                    <section class="text">Hva kan du jobbe som?</section> <!-- Title of the accordion item -->
-                </label>
-                <section class="accordion-content-infobox" aria-labelledby="item7"> <!-- Content displayed when the item is expanded -->
-                    <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger
-                       spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
-                    <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du
-                        etterspurt kompetanse i arbeidslivet etter bachelorstudiet.</p>
-                    <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel
-                        beregninger knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.
-                    <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet. </p>
-
-                </section>
-                <!-- Eight'th accordion item -->
-                <input type="checkbox" id="item8" aria-hidden="false" > <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item8" class="accordion-item-infobox" role="button" aria-expanded="false" aria-controls="item8">
-                    <section class="icon" aria-label="Åttende accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                    <section class="text">Utveksling</section> <!-- Title of the accordion item -->
-                </label>
-                <section class="accordion-content-infobox" aria-labelledby="item8"> <!-- Content displayed when the item is expanded -->
-                    <p>Du kan dra på utveksling i femte semester.</p>
-
-                </section>
-                <!-- Nine'th accordion item -->
-                <input type="checkbox" id="item9" aria-hidden="false"> <!-- Hidden checkbox for toggling content visibility -->
-                <label for="item9" class="accordion-item-infobox" role="button"
-                 aria-expanded="false" aria-controls="item9">
-                    <section class="icon" aria-label="Niende accordion element - knapp"><span>+</span></section> <!-- Icon indicating expandable content -->
-                    <section class="text">Videre studiemuligheter ved Oslomet</section> <!-- Title of the accordion item -->
-                </label>
-                <section class="accordion-content-infobox" aria-labelledby="item9"> <!-- Content displayed when the item is expanded -->
-                    <p>Videre studiemuligheter ved OsloMet:
-                    <p> Anvendt data- og informasjonsteknologi (ACIT)</p>
-                    <p>Masterprogram 2 år Pilestredet i Oslo Heltid</p>
-
-                </section>
-
-            </article>
-            <article class="article-padding">
-
+            </section>
+        </article>
+
+        <article class="description-infobox">
+            <h2 id="description-title">Beskrivelse av programmet</h2>
+            <p>Få innsikt i matematiske og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
+            <p>Informasjon om program, timeplaner, pensum, fadderuker og mye mer finner du på
+                <a href="https://student.oslomet.no" target="_blank" rel="noopener" aria-label="Student OsloMet nettside">studiestartsiden for matematisk modellering og datavitenskap – ingeniør</a>.</p>
+            <p><strong>NB!</strong> Timeplanen som ligger på studiestartsiden er en generell timeplan for hele kullet.
+                For å se din personlige timeplan, må du logge deg inn på
+                <a href="https://student.oslomet.no" target="_blank" rel="noopener" aria-label="Min Side på Student OsloMet nettside">"Min Side"</a>
+                etter at du har aktivert IT-kontoen din og blitt plassert i klasse/gruppe. Dette skjer vanligvis uken før studiestart.</p>
+        </article>
+
+        <article class="article-padding">
+            <!-- Section for Admission Requirements -->
+            <section>
+                <h2>Opptakskrav og poeng</h2>
+                <p>For å søke på dette programmet må du ha generell studiekompetanse
+                    (<a href="https://www.samordnaopptak.no">samordnaopptak.no</a>) eller oppfylle
+                    kravene til realkompetanse: matematikk R1 og R2 samt fysikk 1.</p>
+                <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
+                <p>Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette
+                    studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
+            </section>
+
+            <!-- Section for Application Process -->
+            <section>
+                <h2>Slik søker du</h2>
+                <p>Du søker på Samordna opptak med studiekode 215 503.</p>
+                <p><strong>Søknadsfrister:</strong></p>
+                <ul>
+                    <li>15. april: ordinær søknadsfrist</li>
+                    <li>1. mars: frist for enkelte søkere</li>
+                </ul>
+                <p>Mer informasjon finner du på <a href="https://www.samordnaopptak.no">Samordna opptak</a>.</p>
+            </section>
+
+            <!-- Section for Learning Outcomes -->
+            <section>
+                <h2>Hva lærer du?</h2>
+                <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk.</p>
+                <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning, blant annet i medisinsk kjemi,
+                    biologiske prosesser og ulike samfunnssystemer.</p>
+                <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en
+                    felles forståelse av tematikken.</p>
+                <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.</p>
+                <p>Første året velger du hvilken av disse spesialiseringene du vil ta:</p>
+
+                <!-- Specialization 1 -->
+                <h3>Statistiske metoder og datadrevne metoder</h3>
+                <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til å gjøre
+                    beregninger, for eksempel av fremtidige strømpriser.</p>
+                <p>Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale datatyper.
+                    Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+
+                <!-- Specialization 2 -->
+                <h3>Vitenskaplige beregninger</h3>
+                <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og fysiske problemer
+                    med numeriske metoder.</p>
+                <p>Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.</p>
+
+                <!-- Specialization 3 -->
+                <h3>Matematikk og fysikk</h3>
+                <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.</p>
+                <p>Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer, representasjonsteori
+                    og kategoriteori.</p>
+                <p>I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
+            </section>
+
+            <!-- Section for the course layout -->
+            <section>
+                <h2>Studiets oppbygning</h2>
+                <p>Her finner du informasjon om studiets oppbygning for de ulike årene og spesialiseringene.</p>
+
+                <!-- Found guidance and inspiration for the tables here -->
+                <!-- https://www.w3.org/WAI/tutorials/tables/irregular/ -->
+                <!-- https://codepen.io/tutsplus/pen/MWXYXwP -->
+
+                <!-- First Year -->
+                <h3 class="year-header">1. studieår</h3>
+
+                <!-- TABLES FOR FIRST YEAR -->
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 1. studieår
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="4" scope="rowgroup" class="semester-header">1. semester</th>
+                        <td data-label="Emnenavn">Diskret matematikk</td>
+                        <td data-label="Emnekode">DAPE1300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Programmering</td>
+                        <td data-label="Emnekode">DAPE1400</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Teknologi og samfunn for programmerere</td>
+                        <td data-label="Emnekode">DATA1100</td>
+                        <td data-label="Studiepoeng">5</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Innføring i modeller og beregninger</td>
+                        <td data-label="Emnekode">MAMO1100</td>
+                        <td data-label="Studiepoeng">5</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">2. semester</th>
+                        <td data-label="Emnenavn">Matematikk 1000</td>
+                        <td data-label="Emnekode">DAFE1000</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Fysikk og kjemi</td>
+                        <td data-label="Emnekode">DAPE2101</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Databaser</td>
+                        <td data-label="Emnekode">DATA1500</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <!-- TABLES FOR SECOND YEAR -->
+                <h3 class="year-header">2. studieår</h3>
+
+                <!-- EMNEGRUPPE: MATEMATIKK OG FYSIKK -->
+                <h4 class="emnegruppe-header">Emnegruppe: matematikk og fysikk</h4>
+
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 2. studieår - retning matematikk og fysikk
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">3. semester</th>
+                        <td data-label="Emnenavn">Matematikk 2000 med statistikk</td>
+                        <td data-label="Emnekode">DAPE2000</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Moderne fysikk</td>
+                        <td data-label="Emnekode">MAMO2100</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Lineær algebra og introduksjon til gruppeteori</td>
+                        <td data-label="Emnekode">MAMO2300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">4. semester</th>
+                        <td data-label="Emnenavn">Matematikk 4000</td>
+                        <td data-label="Emnekode">DAVE3705</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Termodynamikk og statistisk fysikk</td>
+                        <td data-label="Emnekode">MAMO2400</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Symmetrier og algebraiske strukturer</td>
+                        <td data-label="Emnekode">MAMO2500</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- EMNEGRUPPE: STATISTISKE OG DATADREVNE METODER -->
+
+                <h4 class="emnegruppe-header">Emnegruppe: Statistiske og datadrevne metoder</h4>
+
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 2. studieår - retning statistiske og datadrevne metoder
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">3. semester</th>
+                        <td data-label="Emnenavn">Matematikk 2000 med statistikk</td>
+                        <td data-label="Emnekode">DAPE2000</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Moderne fysikk</td>
+                        <td data-label="Emnekode">MAMO2100</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Algoritmer og datastrukturer</td>
+                        <td data-label="Emnekode">DATS2300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">4. semester</th>
+                        <td data-label="Emnenavn">Matematikk 4000</td>
+                        <td data-label="Emnekode">DAVE3705</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Statistisk analyse</td>
+                        <td data-label="Emnekode">MAMO3100</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- EMNEGRUPPE: VITENSKAPLIGE BEREGNINGER -->
+
+                <h4 class="emnegruppe-header">Emnegruppe: vitenskaplige beregninger</h4>
+
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 2. studieår - retning vitenskaplige beregninger
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">3. semester</th>
+                        <td data-label="Emnenavn">Matematikk 2000 med statistikk</td>
+                        <td data-label="Emnekode">DAPE2000</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Moderne fysikk</td>
+                        <td data-label="Emnekode">MAMO2100</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Algoritmer og datastrukturer</td>
+                        <td data-label="Emnekode">DATS2300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">4. semester</th>
+                        <td data-label="Emnenavn">Matematikk 4000</td>
+                        <td data-label="Emnekode">DAVE3705</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Ressurseffektive programmer</td>
+                        <td data-label="Emnekode">DAVE3606</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Avansert modellering og beregninger</td>
+                        <td data-label="Emnekode">MAMO2200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+
+                <!-- TABLES FOR THIRD YEAR -->
+
+                <h3 class="year-header">3. studieår</h3>
+                <h4 class="emnegruppe-header">Emnegruppe: matematikk og fysikk</h4>
+
+                <!-- EMNEGRUPPE: MATEMATIKK OG FYSIKK -->
+
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 3. studieår - retning matematikk og fysikk
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">5. semester</th>
+                        <td data-label="Emnenavn">Matematikk 3000</td>
+                        <td data-label="Emnekode">DAVE3700</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Emnenavn">Reell analyse</td>
+                        <td data-label="Emnekode">MAMO3300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" scope="rowgroup" class="semester-header">6. semester</th>
+                        <td data-label="Emnenavn">Bacheloroppgave</td>
+                        <td data-label="Emnekode">DATA3900</td>
+                        <td data-label="Studiepoeng">20</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- EMNEGRUPPE: STATISTISKE OG DATADREVNE METODER -->
+
+                <h4 class="emnegruppe-header">Emnegruppe: Statistiske og datadrevne metoder</h4>
+
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 2. studieår - retning statistiske og datadrevne metoder
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">5. semester</th>
+                        <td data-label="Emnenavn">Matematikk 3000</td>
+                        <td data-label="Emnekode">DAVE3700</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Introduksjon til kunstig intelligens</td>
+                        <td data-label="Emnekode">DAVE3625</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" scope="rowgroup" class="semester-header">6. semester</th>
+                        <td data-label="Emnenavn">Bacheloroppgave</td>
+                        <td data-label="Emnekode">DATA3900</td>
+                        <td data-label="Studiepoeng">20</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+
+                <!-- EMNEGRUPPE: VITENSKAPLIGE BEREGNINGER -->
+
+               <h4 class="emnegruppe-header">Emnegruppe: vitenskaplige beregninger</h4>
+
+                <table>
+                    <!-- Info for screenreader, but hiding it visually -->
+                    <caption class="visually-hidden">
+                        Emner for 2. studieår - retning vitenskaplige beregniner
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">5. semester</th>
+                        <td data-label="Emnenavn">Matematikk 3000</td>
+                        <td data-label="Emnekode">DAVE3700</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Simulering og visualisering</td>
+                        <td data-label="Emnekode">MAMO3200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" scope="rowgroup" class="semester-header">6. semester</th>
+                        <td data-label="Emnenavn">Bacheloroppgave</td>
+                        <td data-label="Emnekode">DATA3900</td>
+                        <td data-label="Studiepoeng">20</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Valgfag</td>
+                        <td data-label="Emnekode">Valgfag</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- VALGFAG -->
+
+                <h3 class="year-header">Valgfag</h3>
+
+                <h4 class="emnegruppe-header">Høst</h4>
+
+                <table>
+                    <caption class="visually-hidden">
+                        Valgfag på høstsemesteret.
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Studieretning</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="4" scope="rowgroup" class="semester-header">Matematikk og fysikk</th>
+                        <td data-label="Emnenavn">Introduksjon til IT-forskning</td>
+                        <td data-label="Emnekode">DATA3730</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Introduction to Data Science with Scripting</td>
+                        <td data-label="Emnekode">DATA3800</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Datasikkerhet</td>
+                        <td data-label="Emnekode">ITPE3100</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Simulering og visualisering</td>
+                        <td data-label="Emnekode">MAMO3200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="semester-header">Statistiske og datadrevne metoder</th>
+                        <td data-label="Emnenavn">Introduksjon til IT-forskning</td>
+                        <td data-label="Emnekode">DATA3730</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Anvendt kunstig intelligens og data science prosjekt</td>
+                        <td data-label="Emnekode">DATA3750</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Simulering og visualisering</td>
+                        <td data-label="Emnekode">MAMO3200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="4" scope="rowgroup" class="semester-header">Vitenskaplige beregninger</th>
+                        <td data-label="Emnenavn">Introduksjon til IT-forskning</td>
+                        <td data-label="Emnekode">DATA3730</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Datasikkerhet</td>
+                        <td data-label="Emnekode">ITPE3100</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Lineær algebra og intro til gruppeteori</td>
+                        <td data-label="Emnekode">MAMO2300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Reell analyse</td>
+                        <td data-label="Emnekode">MAMO3300</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <h4 class="emnegruppe-header">Vår</h4>
+
+                <table>
+                    <caption class="visually-hidden">
+                        Valgfag på vårsemesteret.
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Studieretning</th>
+                        <th scope="col">Emnenavn</th>
+                        <th scope="col">Emnekode</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="4" scope="rowgroup" class="semester-header">Matematikk og fysikk</th>
+                        <td data-label="Emnenavn">Testing av programvare</td>
+                        <td data-label="Emnekode">ADTS2310</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Datanettverk og skytjenester</td>
+                        <td data-label="Emnekode">DATA2410</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Ressurseffektiv programmer</td>
+                        <td data-label="Emnekode">DAVE3606</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Avansert modellering og beregninger</td>
+                        <td data-label="Emnekode">MAMO2200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="5" scope="rowgroup" class="semester-header">Statistiske og datadrevne metoder</th>
+                        <td data-label="Emnenavn">Visualisering</td>
+                        <td data-label="Emnekode">ADSE3200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Avansert modellering og beregninger</td>
+                        <td data-label="Emnekode">MAMO2200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Testing av programvare</td>
+                        <td data-label="Emnekode">ADTS2310</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Datanettverk og skytjenester</td>
+                        <td data-label="Emnekode">DATA2410</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Ressurseffektiv programmering </td>
+                        <td data-label="Emnekode">DAVE3606</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    <tr class="separator-row" aria-hidden="true">
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="4" scope="rowgroup" class="semester-header">Vitenskaplige beregninger</th>
+                        <td data-label="Emnenavn">Visualisering</td>
+                        <td data-label="Emnekode">ADSE3200</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Testing av programvare</td>
+                        <td data-label="Emnekode">ADTS2310</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Datanettverk og skytjenester</td>
+                        <td data-label="Emnekode">DATA2410</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Emnenavn">Symmetrier og algebraiske strukturer</td>
+                        <td data-label="Emnekode">MAMO2500</td>
+                        <td data-label="Studiepoeng">10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section about how the course is taught -->
+            <section>
+                <h2>Hvordan foregår undervisningen?</h2>
+                <p>Undervisningen er en kombinasjon av:</p>
+
+                <ul>
+                    <li>Prosjektarbeid</li>
+                    <li>Workshops</li>
+                    <li>Presentasjoner</li>
+                    <li>Veiledninger</li>
+                    <li>Diskusjoner og refleksjoner</li>
+                    <li>Forelesninger</li>
+                    <li>Selvstudier</li>
+                    <li>Gruppearbeid</li>
+                    <li>Arbeidslivsrelevant bacheloroppgave</li>
+                </ul>
+
+                <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
+            </section>
+
+            <!-- Section about the cost of the education -->
+            <section>
+                <h2>Hva koster det?</h2>
+                <p>Det er ikke studieavgift på dette studiet. Du betaler en semesteravgift hvert semester.</p>
+                <p>For mer informasjon, besøk <a href="https://student.oslomet.no">student.oslomet.no</a>.</p>
+            </section>
+
+            <!-- Section about career opportunities -->
+            <section>
+                <h2>Hva kan du jobbe som?</h2>
+                <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene
+                    vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
+                <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt
+                    kompetanse i arbeidslivet etter bachelorstudiet.</p>
+                <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, for eksempel i beregninger
+                    knyttet til klima, forsikring og finans, samt datadrevne metoder for verdiskaping.</p>
+                <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.</p>
+            </section>
+
+            <!-- Section about exchange possibilities -->
+            <section>
+                <h2>Utveksling</h2>
+                <p>Du kan dra på utveksling i femte semester.</p>
+            </section>
+
+            <!-- Section about further studies -->
+            <section>
+                <h2>Videre studiemuligheter ved OsloMet</h2>
+                <p>Videre studiemuligheter ved OsloMet:</p>
+                <p>Anvendt data- og informasjonsteknologi (ACIT)</p>
+                <p>Masterprogram – 2 år, Pilestredet i Oslo, Heltid</p>
+            </section>
+        </article>
+
+        <!-- Administrative information -->
+        <article class="article-padding">
+
+            <!-- Section about study location -->
+            <section>
                 <h3>Studiested</h3>
-                <p>Studiested Pilestredet</p>
+                <p>Pilestredet, Oslo</p>
+            </section>
+
+            <!-- Section about where to ask questions -->
+            <section>
                 <h4>Spørsmål om utdanningen?</h4>
-                <p><strong>Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</strong></p>
+                <p><strong>Har du spørsmål om utdanningen? Kontakt oss gjennom vårt
+                    <a href="https://www.oslomet.no/kontaktskjema">kontaktskjema</a>.</strong></p>
+            </section>
+
+            <!-- Section about the leader of the bachelor's program -->
+            <section>
                 <h3>Faglig leder</h3>
-                <section class="faglig-leder">
-                <img src="img/matmod-faglig-leder.jpg" alt="Faglig leder for emnet">
-                
-                <section>
-                <p><strong>Kristoffer Herland Hellton</strong></p>
-                <p>Førsteamanuensis</p>
-                <p>+47 672 37 240 | kristoffer.hellton@oslomet.no</p>
+                <div class="faglig-leder">
+                    <img src="img/matmod-faglig-leder.jpg" alt="Bilde av faglig leder Kristoffer Herland Hellton">
+                    <div>
+                        <p><strong>Kristoffer Herland Hellton</strong></p>
+                        <p>Førsteamanuensis</p>
+                        <p>
+                            Telefon: <a href="tel:+4767237240">+47 672 37 240</a><br>
+                            E-post: <a href="mailto:kristoffer.hellton@oslomet.no">kristoffer.hellton@oslomet.no</a>
+                        </p>
+                    </div>
+                </div>
             </section>
-            </section>
+        </article>
+    </main>
+    <footer>
+        <section class="footer-header">
+            <h2>Hold deg oppdatert på OsloMet sine nyheter og arrangementer.</h2>
+            <a href="https://www.oslomet.no/nyhetsbrev" class="btn-newsletter" aria-live="polite">
+                Abonner på nyhetsbrevet!
+            </a>
+        </section>
 
-            </article>
-        </main>
-
-        <!-- FOOTER START -->
-        <footer>
-            <section class="footer-header">
-                <h2>Hold deg oppdatert på OsloMet sine nyheter og arrangementer.</h2>
-                <a href="https://www.oslomet.no/nyhetsbrev"><button class="btn-newsletter">Abonner på nyhetsbrevet!</button></a>
-            </section>
-            <section class="footer-wrapper">
-                <!-- Contact information -->
-                <section class="footer-content">
-                    <h3>Kontaktinformasjon</h3>
+        <div class="footer-wrapper">
+            <!-- Contact Information -->
+            <section class="footer-content">
+                <h3>Kontaktinformasjon</h3>
+                <address>
                     <ul>
                         <li>Oslo Metropolitan University</li>
                         <li>Storbyuniversitetet</li>
                         <li>Postboks 4, St. Olavs plass</li>
                         <li>0130 Oslo</li>
-                        <li>Phone nr: <a href="tel:67235000">67 23 50 00</a></li>
-                        <li>Email: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
+                        <li>Telefon: <a href="tel:+4767235000">67 23 50 00</a></li>
+                        <li>E-post: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
                     </ul>
-                </section>
-                <!-- Navigational links -->
-                <section class="footer-content">
-                    <h3>Navigasjon</h3>
-                    <ul>
-                        <li><a href="index.html">Hjem</a></li>
-                        <li><a href="html/accessibility.html">Tilgjengelighet</a></li>
-                        <li><a href="html/activity.html">OsloMet Gaming</a></li>
-                        <li><a href="html/github.html">GitHub</a></li>
-                    </ul>
-                </section>
-                <!-- Social media links -->
-                <section class="footer-content">
-                    <h3>Følg oss</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/oslomet/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                        <li><a href="https://www.twitter.com/oslomet/"><i class="fa-brands fa-twitter"></i>X (Twitter)</a></li>
-                        <li><a href="https://www.instagram.com/oslomet/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@OsloMetFilm/"><i class="fa-brands fa-youtube"></i>YouTube</a></li>
-                    </ul>
-                </section>
+                </address>
             </section>
-        </footer>
-        <!-- FOOTER END -->
-    </body>
+
+            <!-- Navigation Links -->
+            <nav class="footer-content" aria-label="Footer navigasjon">
+                <h3>Navigasjon</h3>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="html/accessibility.html">Tilgjengelighet</a></li>
+                    <li><a href="html/activity.html">OsloMet Gaming</a></li>
+                    <li><a href="html/github.html">GitHub</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social Media Links -->
+            <nav class="footer-content" aria-label="Følg oss på sosiale medier">
+                <h3>Følg oss</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/oslomet/">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            Følg oss på Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/oslomet/">
+                            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                            Følg oss på X (Twitter)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/oslomet/">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            Følg oss på Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@OsloMetFilm/">
+                            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                            Følg oss på YouTube
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
 </html>
