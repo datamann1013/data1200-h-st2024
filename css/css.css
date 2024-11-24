@@ -1169,9 +1169,9 @@ input:valid+.label {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1600px) {
     main {
-        width: 800px;
+        width: 900px;
     }
     .content {
         margin-left: 25vw;
